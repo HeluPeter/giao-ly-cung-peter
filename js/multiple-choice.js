@@ -1243,7 +1243,7 @@ function loadLeaderboard() {
                 { username: 'player12', score: 16, time: "3'15s", date: '2023-06-10T09:25:00Z' },
             ];
 
-            // Sort by score (descending) and time (ascending)
+            // Sort by score (descending) and time (descending)
             leaderboardData.sort((a, b) => {
                 if (b.score !== a.score) {
                     return b.score - a.score;
