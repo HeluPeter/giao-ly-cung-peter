@@ -240,6 +240,10 @@ body {
     box-shadow: 0 0 10px rgba(205, 127, 50, 0.5);
 }
 
+.rank-4 {
+    background-color: var(--accent-color);
+}
+
 .top-player {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
@@ -1060,6 +1064,13 @@ video {
 @media (min-width: 640px) {
     .container {
         max-width: 640px
+    }
+}
+
+@media (max-width: 768px) {
+    .user-name-score {
+        flex-flow: column !important;
+        text-align: center !important;
     }
 }
 

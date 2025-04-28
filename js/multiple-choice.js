@@ -1252,7 +1252,7 @@ function loadLeaderboard() {
                 // Convert time strings to seconds for comparison
                 const aTime = timeToSeconds(a.time);
                 const bTime = timeToSeconds(b.time);
-                return aTime - bTime;
+                return bTime - aTime;
             });
 
             leaderboardContent.classList.remove('hidden');
@@ -1325,6 +1325,8 @@ function displayLeaderboard() {
         if (rank <= 3) {
             const rankClasses = ['rank-1', 'rank-2', 'rank-3'];
             rankDisplay = `<div class="top-rank ${rankClasses[rank - 1]}">${rank}</div>`;
+        } else {
+            rankDisplay = `<div class="top-rank rank-4">${rank}</div>`;
         }
 
         row.innerHTML = `
