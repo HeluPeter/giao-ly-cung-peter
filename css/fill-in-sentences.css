@@ -157,6 +157,7 @@ body {
     padding: 0.75rem;
     border-radius: 10px;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     font-weight: 600;
     text-align: center;
 }
@@ -237,6 +238,10 @@ body {
 .rank-3 {
     background-color: var(--bronze);
     box-shadow: 0 0 10px rgba(205, 127, 50, 0.5);
+}
+
+.rank-4 {
+    background-color: var(--accent-color);
 }
 
 .top-player {

@@ -825,8 +825,8 @@ function showCurrentQuestion() {
     // Create question card
     currentQuestionContainer.innerHTML = `
         <div class="flex justify-between items-center mb-4">
-            <h3 class="text-xl font-bold">Question ${currentQuestionIndex + 1} of ${quizQuestions.length}</h3>
-            <div class="attempts-badge">Attempts: <span id="current-attempts">0</span>/1</div>
+            <h3 class="text-xl font-bold">Câu hỏi số ${currentQuestionIndex + 1} trên ${quizQuestions.length}</h3>
+            <div class="attempts-badge">Số lượt làm: <span id="current-attempts">0</span>/1</div>
         </div>
         
         <p class="text-lg mb-4">${question.question}</p>
@@ -845,8 +845,8 @@ function showCurrentQuestion() {
         </div>
         
         <div class="button-group">
-            <button id="check-answer-btn" class="btn">Check Answer</button>
-            <button id="next-question-btn" class="btn next-btn hidden">Next Question</button>
+            <button id="check-answer-btn" class="btn">Kiểm Tra</button>
+            <button id="next-question-btn" class="btn next-btn hidden">Câu tiếp theo</button>
         </div>
     `;
 
@@ -920,7 +920,7 @@ function handleTimeUp() {
 
     // Show feedback
     feedbackContainer.classList.remove('hidden');
-    feedbackMessage.textContent = `Hết thời gian! Câu trả lời đúng là: ${question.correctAnswer}`;
+    feedbackMessage.textContent = `Hết thời gian! Câu trả lời đúng là: ${question.correctAnswer} - Giải thích: ${question.explanation}`;
     feedbackMessage.className = 'feedback-message feedback-incorrect';
 
     // Highlight correct answer
