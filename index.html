@@ -1,0 +1,688 @@
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Giáo Lý Cùng Peter</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;family=Lora:wght@500;600&amp;display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFF8E1',
+                        softYellow: '#FFECC7',
+                        warmBeige: '#F5E6CC',
+                        softPink: '#FFE4E1',
+                        dustyRose: '#E8C4C4',
+                        softBlue: '#D4E2F0',
+                    },
+                    fontFamily: {
+                        nunito: ['Nunito', 'sans-serif'],
+                        lora: ['Lora', 'serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 4px 15px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 8px 25px rgba(0, 0, 0, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        @font-face {
+            font-family: 'Atlassian Sans';
+            font-style: normal;
+            font-weight: 400 653;
+            font-display: swap;
+            src:
+                local('AtlassianSans'),
+                local('Atlassian Sans Text'),
+                url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/AtlassianSans-latin.woff2') format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+                U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-cream">
+    <!-- Navigation Bar -->
+    <nav class="bg-warmBeige shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-amber-700" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                        </path>
+                    </svg>
+                    <span class="font-lora text-xl font-bold text-amber-800">Học Giáo Lý Cùng Peter</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="nav-link active font-nunito text-amber-800 hover:text-amber-900">Trang Chủ</a>
+                    <a href="#quizzes" class="nav-link font-nunito text-amber-800 hover:text-amber-900">Bài Kiểm Tra</a>
+                    <a href="#about" class="nav-link font-nunito text-amber-800 hover:text-amber-900">Giới Thiệu</a>
+                    <a href="#contact" class="nav-link font-nunito text-amber-800 hover:text-amber-900">Liên Hệ</a>
+                    <a href="#"
+                        class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg transition duration-300 ease-in-out">Đăng
+                        Nhập</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-amber-800 hover:text-amber-900 focus:outline-none">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu transform -translate-y-full h-0 overflow-hidden md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-3">
+                    <a href="#"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-amber-800 hover:bg-amber-100">Trang
+                        Chủ</a>
+                    <a href="#quizzes"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-amber-800 hover:bg-amber-100">Bài
+                        Kiểm Tra</a>
+                    <a href="#about"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-amber-800 hover:bg-amber-100">Giới
+                        Thiệu</a>
+                    <a href="#contact"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-amber-800 hover:bg-amber-100">Liên
+                        Hệ</a>
+                    <a href="#" class="block px-3 py-2 bg-amber-600 text-white rounded-md text-base font-medium">Đăng
+                        Nhập</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="container mx-auto px-4 pt-12 pb-8 text-center">
+        <h1 class="font-lora text-4xl md:text-5xl font-bold text-amber-800 mb-4">Học Giáo Lý Cùng Peter</h1>
+        <p class="font-nunito text-lg md:text-xl text-amber-700 max-w-2xl mx-auto">
+            Khám phá các bài kiểm tra thú vị để thử thách trí óc và tận hưởng niềm vui! Tìm hiểu các chủ đề mới và kiểm
+            tra kiến thức của bạn.
+        </p>
+        <div class="w-24 h-1 bg-amber-300 mx-auto mt-6 rounded-full"></div>
+    </header>
+
+    <!-- Quiz Cards Grid -->
+    <section id="quizzes" class="container mx-auto px-4 py-8">
+        <div class="text-center mb-8">
+            <h2 class="font-lora text-3xl font-bold text-amber-800 mb-2">Bài Kiểm Tra</h2>
+            <p class="text-amber-700">Chọn một chủ đề để bắt đầu</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1: Multiple Choice -->
+            <a href="giao-ly-mua-chay/multiple-choice.html"
+                class="card bg-white rounded-2xl overflow-hidden shadow-card relative">
+                <div class="card-glow"></div>
+                <div class="h-40 bg-softYellow flex items-center justify-center">
+                    <svg class="w-24 h-24 text-amber-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
+                        </path>
+                        <circle cx="9" cy="11" r="1" fill="currentColor"></circle>
+                        <circle cx="9" cy="16" r="1" fill="currentColor"></circle>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11h4M12 16h4">
+                        </path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-lora text-xl font-semibold text-amber-800">Trắc Nghiệm</h3>
+                        <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full">Trắc Nghiệm</span>
+                    </div>
+                    <p class="text-amber-700 text-sm">Đọc câu hỏi và chọn đáp án đúng nhất cơ bản đến phức tạp.</p>
+                </div>
+            </a>
+
+            <!-- Card 2: Fill in Words -->
+            <a href="giao-ly-mua-chay/fill-in-sentences.html"
+                class="card bg-white rounded-2xl overflow-hidden shadow-card relative">
+                <div class="card-glow"></div>
+                <div class="h-40 bg-softPink flex items-center justify-center">
+                    <svg class="w-24 h-24 text-rose-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 15h3m4 0h3">
+                        </path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-lora text-xl font-semibold text-rose-800">Âm Tiết</h3>
+                        <span class="bg-rose-100 text-rose-800 text-xs px-2 py-1 rounded-full">Điền Từ</span>
+                    </div>
+                    <p class="text-rose-700 text-sm">Đọc câu hỏi và ghi ra đáp án đúng nhất.</p>
+                </div>
+            </a>
+
+            <!-- Card 3: Fill in Blanks -->
+            <a href="giao-ly-mua-chay/fill-in-blank-review.html"
+                class="card bg-white rounded-2xl overflow-hidden shadow-card relative">
+                <div class="card-glow"></div>
+                <div class="h-40 bg-softBlue flex items-center justify-center">
+                    <svg class="w-24 h-24 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 8h.01M11 16h.01">
+                        </path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-lora text-xl font-semibold text-blue-800">Ôn Tập - Điền Câu</h3>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Điền Câu</span>
+                    </div>
+                    <p class="text-blue-700 text-sm">Đọc câu hỏi và trả lời.</p>
+                </div>
+            </a>
+
+            <!-- Card 4: Matching -->
+            <a href="#" class="card bg-white rounded-2xl overflow-hidden shadow-card relative">
+                <div class="card-glow"></div>
+                <div class="h-40 bg-warmBeige flex items-center justify-center">
+                    <svg class="w-24 h-24 text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M8 6v4M8 14v4M16 6v4M16 14v4"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-lora text-xl font-semibold text-orange-800">Coming soon</h3>
+                        <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Coming soon</span>
+                    </div>
+                    <p class="text-orange-700 text-sm">Coming soon</p>
+                </div>
+            </a>
+
+            <!-- Card 5: Fill in Sentences -->
+            <!-- <a href="#" class="card bg-white rounded-2xl overflow-hidden shadow-card relative">
+                <div class="card-glow"></div>
+                <div class="h-40 bg-dustyRose flex items-center justify-center">
+                    <svg class="w-24 h-24 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 18h.01"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-lora text-xl font-semibold text-purple-800">Nhạc Trưởng</h3>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Điền Câu</span>
+                    </div>
+                    <p class="text-purple-700 text-sm">Thử thách bản thân với các câu hỏi về thể loại âm nhạc, nhà soạn
+                        nhạc nổi tiếng và các bài hát biểu tượng qua các thời đại.</p>
+                </div>
+            </a> -->
+
+            <!-- Card 6: True/False -->
+            <!-- <a href="#" class="card bg-white rounded-2xl overflow-hidden shadow-card relative">
+                <div class="card-glow"></div>
+                <div class="h-40 bg-softYellow flex items-center justify-center">
+                    <svg class="w-24 h-24 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 9v6m4-6v6">
+                        </path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-lora text-xl font-semibold text-green-800">Ẩm Thực &amp; Văn Hóa</h3>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Đúng/Sai</span>
+                    </div>
+                    <p class="text-green-700 text-sm">Khám phá những sự thật thú vị về ẩm thực toàn cầu, các món ăn
+                        truyền thống và lịch sử ẩm thực từ khắp nơi trên thế giới.</p>
+                </div>
+            </a> -->
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="text-center mb-8">
+            <h2 class="font-lora text-3xl font-bold text-amber-800 mb-2">Bài Kiểm Tra Nổi Bật</h2>
+            <p class="text-amber-700">Những thử thách phổ biến nhất tháng này</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/2 bg-softPink p-8 flex items-center justify-center">
+                    <svg class="w-32 h-32 text-rose-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <span class="bg-rose-100 text-rose-800 text-xs px-2 py-1 rounded-full">Phổ Biến Nhất</span>
+                    <h3 class="font-lora text-2xl font-semibold text-amber-800 mt-3 mb-4">Âm Tiết</h3>
+                    <p class="text-amber-700 mb-6">Đọc câu hỏi và ghi ra đáp án đúng nhất.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="flex -space-x-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-amber-300 flex items-center justify-center text-xs text-amber-800">
+                                PR</div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-rose-300 flex items-center justify-center text-xs text-rose-800">
+                                TĐ</div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-blue-300 flex items-center justify-center text-xs text-blue-800">
+                                ĐV</div>
+                        </div>
+                        <span class="ml-3 text-sm text-amber-700">2,543 người đã hoàn thành bài kiểm tra này</span>
+                    </div>
+                    <a href="giao-ly-mua-chay/fill-in-sentences.html"
+                        class="inline-block bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-lg transition duration-300 ease-in-out">Làm
+                        Bài</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <div class="section-divider"></div>
+    <section id="about" class="container mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h2 class="font-lora text-3xl font-bold text-amber-800 mb-2">Giới Thiệu Về Chúng Tôi</h2>
+            <p class="text-amber-700 max-w-2xl mx-auto">Khám phá câu chuyện của chúng tôi và sứ mệnh mang đến trải
+                nghiệm học tập thú vị</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="md:flex flex-row-reverse">
+                <div class="md:w-1/2 bg-softBlue p-8 flex items-center justify-center">
+                    <svg class="w-48 h-48 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <h3 class="font-lora text-2xl font-semibold text-amber-800 mb-4">Câu Chuyện Của Chúng Tôi</h3>
+                    <p class="text-amber-700 mb-4">Web Ôn Luyện Giáo Lý được xây dựng với mong muốn trở thành người bạn
+                        đồng hành trên hành trình học hỏi và trưởng thành trong đức tin. Nơi đây, các bạn nhỏ và tất cả
+                        các thành viên Thiếu Nhi Thánh Thể có thể tìm thấy các bài học giáo lý theo từng khối, đặc biệt
+                        là các bài học ý nghĩa về Mùa Chay.</p>
+                    <p class="text-amber-700 mb-4">Chúng tôi còn thiết kế thêm các bài kiểm tra sinh động để giúp các
+                        bạn củng cố kiến thức sau mỗi bài học, và sẽ thường xuyên cập nhật tin tức về các hoạt động của
+                        Thiếu Nhi Thánh Thể khi có sự kiện mới.</p>
+                    <h4 class="font-lora text-xl font-semibold text-amber-800 mt-6 mb-3">Sứ Mệnh Của Chúng Tôi</h4>
+                    <p class="text-amber-700">Chúng tôi mong muốn việc học giáo lý không chỉ là ghi nhớ kiến thức, nhưng
+                        còn là cơ hội để gặp gỡ Chúa, yêu mến Giáo Hội và sống đức tin mỗi ngày. Qua từng bài học, từng
+                        bài kiểm tra, chúng tôi hy vọng mỗi bạn nhỏ sẽ lớn lên trong tình yêu Thiên Chúa và trở nên
+                        những chứng nhân sống động cho Tin Mừng.</p>
+                </div>
+            </div>
+
+            <div class="bg-warmBeige p-8">
+                <h3 class="font-lora text-2xl font-semibold text-amber-800 mb-6 text-center">Giá Trị Cốt Lõi</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <svg class="w-6 h-6 text-amber-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-lora text-lg font-semibold text-amber-800 mb-2 text-center">Sáng Tạo</h4>
+                        <p class="text-amber-700 text-sm text-center">Chúng tôi luôn tìm kiếm những phương cách mới mẻ
+                            và sinh động để truyền đạt giáo lý, giúp mỗi bài học trở nên dễ hiểu, thú vị và gần gũi với
+                            các bạn nhỏ.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <svg class="w-6 h-6 text-amber-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="font-lora text-lg font-semibold text-amber-800 mb-2 text-center">Tính Tiếp Cận</h4>
+                        <p class="text-amber-700 text-sm text-center">Chúng tôi tin rằng ai cũng xứng đáng được học hỏi
+                            và đào sâu đức tin, bất kể lứa tuổi hay hoàn cảnh. Vì thế, các bài học và bài kiểm tra được
+                            thiết kế để ai cũng có thể tiếp cận và học tập dễ dàng.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <svg class="w-6 h-6 text-amber-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="font-lora text-lg font-semibold text-amber-800 mb-2 text-center">Chất Lượng</h4>
+                        <p class="text-amber-700 text-sm text-center">Chúng tôi cam kết mang đến những bài học giáo lý
+                            chính xác, cập nhật và giàu giá trị, để mỗi người học đều được dẫn dắt đến sự hiểu biết vững
+                            chắc và sống đức tin cách sâu sắc hơn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="section-divider"></div>
+    <section id="contact" class="container mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h2 class="font-lora text-3xl font-bold text-amber-800 mb-2">Liên Hệ Với Chúng Tôi</h2>
+            <p class="text-amber-700 max-w-2xl mx-auto">Có câu hỏi hoặc phản hồi? Chúng tôi luôn sẵn sàng lắng nghe bạn!
+            </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/2 p-8">
+                    <h3 class="font-lora text-2xl font-semibold text-amber-800 mb-6">Gửi Tin Nhắn</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-amber-700 mb-2">Họ và tên</label>
+                            <input type="text" id="name"
+                                class="w-full px-4 py-2 border border-amber-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-amber-700 mb-2">Email</label>
+                            <input type="email" id="email"
+                                class="w-full px-4 py-2 border border-amber-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block text-amber-700 mb-2">Chủ đề</label>
+                            <input type="text" id="subject"
+                                class="w-full px-4 py-2 border border-amber-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-amber-700 mb-2">Tin nhắn</label>
+                            <textarea id="message" rows="4"
+                                class="w-full px-4 py-2 border border-amber-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg transition duration-300 ease-in-out">Gửi
+                            Tin Nhắn</button>
+                    </form>
+                </div>
+
+                <div class="md:w-1/2 bg-softBlue p-8">
+                    <h3 class="font-lora text-2xl font-semibold text-amber-800 mb-6">Thông Tin Liên Hệ</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div
+                                class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-lora text-lg font-semibold text-amber-800 mb-1">Điện Thoại</h4>
+                                <p class="text-amber-700">(+84) 367 093 937</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-lora text-lg font-semibold text-amber-800 mb-1">Email</h4>
+                                <p class="text-amber-700">ninh.peterrock@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-lora text-lg font-semibold text-amber-800 mb-1">Địa Chỉ</h4>
+                                <p class="text-amber-700">Nhà Thờ Phùng Khoang</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-lora text-lg font-semibold text-amber-800 mb-1">Giờ Làm Việc</h4>
+                                <p class="text-amber-700">Thứ Hai - Chủ Nhật: Cả ngày</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-lora text-lg font-semibold text-amber-800 mb-4">Kết Nối Với Chúng Tôi</h4>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-amber-600 text-white flex items-center justify-center hover:bg-amber-700">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-amber-600 text-white flex items-center justify-center hover:bg-amber-700">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-amber-600 text-white flex items-center justify-center hover:bg-amber-700">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-amber-600 text-white flex items-center justify-center hover:bg-amber-700">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="bg-warmBeige rounded-2xl p-8 md:p-12">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <h3 class="font-lora text-2xl font-semibold text-amber-800 mb-2">Cập Nhật Thông Tin</h3>
+                    <p class="text-amber-700">Đăng ký nhận bản tin của chúng tôi để cập nhật các bài kiểm tra mới, mẹo
+                        học tập và ưu đãi đặc biệt.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="flex flex-col sm:flex-row gap-3">
+                        <input type="email" placeholder="Địa chỉ email của bạn"
+                            class="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <button type="submit"
+                            class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg transition duration-300 ease-in-out">Đăng
+                            Ký</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-12 py-8 bg-warmBeige">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-6 h-6 text-amber-700" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                            </path>
+                        </svg>
+                        <span class="font-lora text-lg font-bold text-amber-800">Học Giáo Lý Cùng Peter</span>
+                    </div>
+                    <p class="text-amber-700 text-sm">Làm cho việc học trở nên vui vẻ và dễ tiếp cận cho mọi người thông
+                        qua các bài kiểm tra tương tác và nội dung giáo dục.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-lora text-lg font-semibold text-amber-800 mb-4">Liên Kết Nhanh</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-amber-700 hover:text-amber-900">Trang Chủ</a></li>
+                        <li><a href="#quizzes" class="text-amber-700 hover:text-amber-900">Tất Cả Bài Kiểm Tra</a></li>
+                        <li><a href="#" class="text-amber-700 hover:text-amber-900">Nổi Bật</a></li>
+                        <li><a href="#" class="text-amber-700 hover:text-amber-900">Danh Mục</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-lora text-lg font-semibold text-amber-800 mb-4">Giới Thiệu</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-amber-700 hover:text-amber-900">Câu Chuyện Của Chúng Tôi</a>
+                        </li>
+                        <li><a href="#" class="text-amber-700 hover:text-amber-900">Đội Ngũ</a></li>
+                        <li><a href="#" class="text-amber-700 hover:text-amber-900">Tuyển Dụng</a></li>
+                        <li><a href="#contact" class="text-amber-700 hover:text-amber-900">Liên Hệ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-lora text-lg font-semibold text-amber-800 mb-4">Kết Nối</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-amber-600 text-white flex items-center justify-center hover:bg-amber-700">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-amber-600 text-white flex items-center justify-center hover:bg-amber-700">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-amber-600 text-white flex items-center justify-center hover:bg-amber-700">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-amber-700 text-sm">Email: ninh.peterrock@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="border-t border-amber-300 mt-8 pt-6 text-center">
+                <p class="text-amber-700">© 2025 Học Giáo Lý Cùng Peter.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('-translate-y-full')) {
+                mobileMenu.classList.remove('-translate-y-full', 'h-0');
+                mobileMenu.classList.add('translate-y-0', 'h-auto');
+            } else {
+                mobileMenu.classList.remove('translate-y-0', 'h-auto');
+                mobileMenu.classList.add('-translate-y-full', 'h-0');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    if (mobileMenu.classList.contains('translate-y-0')) {
+                        mobileMenu.classList.remove('translate-y-0', 'h-auto');
+                        mobileMenu.classList.add('-translate-y-full', 'h-0');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

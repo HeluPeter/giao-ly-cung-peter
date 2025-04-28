@@ -1,0 +1,236 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Kiểm Tra Trắc Nghiệm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/multiple-choice.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'Atlassian Sans';
+            font-style: normal;
+            font-weight: 400 653;
+            font-display: swap;
+            src:
+                local('AtlassianSans'),
+                local('Atlassian Sans Text'),
+                url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/AtlassianSans-latin.woff2') format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+                U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold mb-2">Bài Kiểm Tra Trắc Nghiệm</h1>
+            <p class="text-lg">Đọc câu hỏi và chọn đáp án đúng nhất cơ bản đến phức tạp.</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Left Column: Quiz Section -->
+            <div class="lg:col-span-2">
+                <!-- Welcome Screen -->
+                <div id="welcome-screen" class="card fade-in">
+                    <h2 class="text-2xl font-bold mb-4">Welcome to the Quiz!</h2>
+
+                    <div class="topic-container mb-4">
+                        <label for="quiz-topic" class="block mb-2 font-semibold">Chọn Phần Kiểm Tra</label>
+                        <select id="quiz-topic" class="topic-select">
+                            <option value="general">PHẦN I: GIÁO LÝ HỘI THÁNH CÔNG GIÁO - CỬ HÀNH MẦU NHIỆM KITÔ GIÁO
+                            </option>
+                            <option value="science">PHẦN II: NĂM MỤC VỤ 2025 - CANH TÂN ĐỜI SỐNG ĐỨC TIN TRONG CỬ HÀNH
+                                PHỤNG VỤ</option>
+                            <option value="history">PHẦN III: NĂM THÁNH 2025 - NHỮNG NGƯỜI HÀNH HƯƠNG CỦA HY VỌNG
+                            </option>
+                            <!-- <option value="geography">Geography</option>
+                            <option value="entertainment">Entertainment</option> -->
+                        </select>
+                        <div id="topic-description" class="topic-description">
+                            Test your general knowledge with this diverse set of questions covering various subjects.
+                        </div>
+                    </div>
+
+                    <div class="rules-container mb-6">
+                        <div class="rules-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
+                                </path>
+                            </svg>
+                            Quiz Rules
+                        </div>
+                        <ul class="rules-list">
+                            <li>Bạn sẽ thấy một câu hỏi xuất hiện với bộ đếm thời gian là 20 giây.</li>
+                            <li>Chọn câu trả lời đúng từ các tùy chọn trắc nghiệm.</li>
+                            <li>Mỗi câu trả lời đúng sẽ kiếm được 1 điểm.</li>
+                            <li>Bạn có tối đa 1 lần thử cho mỗi câu hỏi.</li>
+                            <li>Nếu hết thời gian, bạn sẽ tự động chuyển sang câu hỏi tiếp theo.</li>
+                            <li>Bạn có thể nộp bài kiểm tra sớm bằng cách sử dụng nút "Nộp Bài".</li>
+                            <li>Cố gắng đạt điểm tuyệt đối để xem thông báo chúc mừng đặc biệt!</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="username" class="block mb-2 font-semibold">Nhập tên vào đây để làm bài (nhập tên cũ
+                            nếu muốn cải thiện điểm):</label>
+                        <input type="text" id="username" class="username-input"
+                            placeholder="Điền tên bạn vào đây, ví dụ: oppa, ninhdeptraiz,...">
+                        <p id="username-error" class="error-message hidden">Tên người dùng phải viết thường, không có ký
+                            tự đặc biệt hoặc khoảng trắng.</p>
+                    </div>
+
+                    <div class="toggle-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shuffle-icon" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                            </path>
+                        </svg>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="randomize-questions" checked="">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span class="toggle-label">Xáo trộn câu hỏi</span>
+                    </div>
+
+                    <button id="start-btn" class="btn w-full mt-4">Bắt Đầu</button>
+                </div>
+
+                <!-- Quiz Screen -->
+                <div id="quiz-screen" class="hidden">
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <span class="font-bold">Tên:</span> <span id="display-username"></span>
+                            <span id="display-topic" class="topic-badge">General Knowledge</span>
+                        </div>
+                        <div class="timer">
+                            <span>Score: </span><span id="current-score">0</span>/<span id="max-score">20</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="quiz-progress" class="progress" style="width: 0%"></div>
+                    </div>
+
+                    <div class="timer-container">
+                        <div class="timer-circle">
+                            <div class="timer-circle-bg" id="timer-circle-bg"></div>
+                            <div class="timer-circle-inner" id="timer-countdown">20</div>
+                        </div>
+                    </div>
+
+                    <div id="current-question-container" class="question-card active">
+                        <!-- Current question will be inserted here -->
+                    </div>
+
+                    <div class="flex justify-end">
+                        <button id="submit-quiz-btn" class="btn submit-btn">Nộp Bài</button>
+                    </div>
+                </div>
+
+                <!-- Results Screen -->
+                <div id="results-screen" class="hidden">
+                    <div id="perfect-score-message" class="perfect-score hidden">
+                        <p class="text-xl mb-4">Chúc mừng! Bạn đã trả lời đúng tất cả các câu hỏi!</p>
+                        <p>Bạn là một bậc thầy kiến thức thực thụ. Điểm số của bạn đã được ghi nhận trên bảng xếp hạng.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="text-2xl font-bold mb-4 text-center">Hoàn Thành Bài Kiểm Tra!</h2>
+                        <p class="text-lg mb-2 text-center">Điểm: <span id="final-score"
+                                class="font-bold text-2xl">0</span>/<span id="total-possible">20</span></p>
+                        <p class="mb-6 text-center">Thời gian: <span id="time-taken" class="font-bold">00:00</span></p>
+
+                        <h3 class="text-xl font-bold mb-3">Tóm tắt</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="summary-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Câu hỏi</th>
+                                        <th>Câu trả lời của bạn</th>
+                                        <th>Đáp án</th>
+                                        <th>Kết quả</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="summary-table-body">
+                                    <!-- Summary data will be inserted here -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <button id="restart-btn" class="btn w-full">Bắt Đầu Lại</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Leaderboard -->
+            <div class="lg:col-span-1">
+                <div class="leaderboard-card sticky top-4">
+                    <div class="leaderboard-header">
+                        <h2 class="text-2xl font-bold">🏆 Bảng Xếp Hạng 🏆</h2>
+                    </div>
+
+                    <div id="leaderboard-container">
+                        <div id="top-players-container" class="mb-4 hidden">
+                            <!-- Top 3 players will be inserted here -->
+                        </div>
+
+                        <div id="leaderboard-loading" class="loading-spinner"></div>
+                        <div id="leaderboard-error" class="hidden text-center text-red-500 my-4">
+                            Failed to load leaderboard data
+                        </div>
+                        <div id="leaderboard-empty" class="hidden text-center my-4">
+                            No leaderboard data available yet
+                        </div>
+                        <div id="leaderboard-content" class="hidden">
+                            <div class="overflow-x-auto">
+                                <table class="leaderboard-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Rank</th>
+                                            <th>Tên</th>
+                                            <th>Điểm</th>
+                                            <th>Thời Gian</th>
+                                            <th>Ngày</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="leaderboard-body">
+                                        <!-- Leaderboard data will be inserted here -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div id="pagination" class="pagination mt-4">
+                                <!-- Pagination buttons will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="confirmation-modal hidden">
+        <div class="modal-content">
+            <h3 class="text-xl font-bold mb-4">Nộp Bài Ngay?</h3>
+            <p>Bạn có chắc chắn muốn nộp bài kiểm tra ngay bây giờ không? <br> Bạn vẫn còn câu hỏi chưa làm.</p>
+            <div class="modal-buttons">
+                <button id="modal-cancel" class="btn modal-cancel">Tiếp tục</button>
+                <button id="modal-confirm" class="btn modal-confirm">Nộp ngay</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/multiple-choice.js"></script>
+</body>
+
+</html>
