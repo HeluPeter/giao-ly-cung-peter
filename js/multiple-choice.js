@@ -671,11 +671,11 @@ let quizTotalTime;
 let currentQuestionIndex = 0;
 let questionTimer;
 let questionStartTime;
-let timeRemaining = 20;
+let timeRemaining = 25;
 let leaderboardData = [];
 let currentPage = 1;
 const itemsPerPage = 5;
-const questionTimeLimit = 20; // seconds per question
+const questionTimeLimit = 25; // seconds per question
 let selectedOption = null;
 let questionOrder = []; // To track the original order of questions when randomized
 
