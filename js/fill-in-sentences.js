@@ -137,7 +137,7 @@ const questionTimeLimit = 35; // seconds per question
 
 // Initialize
 totalPossible.textContent = quizQuestions.length * 2; // 2 points per question
-document.getElementById('max-score').textContent = quizQuestions.length * 2;
+document.getElementById('max-score').textContent = quizQuestions.length;
 
 // Load leaderboard on page load
 loadLeaderboard();
