@@ -703,7 +703,7 @@ function updateTopicDescription() {
     // Update max score display based on selected topic
     const topicQuestions = quizQuestionsByTopic[selectedTopic];
     totalPossible.textContent = topicQuestions.length * 2;
-    document.getElementById('max-score').textContent = topicQuestions.length * 2;
+    document.getElementById('max-score').textContent = topicQuestions.length;
 }
 
 function validateUsername() {
@@ -983,7 +983,7 @@ function checkCurrentAnswer() {
         feedbackMessage.className = 'feedback-message feedback-correct';
 
         // Update score
-        score += 2;
+        score += 1;
         currentScoreElement.textContent = score;
 
         // Mark question as completed

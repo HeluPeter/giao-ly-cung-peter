@@ -137,7 +137,7 @@ const questionTimeLimit = 35; // seconds per question
 
 // Initialize
 totalPossible.textContent = quizQuestions.length * 2; // 2 points per question
-document.getElementById('max-score').textContent = quizQuestions.length;
+document.getElementById('max-score').textContent = quizQuestions.length * 2;
 
 // Load leaderboard on page load
 loadLeaderboard();
@@ -363,7 +363,7 @@ function checkCurrentAnswer() {
         feedbackMessage.className = 'feedback-message feedback-correct';
 
         // Update score
-        score += 1;
+        score += 2;
         currentScoreElement.textContent = score;
 
         // Mark question as completed
