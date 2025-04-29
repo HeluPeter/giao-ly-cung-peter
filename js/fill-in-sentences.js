@@ -363,7 +363,7 @@ function checkCurrentAnswer() {
         feedbackMessage.className = 'feedback-message feedback-correct';
 
         // Update score
-        score += 2;
+        score += 1;
         currentScoreElement.textContent = score;
 
         // Mark question as completed
