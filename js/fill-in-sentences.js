@@ -80,7 +80,172 @@ const quizQuestions = [
         failed: false,
         userAnswer: "",
         timeTaken: 0
-    } 
+    },
+    {
+        question: "Các bí tích cho chúng ta tham dự trước vào đời sống vĩnh cửu, đang khi mong chờ ngày Đức Ki-tô làm gì?",
+        syllables: "5 âm tiết",
+        answer: "ngự đến trong vinh quang",
+        hint: "Câu 9.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Đây là một trường hợp mà người không lãnh nhận Bí tích Rửa Tội có thể được cứu độ.",
+        syllables: "4 âm tiết",
+        answer: "chết vì đức tin",
+        hint: "Câu 24.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Vì điều gì mà Bí tích Thêm Sức chỉ được lãnh một lần?",
+        syllables: "6 âm tiết",
+        answer: "Ấn tín không thể xóa được",
+        hint: "Câu 9.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Bí tích Rửa Tội ban cho chúng ta ơn này.",
+        syllables: "10 âm tiết",
+        answer: "được tháp nhập vào Đức Kitô và Hội Thánh",
+        hint: "Câu 11.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Mục đích của các Bí tích phục vụ là để làm gì?",
+        syllables: "5 âm tiết",
+        answer: "xây dựng Dân Thiên Chúa",
+        hint: "Câu 7.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Đây là bổn phận của người lãnh Bí tích Thêm Sức.",
+        syllables: "8 âm tiết",
+        answer: "tích cực giới thiệu Chúa cho mọi người",
+        hint: "Câu 9.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Người muốn lãnh nhận Bí tích Thêm Sức cần học kĩ nhất về điều gì?",
+        syllables: "4 âm tiết",
+        answer: "Bí tích Thêm Sức",
+        hint: "Câu 24.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Bí tích Hôn Phối đem lại ân sủng riêng cho mỗi sứ vụ đặc biệt trong Hội Thánh, việc này là để làm gì?",
+        syllables: "5 âm tiết",
+        answer: "xây dựng Dân Thiên Chúa",
+        hint: "Câu 9.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Ân sủng mà Đức Ki-tô thông ban trong cấc bí tích mang lại lợi ích hay không thì còn tùy thuộc vào điều gì của người lãnh nhận?",
+        syllables: "5 âm tiết",
+        answer: "sự chuẩn bị nội tâm",
+        hint: "Câu 11.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Bí tích Rửa Tội ban cho chúng ta ơn này.",
+        syllables: "11 âm tiết",
+        answer: "được tha tội tổ tông và các tội riêng đã phạm",
+        hint: "Câu 7.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Nhờ các bí tích, đức tin của ta trở nên như thế nào?",
+        syllables: "5 âm tiết",
+        answer: "thêm mạnh mẽ vững vàng",
+        hint: "Câu 17.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Bí tích Thánh Thể Chứa đựng điều gì của Hội Thánh?",
+        syllables: "4 âm tiết",
+        answer: "Kho tàng thiêng liêng",
+        hint: "Câu 33.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Đây là một trong những điều kiện để được rước lễ.",
+        syllables: "7 âm tiết",
+        answer: "ý thức mình không có tội trọng",
+        hint: "Câu 36.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Việc rước lễ giúp gia tăng điều gì?",
+        syllables: "8 âm tiết",
+        answer: "ân sủng và lòng yêu mến tha nhân",
+        hint: "Câu 11.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Bí tích thêm sức giúp ta sống điều gì các mạnh mẽ hơn.",
+        syllables: "5 âm tiết",
+        answer: "ơn Bí tích Rửa Tội",
+        hint: "Câu 7.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    }
 ];
 
 // DOM Elements
@@ -317,7 +482,7 @@ function handleTimeUp() {
 
     // Show feedback
     feedbackContainer.classList.remove('hidden');
-    feedbackMessage.textContent = `Time's up! The correct answer was: ${question.answer} - Giải thích: ${question.hint}`;
+    feedbackMessage.textContent = `Hết giờ rồi! Đáp án là: ${question.answer} - Giải thích: ${question.hint}`;
     feedbackMessage.className = 'feedback-message feedback-incorrect';
 
     // Disable input and check button
