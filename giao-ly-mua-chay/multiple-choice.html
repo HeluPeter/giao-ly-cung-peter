@@ -26,6 +26,70 @@
 </head>
 
 <body>
+    <!-- Navigation Bar -->
+    <nav class="bg-warmBeige shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-amber-700" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                        </path>
+                    </svg>
+                    <a href="../index.html">
+                        <span class="font-lora text-xl font-bold text-amber-800">Học Giáo Lý Cùng Peter</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html"
+                        class="nav-link active font-nunito text-amber-800 hover:text-amber-900">Trang
+                        Chủ</a>
+                    <a href="#quizzes" class="nav-link font-nunito text-amber-800 hover:text-amber-900">Bài Kiểm Tra</a>
+                    <a href="#about" class="nav-link font-nunito text-amber-800 hover:text-amber-900">Giới Thiệu</a>
+                    <a href="#contact" class="nav-link font-nunito text-amber-800 hover:text-amber-900">Liên Hệ</a>
+                    <a href="#"
+                        class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg transition duration-300 ease-in-out">Đăng
+                        Nhập</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-amber-800 hover:text-amber-900 focus:outline-none">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu transform -translate-y-full h-0 overflow-hidden md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-3">
+                    <a href="#"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-amber-800 hover:bg-amber-100">Trang
+                        Chủ</a>
+                    <a href="#quizzes"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-amber-800 hover:bg-amber-100">Bài
+                        Kiểm Tra</a>
+                    <a href="#about"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-amber-800 hover:bg-amber-100">Giới
+                        Thiệu</a>
+                    <a href="#contact"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-amber-800 hover:bg-amber-100">Liên
+                        Hệ</a>
+                    <a href="#" class="block px-3 py-2 bg-amber-600 text-white rounded-md text-base font-medium">Đăng
+                        Nhập</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-8">
             <h1 class="text-4xl font-bold mb-2">Bài Kiểm Tra Trắc Nghiệm</h1>
