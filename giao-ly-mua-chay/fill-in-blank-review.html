@@ -55,7 +55,72 @@
     </style>
 </head>
 
-<body class="min-h-screen">
+<body class="min-h-screen bg-cream">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-warmBeige shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-amber-700" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                        </path>
+                    </svg>
+                    <a href="../index.html">
+                        <span class="font-lora text-xl font-bold text-amber-800">Học Giáo Lý Cùng Peter</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html"
+                        class="nav-link active font-nunito text-amber-800 hover:text-amber-900">Trang
+                        Chủ</a>
+                    <a href="#quizzes" class="nav-link font-nunito text-amber-800 hover:text-amber-900">Bài Kiểm Tra</a>
+                    <a href="#about" class="nav-link font-nunito text-amber-800 hover:text-amber-900">Giới Thiệu</a>
+                    <a href="#contact" class="nav-link font-nunito text-amber-800 hover:text-amber-900">Liên Hệ</a>
+                    <a href="#"
+                        class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg transition duration-300 ease-in-out">Đăng
+                        Nhập</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-amber-800 hover:text-amber-900 focus:outline-none">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu transform -translate-y-full h-0 overflow-hidden md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-3">
+                    <a href="#"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-amber-800 hover:bg-amber-100">Trang
+                        Chủ</a>
+                    <a href="#quizzes"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-amber-800 hover:bg-amber-100">Bài
+                        Kiểm Tra</a>
+                    <a href="#about"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-amber-800 hover:bg-amber-100">Giới
+                        Thiệu</a>
+                    <a href="#contact"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-amber-800 hover:bg-amber-100">Liên
+                        Hệ</a>
+                    <a href="#" class="block px-3 py-2 bg-amber-600 text-white rounded-md text-base font-medium">Đăng
+                        Nhập</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="container mx-auto px-4 py-8 max-w-6xl">
         <!-- Header -->
         <header class="text-center mb-6">
@@ -68,7 +133,7 @@
             <div class="flex flex-col md:flex-row">
                 <!-- Sidebar - Hidden on mobile by default -->
                 <div id="sidebar"
-                    class="w-full md:w-72 lg:w-80 bg-pastelGreenLight p-4 md:border-r border-pastelGreen sidebar-mobile-hidden">
+                    class="w-full md:w-72 lg:w-80 bg-softYellow p-4 md:border-r border-pastelGreen sidebar-mobile-hidden">
                     <div class="flex flex-col h-full">
                         <!-- Sidebar Header -->
                         <div class="text-center mb-6 p-2 bg-white rounded-lg shadow-soft">
@@ -78,7 +143,8 @@
 
                         <!-- Summary Cards -->
                         <div class="flex-grow overflow-y-auto sidebar-scroll mb-6 space-y-4">
-                            <div class="summary-card rounded-lg shadow-soft overflow-hidden" onclick="changeSection(0)">
+                            <a href="multiple-choice.html" target="_blank"
+                                class="block summary-card rounded-lg shadow-soft overflow-hidden hover:shadow-lg transition-shadow duration-200">
                                 <div class="card-icon-container bg-cardGreen">
                                     <div class="quiz-type-icon bg-white text-cardGreen">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
@@ -91,17 +157,18 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="flex justify-between items-center mb-2">
-                                        <h3 class="font-semibold text-gray-800">Giáo Lý Căn Bản</h3>
+                                        <h3 class="font-semibold text-gray-800">Trắc Nghiệm</h3>
                                         <span
                                             class="text-xs font-medium px-2 py-1 bg-green-100 text-green-800 rounded-full">Trắc
                                             nghiệm</span>
                                     </div>
-                                    <p class="card-summary">Ôn tập các kiến thức cơ bản về giáo lý Công Giáo qua các câu
-                                        hỏi trắc nghiệm.</p>
+                                    <p class="card-summary">Đọc câu hỏi và chọn đáp án đúng nhất cơ bản đến phức tạp.
+                                    </p>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="summary-card rounded-lg shadow-soft overflow-hidden" onclick="changeSection(1)">
+                            <a href="fill-in-sentences.html" target="_blank"
+                                class="block summary-card rounded-lg shadow-soft overflow-hidden hover:shadow-lg transition-shadow duration-200">
                                 <div class="card-icon-container bg-cardYellow">
                                     <div class="quiz-type-icon bg-white text-cardYellow">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
@@ -114,17 +181,17 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="flex justify-between items-center mb-2">
-                                        <h3 class="font-semibold text-gray-800">Bí Tích</h3>
+                                        <h3 class="font-semibold text-gray-800">Âm Tiết</h3>
                                         <span
                                             class="text-xs font-medium px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full">Điền
                                             từ</span>
                                     </div>
-                                    <p class="card-summary">Tìm hiểu về 7 Bí tích trong Giáo Hội Công Giáo qua các bài
-                                        tập điền từ.</p>
+                                    <p class="card-summary">Đọc câu hỏi và ghi ra đáp án đúng nhất.</p>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="summary-card rounded-lg shadow-soft overflow-hidden" onclick="changeSection(2)">
+                            <a href="#"
+                                class="block summary-card rounded-lg shadow-soft overflow-hidden hover:shadow-lg transition-shadow duration-200">
                                 <div class="card-icon-container bg-cardBlue">
                                     <div class="quiz-type-icon bg-white text-cardBlue">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
@@ -139,15 +206,16 @@
                                     <div class="flex justify-between items-center mb-2">
                                         <h3 class="font-semibold text-gray-800">Kinh Thánh</h3>
                                         <span
-                                            class="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-800 rounded-full">Điền
-                                            câu</span>
+                                            class="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-800 rounded-full">Coming
+                                            soon</span>
                                     </div>
                                     <p class="card-summary">Ôn tập kiến thức Kinh Thánh qua các bài tập điền câu từ Cựu
                                         Ước và Tân Ước.</p>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="summary-card rounded-lg shadow-soft overflow-hidden">
+                            <a href="#"
+                                class="block summary-card rounded-lg shadow-soft overflow-hidden hover:shadow-lg transition-shadow duration-200">
                                 <div class="card-icon-container bg-cardPink">
                                     <div class="quiz-type-icon bg-white text-cardPink">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
@@ -162,15 +230,16 @@
                                     <div class="flex justify-between items-center mb-2">
                                         <h3 class="font-semibold text-gray-800">Lịch Sử Giáo Hội</h3>
                                         <span
-                                            class="text-xs font-medium px-2 py-1 bg-pink-100 text-pink-800 rounded-full">Ghép
-                                            đôi</span>
+                                            class="text-xs font-medium px-2 py-1 bg-pink-100 text-pink-800 rounded-full">Coming
+                                            soon</span>
                                     </div>
-                                    <p class="card-summary">Tìm hiểu về lịch sử Giáo Hội qua các bài tập ghép đôi sự
+                                    <p class="card-summary">Tìm hiểu về lịch sử Giáo Hội qua các sự
                                         kiện và thời gian.</p>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="summary-card rounded-lg shadow-soft overflow-hidden">
+                            <!-- <a href="#"
+                                class="block summary-card rounded-lg shadow-soft overflow-hidden hover:shadow-lg transition-shadow duration-200">
                                 <div class="card-icon-container bg-cardAmber">
                                     <div class="quiz-type-icon bg-white text-cardAmber">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
@@ -185,13 +254,13 @@
                                     <div class="flex justify-between items-center mb-2">
                                         <h3 class="font-semibold text-gray-800">Luân Lý</h3>
                                         <span
-                                            class="text-xs font-medium px-2 py-1 bg-amber-100 text-amber-800 rounded-full">Câu
-                                            hỏi mở</span>
+                                            class="text-xs font-medium px-2 py-1 bg-amber-100 text-amber-800 rounded-full">Coming
+                                            soon</span>
                                     </div>
                                     <p class="card-summary">Ôn tập kiến thức về luân lý Công Giáo qua các câu hỏi mở và
                                         tình huống thực tế.</p>
                                 </div>
-                            </div>
+                            </a> -->
                         </div>
 
                         <!-- Countdown Timer -->
@@ -225,15 +294,15 @@
                     <div class="max-w-3xl mx-auto">
                         <!-- Section Selector and Guide Button in same row -->
                         <div class="flex flex-wrap items-center mb-4 gap-2">
-                            <div class="w-full md:w-3/4 flex items-center gap-3">
+                            <div class="w-full flex items-center gap-3">
                                 <div class="flex-grow">
                                     <label for="sectionSelector" class="block text-gray-600 mb-2 font-medium">Chọn phần
                                         ôn tập:</label>
                                     <select id="sectionSelector"
                                         class="w-full py-3 px-4 rounded-lg bg-white border border-pastelGreen focus:outline-none focus:border-pastelGreenDark appearance-none pr-10">
-                                        <option value="0">Phần 1: Phụng Vụ</option>
-                                        <option value="1">Phần 2: Bí Tích</option>
-                                        <option value="2">Phần 3: Giáo Hội</option>
+                                        <option value="0">PHẦN I: GIÁO LÝ HỘI THÁNH CÔNG GIÁO</option>
+                                        <option value="1">PHẦN II: NĂM MỤC VỤ 2025</option>
+                                        <option value="2">PHẦN III: NĂM THÁNH 2025</option>
                                     </select>
                                 </div>
                                 <div class="mt-8">
@@ -311,12 +380,10 @@
                             </div>
 
                             <div id="questionContent" class="">
-                                <h2 id="questionText" class="text-xl md:text-2xl font-semibold mb-6 leading-relaxed">1.
+                                <h2 id="questionText" class="text-xl font-semibold mb-6 leading-relaxed">1.
                                     H. Phụng vụ là gì?</h2>
 
                                 <div class="mb-6">
-                                    <label for="answerInput" class="block text-gray-600 mb-2">Câu trả lời của
-                                        bạn:</label>
                                     <textarea id="answerInput" rows="4"
                                         class="input-field w-full p-3 border border-gray-200 rounded-lg focus:outline-none"
                                         placeholder="Nhập câu trả lời của bạn tại đây..."></textarea>
@@ -480,443 +547,8 @@
             </button>
         </div>
     </div>
-
-    <script>
-        // Question sets for different sections
-        const questionSets = [
-            // Section 1: Phụng Vụ
-            [
-                {
-                    question: "1. H. Phụng vụ là gì?",
-                    tips: "Thưa. Phụng vụ ______ ______ nhiệm ______.",
-                    correctAnswers: "Thưa. Phụng vụ là việc Hội Thánh chính thức cử hành mầu nhiệm Đức Kitô, để thờ phượng Thiên Chúa và thánh hóa con người."
-                },
-                {
-                    question: "2. H. Phụng vụ có vị trí nào trong đời sống Hội Thánh?",
-                    tips: "Phụng vụ là ______ và là ______ của đời sống Hội Thánh.",
-                    correctAnswers: "Phụng vụ là nguồn mạch và là chóp đỉnh của đời sống Hội Thánh."
-                },
-                {
-                    question: "3. H. Phụng vụ diễn tả điều gì?",
-                    tips: "Phụng vụ diễn tả ______ của Hội Thánh và ______ của các tín hữu.",
-                    correctAnswers: "Phụng vụ diễn tả đức tin của Hội Thánh và nuôi dưỡng đức tin của các tín hữu."
-                },
-                {
-                    question: "4. H. Phụng vụ có những yếu tố nào?",
-                    tips: "Phụng vụ có những yếu tố ______ và những yếu tố ______.",
-                    correctAnswers: "Phụng vụ có những yếu tố bất biến và những yếu tố khả biến."
-                },
-                {
-                    question: "5. H. Ai có quyền điều chỉnh Phụng vụ?",
-                    tips: "Chỉ có ______ hoặc ______ mới có quyền điều chỉnh Phụng vụ.",
-                    correctAnswers: "Chỉ có Tòa Thánh hoặc Giám mục đoàn mới có quyền điều chỉnh Phụng vụ."
-                }
-            ],
-            // Section 2: Bí Tích
-            [
-                {
-                    question: "1. H. Bí tích là gì?",
-                    tips: "Bí tích là ______ hữu hình do ______ thiết lập để ______.",
-                    correctAnswers: "Bí tích là dấu chỉ hữu hình do Đức Kitô thiết lập để thông ban ơn cứu độ."
-                },
-                {
-                    question: "2. H. Có mấy Bí tích và là những Bí tích nào?",
-                    tips: "Có ______ Bí tích là: ______.",
-                    correctAnswers: "Có bảy Bí tích là: Rửa tội, Thêm sức, Thánh Thể, Hòa giải, Xức dầu bệnh nhân, Truyền chức thánh và Hôn phối."
-                },
-                {
-                    question: "3. H. Bí tích Thánh Thể là gì?",
-                    tips: "Bí tích Thánh Thể là ______ và ______ Đức Giêsu Kitô.",
-                    correctAnswers: "Bí tích Thánh Thể là Mình và Máu Đức Giêsu Kitô, cùng với Linh hồn và Thiên tính của Người, nghĩa là toàn thể Đức Kitô, thực sự có trong hình bánh và hình rượu đã được truyền phép."
-                },
-                {
-                    question: "4. H. Bí tích Hòa giải có những hiệu quả nào?",
-                    tips: "Bí tích Hòa giải ______ tội lỗi, ______ với Thiên Chúa và ______.",
-                    correctAnswers: "Bí tích Hòa giải tha thứ tội lỗi, hòa giải với Thiên Chúa và Hội Thánh, đồng thời ban lại ân sủng đã mất vì tội trọng."
-                },
-                {
-                    question: "5. H. Ai có thể lãnh nhận Bí tích Truyền chức thánh?",
-                    tips: "Chỉ có ______ đã chịu phép ______ mới có thể lãnh nhận Bí tích Truyền chức thánh.",
-                    correctAnswers: "Chỉ có nam giới đã chịu phép Rửa tội mới có thể lãnh nhận Bí tích Truyền chức thánh."
-                }
-            ],
-            // Section 3: Giáo Hội
-            [
-                {
-                    question: "1. H. Giáo Hội là gì?",
-                    tips: "Giáo Hội là ______ Dân Thiên Chúa, ______ Đức Kitô và ______ Chúa Thánh Thần.",
-                    correctAnswers: "Giáo Hội là cộng đoàn Dân Thiên Chúa, Thân Thể Đức Kitô và Đền Thờ Chúa Thánh Thần."
-                },
-                {
-                    question: "2. H. Giáo Hội có những đặc tính nào?",
-                    tips: "Giáo Hội có bốn đặc tính là: ______, ______, ______ và ______.",
-                    correctAnswers: "Giáo Hội có bốn đặc tính là: duy nhất, thánh thiện, công giáo và tông truyền."
-                },
-                {
-                    question: "3. H. Ai là người đứng đầu Giáo Hội?",
-                    tips: "______ là Đấng đứng đầu Giáo Hội, và ______ là đại diện của Người trên trần gian.",
-                    correctAnswers: "Đức Giêsu Kitô là Đấng đứng đầu Giáo Hội, và Đức Giáo Hoàng là đại diện của Người trên trần gian."
-                },
-                {
-                    question: "4. H. Sứ mạng của Giáo Hội là gì?",
-                    tips: "Sứ mạng của Giáo Hội là ______, ______ và ______.",
-                    correctAnswers: "Sứ mạng của Giáo Hội là loan báo Tin Mừng, cử hành các Bí tích và phục vụ trong đức ái."
-                },
-                {
-                    question: "5. H. Giáo dân có vai trò gì trong Giáo Hội?",
-                    tips: "Giáo dân được mời gọi ______ trong đời sống ______ và ______.",
-                    correctAnswers: "Giáo dân được mời gọi thánh hóa thế giới trong đời sống gia đình và xã hội, làm chứng cho Đức Kitô bằng đời sống và lời nói."
-                }
-            ]
-        ];
-
-        // Main application state
-        let currentSection = 0;
-        let questions = questionSets[currentSection];
-        let currentQuestionIndex = 0;
-        let attemptCount = 0;
-        const maxAttempts = 2;
-        let sidebarVisible = false;
-
-        // DOM Elements
-        const loadingState = document.getElementById('loadingState');
-        const questionContent = document.getElementById('questionContent');
-        const questionText = document.getElementById('questionText');
-        const answerInput = document.getElementById('answerInput');
-        const checkButton = document.getElementById('checkButton');
-        const showAnswerButton = document.getElementById('showAnswerButton');
-        const nextButton = document.getElementById('nextButton');
-        const prevButton = document.getElementById('prevButton');
-        const feedbackArea = document.getElementById('feedbackArea');
-        const correctFeedback = document.getElementById('correctFeedback');
-        const incorrectFeedback = document.getElementById('incorrectFeedback');
-        const tipText = document.getElementById('tipText');
-        const correctAnswerText = document.getElementById('correctAnswerText');
-        const questionCounter = document.getElementById('questionCounter');
-        const progressBar = document.getElementById('progressBar');
-        const randomButton = document.getElementById('randomButton');
-        const searchInput = document.getElementById('searchInput');
-        const searchButton = document.getElementById('searchButton');
-        const searchResults = document.getElementById('searchResults');
-        const resultsContainer = document.getElementById('resultsContainer');
-        const backToQuizButton = document.getElementById('backToQuizButton');
-        const quizCard = document.getElementById('quizCard');
-        const rulesButton = document.getElementById('rulesButton');
-        const rulesModal = document.getElementById('rulesModal');
-        const closeRulesButton = document.getElementById('closeRulesButton');
-        const closeRulesButtonBottom = document.getElementById('closeRulesButtonBottom');
-        const sectionSelector = document.getElementById('sectionSelector');
-        const errorMessageArea = document.getElementById('errorMessageArea');
-        const errorMessage = document.getElementById('errorMessage');
-        const sidebar = document.getElementById('sidebar');
-        const toggleSidebar = document.getElementById('toggleSidebar');
-
-        // Initialize the quiz
-        function initQuiz() {
-            // Update UI
-            loadingState.classList.add('hidden');
-            questionContent.classList.remove('hidden');
-            updateProgressBar();
-            displayQuestion(0);
-
-            // Start countdown
-            startCountdown();
-        }
-
-        // Display a question by index
-        function displayQuestion(index) {
-            if (index < 0 || index >= questions.length) return;
-
-            currentQuestionIndex = index;
-            const question = questions[index];
-
-            // Reset state
-            answerInput.value = '';
-            feedbackArea.classList.add('hidden');
-            correctFeedback.classList.add('hidden');
-            incorrectFeedback.classList.add('hidden');
-            showAnswerButton.classList.add('hidden'); // Hide show answer button on new question
-            hideErrorMessage(); // Hide any error messages
-            attemptCount = 0;
-
-            // Update UI
-            questionText.textContent = question.question;
-            questionCounter.textContent = `Câu hỏi ${index + 1} / ${questions.length}`;
-            updateProgressBar();
-
-            // Update navigation button states
-            prevButton.disabled = index === 0;
-            prevButton.classList.toggle('opacity-50', index === 0);
-            prevButton.classList.toggle('cursor-not-allowed', index === 0);
-
-            // Add fade-in animation
-            questionText.classList.add('fade-in');
-            setTimeout(() => questionText.classList.remove('fade-in'), 500);
-        }
-
-        // Update progress bar
-        function updateProgressBar() {
-            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
-            progressBar.style.width = `${progress}%`;
-        }
-
-        // Normalize text for comparison
-        function normalizeText(text) {
-            return text
-                .toLowerCase()
-                .replace(/[.,;:'"?!/()[\]{}]/g, '')
-                .replace(/\s+/g, ' ')
-                .trim();
-        }
-
-        // Show error message
-        function showErrorMessage(message) {
-            errorMessage.textContent = message;
-            errorMessageArea.classList.remove('hidden');
-        }
-
-        // Hide error message
-        function hideErrorMessage() {
-            errorMessageArea.classList.add('hidden');
-        }
-
-        // Check if the answer is correct
-        function checkAnswer() {
-            const userAnswer = answerInput.value;
-            const currentQuestion = questions[currentQuestionIndex];
-
-            if (!userAnswer.trim()) {
-                showErrorMessage('Vui lòng nhập câu trả lời trước khi kiểm tra.');
-                return;
-            }
-
-            // Hide error message if it was shown
-            hideErrorMessage();
-
-            attemptCount++;
-
-            const normalizedUserAnswer = normalizeText(userAnswer);
-            const normalizedCorrectAnswer = normalizeText(currentQuestion.correctAnswers);
-
-            feedbackArea.classList.remove('hidden');
-
-            // Show the "Show Answer" button after checking
-            showAnswerButton.classList.remove('hidden');
-            showAnswerButton.classList.add('button-appear');
-
-            if (normalizedUserAnswer === normalizedCorrectAnswer) {
-                // Correct answer
-                correctFeedback.classList.remove('hidden');
-                incorrectFeedback.classList.add('hidden');
-                correctAnswerText.textContent = currentQuestion.correctAnswers;
-            } else {
-                // Incorrect answer
-                incorrectFeedback.classList.remove('hidden');
-                correctFeedback.classList.add('hidden');
-                tipText.textContent = currentQuestion.tips;
-
-                if (attemptCount >= maxAttempts) {
-                    tipText.innerHTML = `${currentQuestion.tips}<br><br><strong>Đáp án đúng:</strong> ${currentQuestion.correctAnswers}`;
-                }
-            }
-        }
-
-        // Show the correct answer
-        function showAnswer() {
-            const currentQuestion = questions[currentQuestionIndex];
-            feedbackArea.classList.remove('hidden');
-            correctFeedback.classList.remove('hidden');
-            incorrectFeedback.classList.add('hidden');
-            correctAnswerText.textContent = currentQuestion.correctAnswers;
-        }
-
-        // Go to next question
-        function nextQuestion() {
-            if (currentQuestionIndex < questions.length - 1) {
-                displayQuestion(currentQuestionIndex + 1);
-            } else {
-                // Reached the end, loop back to first question
-                displayQuestion(0);
-            }
-        }
-
-        // Go to previous question
-        function prevQuestion() {
-            if (currentQuestionIndex > 0) {
-                displayQuestion(currentQuestionIndex - 1);
-            }
-        }
-
-        // Go to a random question
-        function goToRandomQuestion() {
-            const randomIndex = Math.floor(Math.random() * questions.length);
-            displayQuestion(randomIndex);
-        }
-
-        // Search questions
-        function searchQuestions() {
-            const searchTerm = normalizeText(searchInput.value);
-
-            if (!searchTerm) {
-                showErrorMessage('Vui lòng nhập từ khóa tìm kiếm.');
-                return;
-            }
-
-            // Hide error message if it was shown
-            hideErrorMessage();
-
-            const results = questions.filter(q =>
-                normalizeText(q.question).includes(searchTerm) ||
-                normalizeText(q.correctAnswers).includes(searchTerm)
-            );
-
-            // Show search results
-            questionContent.classList.add('hidden');
-            searchResults.classList.remove('hidden');
-
-            // Clear previous results
-            resultsContainer.innerHTML = '';
-
-            if (results.length === 0) {
-                resultsContainer.innerHTML = '<p class="text-gray-600">Không tìm thấy kết quả.</p>';
-            } else {
-                results.forEach((result, index) => {
-                    const resultItem = document.createElement('div');
-                    resultItem.className = 'p-4 bg-pastelGreenLight rounded-lg cursor-pointer hover:bg-pastelGreen transition-colors';
-                    resultItem.innerHTML = `<p class="font-medium">${result.question}</p>`;
-                    resultItem.addEventListener('click', () => {
-                        const questionIndex = questions.findIndex(q => q.question === result.question);
-                        if (questionIndex !== -1) {
-                            searchResults.classList.add('hidden');
-                            questionContent.classList.remove('hidden');
-                            displayQuestion(questionIndex);
-                        }
-                    });
-                    resultsContainer.appendChild(resultItem);
-                });
-            }
-        }
-
-        // Return to quiz from search results
-        function backToQuiz() {
-            searchResults.classList.add('hidden');
-            questionContent.classList.remove('hidden');
-        }
-
-        // Show rules modal
-        function showRulesModal() {
-            rulesModal.classList.remove('hidden');
-            rulesModal.classList.add('fade-in');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-        }
-
-        // Hide rules modal
-        function hideRulesModal() {
-            rulesModal.classList.add('hidden');
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-
-        // Change question section
-        function changeSection(sectionIndex) {
-            currentSection = sectionIndex;
-            questions = questionSets[sectionIndex];
-            currentQuestionIndex = 0;
-            sectionSelector.value = sectionIndex;
-            displayQuestion(0);
-        }
-
-        // Toggle sidebar visibility on mobile
-        function toggleSidebarVisibility() {
-            sidebarVisible = !sidebarVisible;
-            if (sidebarVisible) {
-                sidebar.classList.remove('sidebar-mobile-hidden');
-            } else {
-                sidebar.classList.add('sidebar-mobile-hidden');
-            }
-        }
-
-        // Start countdown timer
-        function startCountdown() {
-            const examDate = new Date('May 25, 2025 00:00:00').getTime();
-
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = examDate - now;
-
-                // Time calculations
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the result
-                document.getElementById('days').textContent = days.toString().padStart(2, '0');
-                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-
-                // If the countdown is finished, display a message
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById('countdown').innerHTML = "<p class='text-red-600 font-bold'>KỲ THI ĐÃ BẮT ĐẦU!</p>";
-                }
-            }
-
-            // Update the countdown every 1 second
-            updateCountdown();
-            const x = setInterval(updateCountdown, 1000);
-        }
-
-        // Event Listeners
-        checkButton.addEventListener('click', checkAnswer);
-        showAnswerButton.addEventListener('click', showAnswer);
-        nextButton.addEventListener('click', nextQuestion);
-        prevButton.addEventListener('click', prevQuestion);
-        randomButton.addEventListener('click', goToRandomQuestion);
-        searchButton.addEventListener('click', searchQuestions);
-        backToQuizButton.addEventListener('click', backToQuiz);
-        rulesButton.addEventListener('click', showRulesModal);
-        closeRulesButton.addEventListener('click', hideRulesModal);
-        closeRulesButtonBottom.addEventListener('click', hideRulesModal);
-        toggleSidebar.addEventListener('click', toggleSidebarVisibility);
-
-        // Section selector listener
-        sectionSelector.addEventListener('change', function () {
-            changeSection(parseInt(this.value));
-        });
-
-        // Close modals when clicking outside
-        rulesModal.addEventListener('click', (e) => {
-            if (e.target === rulesModal) {
-                hideRulesModal();
-            }
-        });
-
-        // Allow pressing Enter in search input
-        searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                searchQuestions();
-            }
-        });
-
-        // Allow pressing Enter in answer input
-        answerInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' && e.ctrlKey) {
-                checkAnswer();
-            }
-        });
-
-        // Start the quiz
-        initQuiz();
-    </script>
-    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9374f50af2b384e5',t:'MTc0NTgyNjUwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
-    <iframe height="1" width="1"
-        style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
-    <div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb">
-        <div id="shadow-host-companion"></div>
-    </div>
-</body><ddict-div style="visibility: visible !important;"></ddict-div><youtube-dubbing-text-voice
-    data-wxt-shadow-root=""
-    style="display: none; position: fixed; right: 0px; top: calc(60% - 50px); transform: translateY(-50%); z-index: 9999;"></youtube-dubbing-text-voice>
+    <script src="../js/fill-in-blank-review.js"></script>
+</body>
+</body>
 
 </html>

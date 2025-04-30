@@ -2,12 +2,16 @@
 body {
     font-family: 'Nunito', sans-serif;
     background-color: #E8F3E8;
-    background-image: radial-gradient(#D4E6D4 1px, transparent 1px);
+    /* background-image: radial-gradient(#D4E6D4 1px, transparent 1px); */
     background-size: 20px 20px;
 }
 
 .quiz-card {
     transition: all 0.3s ease;
+}
+.bg-softYellow {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 236 199 / var(--tw-bg-opacity, 1));
 }
 
 .quiz-card:hover {
@@ -20,8 +24,13 @@ button {
 }
 
 button:hover {
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bg-cream {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 248 225 / var(--tw-bg-opacity, 1))
 }
 
 .input-field {
