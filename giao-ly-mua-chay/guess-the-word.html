@@ -1,0 +1,204 @@
+<html lang="en">
+<script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js"
+    id="eppiocemhmnlbhjplcgkofciiegomcon"></script>
+<script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script>
+<script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script bis_use="true" type="text/javascript" charset="utf-8"
+        data-bis-config="[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;]"
+        src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/traffic.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/guess-the-word.css">
+    <style type="text/css">
+        @font-face {
+            font-family: 'Atlassian Sans';
+            font-style: normal;
+            font-weight: 400 653;
+            font-display: swap;
+            src:
+                local('AtlassianSans'),
+                local('Atlassian Sans Text'),
+                url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/AtlassianSans-latin.woff2') format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+                U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen" __processed_0bf9dcc5-9c3c-4cd9-b68d-2f5dca5cdd41__="true"
+    bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJMSU5LRURJTiI6ImVuYWJsZWQiLCJDT05GSUciOiJkaXNhYmxlZCJ9LCJ2ZXJzaW9uIjoiMi4wLjIyIiwic2NvcmUiOjIwMDIyMH1d">
+    <div class="container mx-auto px-4 py-8 max-w-5xl" bis_skin_checked="1">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-indigo-600 mb-2">Vocabulary Builder</h1>
+            <p class="text-gray-600">Expand your vocabulary one lesson at a time</p>
+        </header>
+
+        <!-- Lessons View -->
+        <div id="lessons-view" class="view visible-view" bis_skin_checked="1">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Select a Lesson</h2>
+            <div id="lessons-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                bis_skin_checked="1">
+                <div class="card bg-blue-100 border-blue-300 border-2 rounded-xl p-6 cursor-pointer shadow-sm hover:shadow-md"
+                    bis_skin_checked="1">
+                    <div class="flex items-center justify-between mb-2" bis_skin_checked="1">
+                        <span class="text-4xl">1️⃣</span>
+                        <span
+                            class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm text-blue-700 font-medium">Lesson
+                            1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-700">Lesson 1: Animals</h3>
+                    <p class="text-gray-600 mt-2">3 sets</p>
+                </div>
+                <div class="card bg-green-100 border-green-300 border-2 rounded-xl p-6 cursor-pointer shadow-sm hover:shadow-md"
+                    bis_skin_checked="1">
+                    <div class="flex items-center justify-between mb-2" bis_skin_checked="1">
+                        <span class="text-4xl">2️⃣</span>
+                        <span
+                            class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm text-green-700 font-medium">Lesson
+                            2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-green-700">Lesson 2: Food</h3>
+                    <p class="text-gray-600 mt-2">3 sets</p>
+                </div>
+                <div class="card bg-purple-100 border-purple-300 border-2 rounded-xl p-6 cursor-pointer shadow-sm hover:shadow-md"
+                    bis_skin_checked="1">
+                    <div class="flex items-center justify-between mb-2" bis_skin_checked="1">
+                        <span class="text-4xl">3️⃣</span>
+                        <span
+                            class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm text-purple-700 font-medium">Lesson
+                            3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-purple-700">Lesson 3: Travel</h3>
+                    <p class="text-gray-600 mt-2">3 sets</p>
+                </div>
+                <div class="card bg-red-100 border-red-300 border-2 rounded-xl p-6 cursor-pointer shadow-sm hover:shadow-md"
+                    bis_skin_checked="1">
+                    <div class="flex items-center justify-between mb-2" bis_skin_checked="1">
+                        <span class="text-4xl">4️⃣</span>
+                        <span
+                            class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm text-red-700 font-medium">Lesson
+                            4</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-red-700">Lesson 4: Professions</h3>
+                    <p class="text-gray-600 mt-2">3 sets</p>
+                </div>
+                <div class="card bg-indigo-100 border-indigo-300 border-2 rounded-xl p-6 cursor-pointer shadow-sm hover:shadow-md"
+                    bis_skin_checked="1">
+                    <div class="flex items-center justify-between mb-2" bis_skin_checked="1">
+                        <span class="text-4xl">5️⃣</span>
+                        <span
+                            class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm text-indigo-700 font-medium">Lesson
+                            5</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-indigo-700">Lesson 5: Technology</h3>
+                    <p class="text-gray-600 mt-2">3 sets</p>
+                </div>
+                <div class="card bg-yellow-100 border-yellow-300 border-2 rounded-xl p-6 cursor-pointer shadow-sm hover:shadow-md"
+                    bis_skin_checked="1">
+                    <div class="flex items-center justify-between mb-2" bis_skin_checked="1">
+                        <span class="text-4xl">6️⃣</span>
+                        <span
+                            class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm text-yellow-700 font-medium">Lesson
+                            6</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-yellow-700">Lesson 6: Nature</h3>
+                    <p class="text-gray-600 mt-2">3 sets</p>
+                </div>
+                <div class="card bg-orange-100 border-orange-300 border-2 rounded-xl p-6 cursor-pointer shadow-sm hover:shadow-md"
+                    bis_skin_checked="1">
+                    <div class="flex items-center justify-between mb-2" bis_skin_checked="1">
+                        <span class="text-4xl">7️⃣</span>
+                        <span
+                            class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm text-orange-700 font-medium">Lesson
+                            7</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-orange-700">Lesson 7: Sports</h3>
+                    <p class="text-gray-600 mt-2">3 sets</p>
+                </div>
+                <div class="card bg-pink-100 border-pink-300 border-2 rounded-xl p-6 cursor-pointer shadow-sm hover:shadow-md"
+                    bis_skin_checked="1">
+                    <div class="flex items-center justify-between mb-2" bis_skin_checked="1">
+                        <span class="text-4xl">8️⃣</span>
+                        <span
+                            class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm text-pink-700 font-medium">Lesson
+                            8</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-pink-700">Lesson 8: Music</h3>
+                    <p class="text-gray-600 mt-2">3 sets</p>
+                </div>
+                <div class="card bg-teal-100 border-teal-300 border-2 rounded-xl p-6 cursor-pointer shadow-sm hover:shadow-md"
+                    bis_skin_checked="1">
+                    <div class="flex items-center justify-between mb-2" bis_skin_checked="1">
+                        <span class="text-4xl">9️⃣</span>
+                        <span
+                            class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm text-teal-700 font-medium">Lesson
+                            9</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-teal-700">Lesson 9: Space</h3>
+                    <p class="text-gray-600 mt-2">3 sets</p>
+                </div>
+                <div class="card bg-amber-100 border-amber-300 border-2 rounded-xl p-6 cursor-pointer shadow-sm hover:shadow-md"
+                    bis_skin_checked="1">
+                    <div class="flex items-center justify-between mb-2" bis_skin_checked="1">
+                        <span class="text-4xl">🔟</span>
+                        <span
+                            class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm text-amber-700 font-medium">Lesson
+                            10</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-amber-700">Lesson 10: Art</h3>
+                    <p class="text-gray-600 mt-2">3 sets</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sets View -->
+        <div id="sets-view" class="view hidden-view" bis_skin_checked="1">
+            <div class="flex items-center mb-6" bis_skin_checked="1">
+                <button id="back-to-lessons" class="back-button flex items-center text-indigo-600 font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    Back to Lessons
+                </button>
+            </div>
+            <h2 id="lesson-title" class="text-2xl font-semibold text-gray-800 mb-6">Lesson Sets</h2>
+            <div id="sets-container" class="grid grid-cols-1 md:grid-cols-3 gap-4" bis_skin_checked="1">
+                <!-- Sets will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Words View -->
+        <div id="words-view" class="view hidden-view" bis_skin_checked="1">
+            <div class="flex items-center mb-6" bis_skin_checked="1">
+                <button id="back-to-sets" class="back-button flex items-center text-indigo-600 font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    Back to Sets
+                </button>
+            </div>
+            <h2 id="set-title" class="text-2xl font-semibold text-gray-800 mb-2">Words</h2>
+            <p id="set-description" class="text-gray-600 mb-6">Learn these vocabulary words</p>
+            <div id="words-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"
+                bis_skin_checked="1">
+                <!-- Words will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/guess-the-word.js"></script>
+</body>
+
+</html>
