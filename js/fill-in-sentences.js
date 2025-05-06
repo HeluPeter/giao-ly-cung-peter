@@ -18,7 +18,7 @@ const quizQuestions = [
     {
         question: "Năm phụng vụ là gì?",
         syllables: "12 âm tiết",
-        answer: "thời gian Hội Thánh cử hành các mầu nhiệm Đức Kitô",
+        answer: "thời gian Hội Thánh cử hành các mầu nhiệm Đức Ki-tô",
         hint: "Câu 8.",
         attempts: 0,
         completed: false,
@@ -117,7 +117,7 @@ const quizQuestions = [
     {
         question: "Bí tích Rửa Tội ban cho chúng ta ơn này.",
         syllables: "10 âm tiết",
-        answer: "được tháp nhập vào Đức Kitô và Hội Thánh",
+        answer: "được tháp nhập vào Đức Ki-tô và Hội Thánh",
         hint: "Câu 11.",
         attempts: 0,
         completed: false,
