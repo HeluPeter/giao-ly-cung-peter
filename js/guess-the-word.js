@@ -312,7 +312,7 @@ const vocabularyData = {
         },
         {
             id: 3,
-            title: "Lesson 3: Travel",
+            title: "Bài 3: Các bí tích",
             color: "bg-purple-100",
             borderColor: "border-purple-300",
             textColor: "text-purple-700",
@@ -320,63 +320,99 @@ const vocabularyData = {
             sets: [
                 {
                     id: 1,
-                    title: "Set 1: Transportation",
-                    color: "bg-purple-50",
-                    borderColor: "border-purple-200",
+                    title: "Gói 1",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Airplane" },
-                        { word: "Train" },
-                        { word: "Car" },
-                        { word: "Bus" },
-                        { word: "Bicycle" },
-                        { word: "Ship" },
-                        { word: "Subway" },
-                        { word: "Taxi" },
-                        { word: "Helicopter" },
-                        { word: "Motorcycle" }
+                        { word: "Ân sủng bên trong" },
+                        { word: "Sự sống thần linh" },
+                        { word: "Chúa Giê su đã lập" },
+                        { word: "Các bí tích này tái sinh, củng cố và nuôi dưỡng" },
+                        { word: "Bí tích Thống Hối và Xức Dầu Bệnh Nhân" },
+                        { word: "Chính Đức Kitô hoạt động và thông ban ân sủng" },
+                        { word: "Các bí tích của Hội Thánh được phân thành ba loại" },
+                        { word: "Đức Kitô hoạt động và thông ban ân sủng trong các bí tích" },
+                        { word: "Các bí tích cho chúng ta tham dự trước vào đời sống vĩnh cửu" },
+                        { word: "Các bí tích trao ban ân sủng của Chúa Thánh Thần" }
                     ]
                 },
                 {
                     id: 2,
-                    title: "Set 2: Destinations",
-                    color: "bg-purple-50",
-                    borderColor: "border-purple-200",
+                    title: "Gói 2",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Beach" },
-                        { word: "Mountain" },
-                        { word: "City" },
-                        { word: "Forest" },
-                        { word: "Island" },
-                        { word: "Desert" },
-                        { word: "Lake" },
-                        { word: "Waterfall" },
-                        { word: "Volcano" },
-                        { word: "Canyon" }
+                        { word: "Các bí tích khai tâm" },
+                        { word: "Các bí tích chữa lành" },
+                        { word: "Bí tích Thêm Sức" },
+                        { word: "Đức Kitô ngự đến trong vinh quang" },
+                        { word: "Các bí tích này phục hồi và củng cố đời sống mới" },
+                        { word: "Đem lại ân sủng riêng cho mỗi sứ vụ đặc biệt trong Hội Thánh" },
+                        { word: "Các bí tích phục vụ gồm Bí tích Truyền Chức Thánh và Hôn Phối" },
+                        { word: "Các bí tích này chỉ được lãnh một lần mà thôi" },
+                        { word: "Vì các bí tích trao ban ân sủng của Chúa Thánh Thần" },
+                        { word: "Vì khi lãnh nhận bí tích, chúng ta phải có đức tin" }
                     ]
                 },
                 {
                     id: 3,
-                    title: "Set 3: Travel Items",
-                    color: "bg-purple-50",
-                    borderColor: "border-purple-200",
+                    title: "Gói 3",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Passport" },
-                        { word: "Suitcase" },
-                        { word: "Map" },
-                        { word: "Camera" },
-                        { word: "Sunscreen" },
-                        { word: "Backpack" },
-                        { word: "Ticket" },
-                        { word: "Guidebook" },
-                        { word: "Sunglasses" },
-                        { word: "Wallet" }
+                        { word: "Bí tích Rửa Tội" },
+                        { word: "Bí tích Truyền Chức Thánh" },
+                        { word: "Các bí tích phục vụ" },
+                        { word: "Các bí tích này tái sinh, củng cố và nuôi dưỡng các tín hữu" },
+                        { word: "Chính Đức Kitô hoạt động và thông ban ân sủng trong các bí tích" },
+                        { word: "Các bí tích này phục hồi và củng cố đời sống mới của các tín hữu" },
+                        { word: "Bí tích Thống Hối và Xức Dầu Bệnh Nhân" },
+                        { word: "Ấn tín bí tích là dấu ấn thiêng liêng" },
+                        { word: "Các bí tích chữa lành phục hồi và củng cố" },
+                        { word: "Các bí tích cho chúng ta tham dự trước vào đời sống vĩnh cửu" }
                     ]
-                }
+                },
+                {
+                    id: 4,
+                    title: "Gói 4",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "Ấn tín bí tích" },
+                        { word: "Các bí tích khai tâm Kitô giáo" },
+                        { word: "Các bí tích chữa lành" },
+                        { word: "Các bí tích phục vụ" },
+                        { word: "Các bí tích của Hội Thánh được phân thành ba loại" },
+                        { word: "Các bí tích giúp chúng ta sống đời sống vĩnh cửu" },
+                        { word: "Thiên Chúa in vào lòng những người lãnh Bí tích" },
+                        { word: "Đức Kitô ngự đến trong vinh quang" },
+                        { word: "Các bí tích trao ban ân sủng của Chúa Thánh Thần" },
+                        { word: "Các bí tích này phục hồi và củng cố đời sống mới" }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "Gói 5",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "Các bí tích" },
+                        { word: "Bí tích Hôn Phối" },
+                        { word: "Các bí tích này tái sinh" },
+                        { word: "Là dấu chỉ bên ngoài" },
+                        { word: "Chính Đức Kitô hoạt động trong phụng vụ" },
+                        { word: "Các bí tích phục vụ gồm Bí tích Truyền Chức Thánh và Hôn Phối" },
+                        { word: "Là sự sống thần linh" },
+                        { word: "Được phân thành ba loại này" },
+                        { word: "Các bí tích của Hội Thánh được phân thành ba loại" },
+                        { word: "Các bí tích giúp chúng ta sống đời sống vĩnh cửu" }
+                    ]
+                }                
             ]
         },
         {
             id: 4,
-            title: "Lesson 4: Professions",
+            title: "Bài 4: Bí tích Rửa Tội",
             color: "bg-red-100",
             borderColor: "border-red-300",
             textColor: "text-red-700",
@@ -384,63 +420,63 @@ const vocabularyData = {
             sets: [
                 {
                     id: 1,
-                    title: "Set 1: Healthcare",
-                    color: "bg-red-50",
-                    borderColor: "border-red-200",
+                    title: "Gói 1",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Doctor" },
-                        { word: "Nurse" },
-                        { word: "Surgeon" },
-                        { word: "Pharmacist" },
-                        { word: "Dentist" },
-                        { word: "Therapist" },
-                        { word: "Veterinarian" },
-                        { word: "Paramedic" },
-                        { word: "Psychologist" },
-                        { word: "Nutritionist" }
+                        { word: "Bí Tích Rửa Tội" },
+                        { word: "Được sinh lại trong đời sống mới" },
+                        { word: "Chúa Giê su đã lập" },
+                        { word: "Dìm xuống nước hay đổ nước trên đầu" },
+                        { word: "Là bí tích Chúa Giê su đã lập, để làm cho chúng ta được sinh lại" },
+                        { word: "Nghi thức chính yếu của Bí Tích Rửa Tội" },
+                        { word: "Được làm con cái Thiên Chúa" },
+                        { word: "Được ghi vào linh hồn dấu ấn thiêng liêng không bao giờ xóa được" },
+                        { word: "Được tháp nhập vào Đức Kitô và Hội Thánh" },
+                        { word: "Cần thiết cho ơn cứu độ" }
                     ]
                 },
                 {
                     id: 2,
-                    title: "Set 2: Business",
-                    color: "bg-red-50",
-                    borderColor: "border-red-200",
+                    title: "Gói 2",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Manager" },
-                        { word: "Accountant" },
-                        { word: "Entrepreneur" },
-                        { word: "Consultant" },
-                        { word: "Analyst" },
-                        { word: "Executive" },
-                        { word: "Marketer" },
-                        { word: "Salesperson" },
-                        { word: "Investor" },
-                        { word: "Banker" }
+                        { word: "Được tha tội tổ tông" },
+                        { word: "Được làm con cái Thiên Chúa" },
+                        { word: "Người không lãnh nhận Bí Tích Rửa Tội" },
+                        { word: "Người không lãnh Bí Tích Rửa Tội có thể được cứu độ" },
+                        { word: "Là bí tích Chúa Giê su đã lập" },
+                        { word: "Một là chết vì đức tin" },
+                        { word: "Những ơn này: được tha tội tổ tông và các tội riêng đã phạm" },
+                        { word: "Bí Tích Rửa Tội ban cho chúng ta những ơn này" },
+                        { word: "Chưa được biết Chúa Kitô và Hội Thánh" },
+                        { word: "Được làm con cái Thiên Chúa và được tháp nhập vào Đức Kitô" }
                     ]
                 },
                 {
                     id: 3,
-                    title: "Set 3: Creative",
-                    color: "bg-red-50",
-                    borderColor: "border-red-200",
+                    title: "Gói 3",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Artist" },
-                        { word: "Designer" },
-                        { word: "Writer" },
-                        { word: "Musician" },
-                        { word: "Photographer" },
-                        { word: "Architect" },
-                        { word: "Actor" },
-                        { word: "Director" },
-                        { word: "Chef" },
-                        { word: "Animator" }
+                        { word: "Được tha tội tổ tông" },
+                        { word: "Dìm xuống nước hay đổ nước trên đầu người lãnh bí tích" },
+                        { word: "Nghi thức chính yếu của Bí Tích Rửa Tội" },
+                        { word: "Được làm con cái Thiên Chúa và tháp nhập vào Đức Kitô" },
+                        { word: "Cần thiết cho ơn cứu độ" },
+                        { word: "Chưa được biết Chúa Kitô và Hội Thánh" },
+                        { word: "Người không lãnh Bí Tích Rửa Tội có thể được cứu độ" },
+                        { word: "Một là chết vì đức tin" },
+                        { word: "Ba là chưa được biết Chúa Kitô và Hội Thánh" },
+                        { word: "Được ghi vào linh hồn dấu ấn thiêng liêng không bao giờ xóa được" }
                     ]
-                }
+                }                
             ]
         },
         {
             id: 5,
-            title: "Lesson 5: Technology",
+            title: "Bài 5: Bí tích Thêm Sức",
             color: "bg-indigo-100",
             borderColor: "border-indigo-300",
             textColor: "text-indigo-700",
@@ -448,63 +484,81 @@ const vocabularyData = {
             sets: [
                 {
                     id: 1,
-                    title: "Set 1: Devices",
-                    color: "bg-indigo-50",
-                    borderColor: "border-indigo-200",
+                    title: "Gói 1",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Smartphone" },
-                        { word: "Laptop" },
-                        { word: "Tablet" },
-                        { word: "Smartwatch" },
-                        { word: "Headphones" },
-                        { word: "Monitor" },
-                        { word: "Printer" },
-                        { word: "Router" },
-                        { word: "Keyboard" },
-                        { word: "Mouse" }
+                        { word: "Bí Tích Thêm Sức" },
+                        { word: "Chúa Thánh Thần" },
+                        { word: "Ban tràn đầy Chúa Thánh Thần" },
+                        { word: "Sống ơn Bí Tích Rửa Tội" },
+                        { word: "Thêm Sức giúp chúng ta sống" },
+                        { word: "Đổ tràn Chúa Thánh Thần" },
+                        { word: "Được ghi ấn tín không thể tẩy xóa" },
+                        { word: "Bổn phận của người lãnh Bí Tích Thêm Sức" },
+                        { word: "Người lãnh Bí Tích Thêm Sức phải cầu nguyện sốt sắng" },
+                        { word: "Nỗ lực thi hành Lời Chúa trong đời sống" }
                     ]
                 },
                 {
                     id: 2,
-                    title: "Set 2: Software",
-                    color: "bg-indigo-50",
-                    borderColor: "border-indigo-200",
+                    title: "Gói 2",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Browser" },
-                        { word: "Application" },
-                        { word: "Database" },
-                        { word: "Algorithm" },
-                        { word: "Interface" },
-                        { word: "Operating System" },
-                        { word: "Spreadsheet" },
-                        { word: "Antivirus" },
-                        { word: "Firewall" },
-                        { word: "Plugin" }
+                        { word: "Bí Tích Thêm Sức" },
+                        { word: "Xức dầu thánh trên trán" },
+                        { word: "Đặt tay trên đầu người lãnh Bí Tích" },
+                        { word: "Nghi thức chính yếu của Bí Tích Thêm Sức" },
+                        { word: "Lãnh nhận ấn tín ơn Chúa Thánh Thần" },
+                        { word: "Thêm Sức giúp gia tăng ân sủng" },
+                        { word: "Cần học giáo lý về Bí Tích Thêm Sức" },
+                        { word: "Bí Tích Thêm Sức gia tăng ân sủng Rửa Tội" },
+                        { word: "Cầu nguyện thật lòng ước ao lãnh nhận" },
+                        { word: "Ban tràn đầy Chúa Thánh Thần" }
                     ]
                 },
                 {
                     id: 3,
-                    title: "Set 3: Internet",
-                    color: "bg-indigo-50",
-                    borderColor: "border-indigo-200",
+                    title: "Gói 3",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Website" },
-                        { word: "Email" },
-                        { word: "Cloud" },
-                        { word: "Server" },
-                        { word: "Domain" },
-                        { word: "Bandwidth" },
-                        { word: "Streaming" },
-                        { word: "Download" },
-                        { word: "Upload" },
-                        { word: "Encryption" }
+                        { word: "Người lãnh Bí Tích Thêm Sức" },
+                        { word: "Xức dầu thánh" },
+                        { word: "Bí Tích Thêm Sức gia tăng ân sủng" },
+                        { word: "Thi hành Lời Chúa trong đời sống thường ngày" },
+                        { word: "Cần phải sạch tội trọng" },
+                        { word: "Bí Tích Thêm Sức giúp sống tốt đẹp hơn" },
+                        { word: "Bổn phận xây dựng xã hội theo Tin Mừng" },
+                        { word: "Cầu nguyện sốt sắng" },
+                        { word: "Được ghi ấn tín không thể xóa được" },
+                        { word: "Tích cực giới thiệu Chúa cho mọi người" }
                     ]
-                }
+                },
+                {
+                    id: 4,
+                    title: "Gói 4",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "Bí Tích Thêm Sức" },
+                        { word: "Nghi thức chính yếu của Bí Tích Thêm Sức" },
+                        { word: "Thêm Sức ban tràn đầy Chúa Thánh Thần" },
+                        { word: "Lãnh nhận Bí Tích Thêm Sức" },
+                        { word: "Người lãnh Bí Tích Thêm Sức phải học giáo lý" },
+                        { word: "Xức dầu thánh trên trán người lãnh Bí Tích" },
+                        { word: "Gia tăng ân sủng Bí Tích Rửa Tội" },
+                        { word: "Lãnh nhận ấn tín ơn Chúa Thánh Thần" },
+                        { word: "Bí Tích Thêm Sức ghi ấn tín không thể xóa" },
+                        { word: "Phải cầu nguyện sốt sắng" }
+                    ]
+                }                
             ]
         },
         {
             id: 6,
-            title: "Lesson 6: Nature",
+            title: "Bài 6: Bí tích Thánh Thể",
             color: "bg-yellow-100",
             borderColor: "border-yellow-300",
             textColor: "text-yellow-700",
@@ -512,63 +566,99 @@ const vocabularyData = {
             sets: [
                 {
                     id: 1,
-                    title: "Set 1: Landscapes",
-                    color: "bg-yellow-50",
-                    borderColor: "border-yellow-200",
+                    title: "Gói 1",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Mountain" },
-                        { word: "Valley" },
-                        { word: "Forest" },
-                        { word: "Desert" },
-                        { word: "Ocean" },
-                        { word: "River" },
-                        { word: "Glacier" },
-                        { word: "Canyon" },
-                        { word: "Meadow" },
-                        { word: "Cliff" }
+                        { word: "Bí Tích Thánh Thể" },
+                        { word: "Thánh lễ" },
+                        { word: "Bí Tích Thánh Thể là gì" },
+                        { word: "Chúa Giê su đã lập Bí Tích" },
+                        { word: "Bí Tích Thánh Thể là nguồn mạch" },
+                        { word: "Cử hành Bí Tích Thánh Thể trong Thánh lễ" },
+                        { word: "Việc rước lễ đem lại cho chúng ta những ơn ích" },
+                        { word: "một là hoàn toàn thuộc về Hội Thánh" },
+                        { word: "Hội Thánh cử hành Bí Tích Thánh Thể trong Thánh lễ" },
+                        { word: "Việc rước lễ làm cho chúng ta được kết hợp mật thiết với Đức Kitô và Hội Thánh" }
                     ]
                 },
                 {
                     id: 2,
-                    title: "Set 2: Weather",
-                    color: "bg-yellow-50",
-                    borderColor: "border-yellow-200",
+                    title: "Gói 2",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Rain" },
-                        { word: "Snow" },
-                        { word: "Wind" },
-                        { word: "Storm" },
-                        { word: "Sunshine" },
-                        { word: "Fog" },
-                        { word: "Hail" },
-                        { word: "Thunder" },
-                        { word: "Lightning" },
-                        { word: "Hurricane" }
+                        { word: "Hội Thánh" },
+                        { word: "Rước lễ" },
+                        { word: "Hội Thánh dạy thế nào về việc rước lễ" },
+                        { word: "Việc rước lễ làm cho chúng ta được kết hợp mật thiết" },
+                        { word: "Bí Tích Thánh Thể là nguồn mạch và tột đỉnh" },
+                        { word: "Bí Tích Thánh Thể làm của ăn nuôi sống chúng ta" },
+                        { word: "Chúa Giê su cầm lấy bánh, tạ ơn" },
+                        { word: "ba là phải giữ chay theo quy định của Hội Thánh" },
+                        { word: "Chúa Giê su đã lập Bí Tích Thánh Thể khi tự nguyện nộp mình chịu khổ hình" },
+                        { word: "Hội Thánh khuyên các tín hữu rước lễ mỗi khi tham dự Thánh lễ" }
                     ]
                 },
                 {
                     id: 3,
-                    title: "Set 3: Plants",
-                    color: "bg-yellow-50",
-                    borderColor: "border-yellow-200",
+                    title: "Gói 3",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Tree" },
-                        { word: "Flower" },
-                        { word: "Grass" },
-                        { word: "Bush" },
-                        { word: "Cactus" },
-                        { word: "Fern" },
-                        { word: "Moss" },
-                        { word: "Vine" },
-                        { word: "Seaweed" },
-                        { word: "Palm" }
+                        { word: "Thánh Thể" },
+                        { word: "Hội Thánh Công Giáo" },
+                        { word: "Bí Tích Thánh Thể là gì" },
+                        { word: "Hội Thánh cử hành Bí Tích Thánh Thể trong Thánh lễ" },
+                        { word: "Bí Tích Thánh Thể là nguồn mạch và tột đỉnh của toàn bộ đời sống Kitô giáo" },
+                        { word: "Việc rước lễ làm cho chúng ta được kết hợp mật thiết với Đức Kitô và Hội Thánh" },
+                        { word: "một là hoàn toàn thuộc về Hội Thánh Công Giáo" },
+                        { word: "Phải có những điều kiện này: ba là phải giữ chay theo quy định của Hội Thánh" },
+                        { word: "Hội Thánh khuyên các tín hữu rước lễ mỗi khi tham dự Thánh lễ" },
+                        { word: "Bí Tích Thánh Thể giúp nuôi sống chúng ta" }
                     ]
-                }
+                },
+                {
+                    id: 4,
+                    title: "Gói 4",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "Rước lễ" },
+                        { word: "Hội Thánh" },
+                        { word: "Bí Tích Thánh Thể" },
+                        { word: "hai là ý thức mình không có tội trọng" },
+                        { word: "Việc rước lễ làm cho chúng ta được kết hợp mật thiết với Đức Kitô và Hội Thánh" },
+                        { word: "Chúa Giê su đã lập Bí Tích Thánh Thể để tiếp tục lễ hy sinh trên Thánh giá" },
+                        { word: "Hội Thánh cử hành Bí Tích Thánh Thể trong Thánh lễ, gồm hai phần chính" },
+                        { word: "Bí Tích Thánh Thể là để ban Mình Máu Ngài" },
+                        { word: "Chúa Giê su cầm lấy chén rượu và nói: “Tất cả các con hãy nhận lấy mà uống”" },
+                        { word: "Hội Thánh dạy thế nào về việc rước lễ" }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "Gói 5",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "Hội Thánh dạy" },
+                        { word: "Phải có điều kiện" },
+                        { word: "Hội Thánh khuyên các tín hữu rước lễ mỗi khi tham dự Thánh lễ" },
+                        { word: "Bí Tích Thánh Thể giúp chúng ta sống ơn Rửa Tội" },
+                        { word: "bốn là có thái độ tôn kính Đức Kitô" },
+                        { word: "Việc rước lễ làm cho chúng ta được tẩy xóa các tội nhẹ" },
+                        { word: "Bí Tích Thánh Thể là nguồn mạch và tột đỉnh của toàn bộ đời sống Kitô giáo" },
+                        { word: "hai là ý thức mình không có tội trọng" },
+                        { word: "Bí Tích Thánh Thể là để ban Mình Máu Ngài, làm của ăn nuôi sống chúng ta" },
+                        { word: "Hội Thánh cử hành Bí Tích Thánh Thể trong Thánh lễ, gồm hai phần chính" }
+                    ]
+                }                
             ]
         },
         {
             id: 7,
-            title: "Lesson 7: Sports",
+            title: "Bài 7: Bí tích Thống Hối",
             color: "bg-orange-100",
             borderColor: "border-orange-300",
             textColor: "text-orange-700",
@@ -576,63 +666,99 @@ const vocabularyData = {
             sets: [
                 {
                     id: 1,
-                    title: "Set 1: Team Sports",
-                    color: "bg-orange-50",
-                    borderColor: "border-orange-200",
+                    title: "Gói 1",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Soccer" },
-                        { word: "Basketball" },
-                        { word: "Baseball" },
-                        { word: "Volleyball" },
-                        { word: "Hockey" },
-                        { word: "Rugby" },
-                        { word: "Cricket" },
-                        { word: "Football" },
-                        { word: "Handball" },
-                        { word: "Lacrosse" }
+                        { word: "Bí Tích Thống Hối" },
+                        { word: "Tha tội" },
+                        { word: "Bí Tích Thống Hối là gì" },
+                        { word: "Lời xá giải của linh mục" },
+                        { word: "Bí Tích Thống Hối có những yếu tố chính yếu này" },
+                        { word: "Muốn lãnh Bí Tích Thống Hối chúng ta phải làm bốn việc này" },
+                        { word: "Chúa Giê su đã lập Bí Tích Thống Hối khi Ngài hiện ra với các Tông đồ" },
+                        { word: "Khi đến tuổi khôn, mọi tín hữu buộc phải xưng các tội trọng" },
+                        { word: "một là tha tội" },
+                        { word: "Bí Tích Thống Hối có hai yếu tố chính yếu này" }
                     ]
                 },
                 {
                     id: 2,
-                    title: "Set 2: Individual Sports",
-                    color: "bg-orange-50",
-                    borderColor: "border-orange-200",
+                    title: "Gói 2",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Tennis" },
-                        { word: "Golf" },
-                        { word: "Swimming" },
-                        { word: "Gymnastics" },
-                        { word: "Boxing" },
-                        { word: "Skiing" },
-                        { word: "Skateboarding" },
-                        { word: "Surfing" },
-                        { word: "Archery" },
-                        { word: "Cycling" }
+                        { word: "Xưng tội" },
+                        { word: "Tha tội" },
+                        { word: "Bí Tích Thống Hối có những hiệu quả này" },
+                        { word: "Bí Tích Thống Hối có hai yếu tố chính yếu này" },
+                        { word: "Ân xá là gì" },
+                        { word: "Muốn lãnh Bí Tích Thống Hối chúng ta phải làm bốn việc này" },
+                        { word: "Tha hình phạt muôn đời do các tội trọng" },
+                        { word: "Khi nào các tín hữu buộc phải xưng các tội trọng" },
+                        { word: "Bí Tích Thống Hối là để tha các tội riêng" },
+                        { word: "Chúa Giê su đã lập Bí Tích Thống Hối" }
                     ]
                 },
                 {
                     id: 3,
-                    title: "Set 3: Equipment",
-                    color: "bg-orange-50",
-                    borderColor: "border-orange-200",
+                    title: "Gói 3",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Ball" },
-                        { word: "Racket" },
-                        { word: "Helmet" },
-                        { word: "Glove" },
-                        { word: "Net" },
-                        { word: "Goal" },
-                        { word: "Bat" },
-                        { word: "Club" },
-                        { word: "Skates" },
-                        { word: "Board" }
+                        { word: "Sám hối" },
+                        { word: "Xưng tội" },
+                        { word: "Chúa Giê su đã lập Bí Tích Thống Hối" },
+                        { word: "Bí Tích Thống Hối có những hiệu quả này" },
+                        { word: "Bí Tích Thống Hối có hai yếu tố chính yếu này" },
+                        { word: "ba là ban sự bình an" },
+                        { word: "Ân xá là việc tha thứ những hình phạt tạm đáng chịu" },
+                        { word: "Khi đến tuổi khôn, mọi tín hữu buộc phải xưng các tội trọng" },
+                        { word: "Một là xét mình" },
+                        { word: "Khi nào các tín hữu buộc phải xưng các tội trọng" }
                     ]
-                }
+                },
+                {
+                    id: 4,
+                    title: "Gói 4",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "Bí Tích Thống Hối" },
+                        { word: "Xưng các tội trọng" },
+                        { word: "Ân xá là việc tha thứ những hình phạt" },
+                        { word: "khi Ngài hiện ra với các Tông đồ" },
+                        { word: "hai là tha hình phạt muôn đời" },
+                        { word: "ba là gia tăng sức mạnh cho cuộc chiến đấu thiêng liêng " },
+                        { word: "Bí Tích Thống Hối có những yếu tố chính yếu này" },
+                        { word: "Muốn lãnh Bí Tích Thống Hối chúng ta phải làm bốn việc này" },
+                        { word: "Bí Tích Thống Hối là để tha các tội riêng chúng ta đã phạm" },
+                        { word: "Muốn lãnh Bí Tích Thống Hối chúng ta phải làm bốn việc này" }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "Gói 5",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "Chúa Giê su" },
+                        { word: "Tội trọng" },
+                        { word: "Ân xá là gì" },
+                        { word: "Một là xét mình" },
+                        { word: "Chúa Giê su đã lập Bí Tích Thống Hối khi Ngài hiện ra" },
+                        { word: "ban sự bình an và gia tăng sức mạnh cho cuộc chiến đấu" },
+                        { word: "Bí Tích Thống Hối có hai yếu tố chính yếu này" },
+                        { word: "tha tội để giao hòa chúng ta" },
+                        { word: "Ân xá là việc tha thứ những hình phạt tạm đáng chịu" },
+                        { word: "tha hình phạt muôn đời do các tội trọng đã gây ra" }
+                    ]
+                }                
             ]
         },
         {
             id: 8,
-            title: "Lesson 8: Music",
+            title: "Phần II - 3 câu đầu",
             color: "bg-pink-100",
             borderColor: "border-pink-300",
             textColor: "text-pink-700",
@@ -640,63 +766,63 @@ const vocabularyData = {
             sets: [
                 {
                     id: 1,
-                    title: "Set 1: Instruments",
-                    color: "bg-pink-50",
-                    borderColor: "border-pink-200",
+                    title: "Gói 1",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Guitar" },
-                        { word: "Piano" },
-                        { word: "Drums" },
-                        { word: "Violin" },
-                        { word: "Flute" },
-                        { word: "Saxophone" },
-                        { word: "Trumpet" },
-                        { word: "Harp" },
-                        { word: "Cello" },
-                        { word: "Clarinet" }
+                        { word: "Chủ đề mục vụ" },
+                        { word: "Canh tân đời sống" },
+                        { word: "Cử hành phụng vụ" },
+                        { word: "Làm mới lại lòng yêu mến" },
+                        { word: "Thứ nhất vì phụng vụ" },
+                        { word: "Mầu nhiệm thánh, là nguồn mạch" },
+                        { word: "Tích cực tham dự phụng vụ" },
+                        { word: "Thứ ba loại bỏ lạm dụng" },
+                        { word: "Cung cách cử hành phụng vụ" },
+                        { word: "Thái độ tham dự khô khan" }
                     ]
                 },
                 {
                     id: 2,
-                    title: "Set 2: Genres",
-                    color: "bg-pink-50",
-                    borderColor: "border-pink-200",
+                    title: "Gói 2",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Rock" },
-                        { word: "Jazz" },
-                        { word: "Classical" },
-                        { word: "Pop" },
-                        { word: "Hip-Hop" },
-                        { word: "Country" },
-                        { word: "Electronic" },
-                        { word: "Blues" },
-                        { word: "Reggae" },
-                        { word: "Folk" }
+                        { word: "Canh tân đời sống đức tin" },
+                        { word: "Cử hành phụng vụ cách trọn vẹn" },
+                        { word: "Làm mới lại lòng yêu mến, tinh thần tham dự" },
+                        { word: "Thứ ba cần loại bỏ lạm dụng" },
+                        { word: "Thứ hai vì Hội Thánh" },
+                        { word: "Tha thiết mong ước tham dự" },
+                        { word: "Tham dự cử hành phụng vụ" },
+                        { word: "Cần loại bỏ cẩu thả" },
+                        { word: "Những cử hành lạm dụng" },
+                        { word: "Được hiệp thông với Thiên Chúa" }
                     ]
                 },
                 {
                     id: 3,
-                    title: "Set 3: Music Terms",
-                    color: "bg-pink-50",
-                    borderColor: "border-pink-200",
+                    title: "Gói 3",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Melody" },
-                        { word: "Rhythm" },
-                        { word: "Harmony" },
-                        { word: "Tempo" },
-                        { word: "Chord" },
-                        { word: "Note" },
-                        { word: "Scale" },
-                        { word: "Octave" },
-                        { word: "Beat" },
-                        { word: "Lyrics" }
+                        { word: "Canh tân đời sống đức tin trong cử hành phụng vụ" },
+                        { word: "Thứ ba loại bỏ những lạm dụng" },
+                        { word: "Thứ nhất vì phụng vụ là mầu nhiệm thánh" },
+                        { word: "Tham dự cử hành phụng vụ tích cực" },
+                        { word: "Thứ ba cần loại bỏ khô khan" },
+                        { word: "Thái độ tham dự tích cực" },
+                        { word: "Cử hành phụng vụ là nguồn mạch" },
+                        { word: "Cử hành phụng vụ thánh" },
+                        { word: "Làm mới lại lòng yêu mến" },
+                        { word: "Cung cách tham dự phụng vụ" }
                     ]
-                }
+                }                
             ]
         },
         {
             id: 9,
-            title: "Lesson 9: Space",
+            title: "PHẦN 3 - 4 câu đầu",
             color: "bg-teal-100",
             borderColor: "border-teal-300",
             textColor: "text-teal-700",
@@ -704,63 +830,81 @@ const vocabularyData = {
             sets: [
                 {
                     id: 1,
-                    title: "Set 1: Celestial Bodies",
-                    color: "bg-teal-50",
-                    borderColor: "border-teal-200",
+                    title: "Gói 1",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Planet" },
-                        { word: "Star" },
-                        { word: "Moon" },
-                        { word: "Asteroid" },
-                        { word: "Comet" },
-                        { word: "Galaxy" },
-                        { word: "Nebula" },
-                        { word: "Black Hole" },
-                        { word: "Supernova" },
-                        { word: "Meteor" }
+                        { word: "Năm Thánh là gì" },
+                        { word: "Thời kỳ hồng ân" },
+                        { word: "Thiên Chúa ban ơn đặc biệt" },
+                        { word: "Thống hối và canh tân" },
+                        { word: "Thời gian giao hoà với Thiên Chúa" },
+                        { word: "Củng cố đức tin" },
+                        { word: "Tạo cơ hội thuận tiện" },
+                        { word: "Tình liên đới và hiệp thông" },
+                        { word: "Tuyên xưng đức tin" },
+                        { word: "Sống động hơn nơi Đức Kitô" }
                     ]
                 },
                 {
                     id: 2,
-                    title: "Set 2: Solar System",
-                    color: "bg-teal-50",
-                    borderColor: "border-teal-200",
+                    title: "Gói 2",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Mercury" },
-                        { word: "Venus" },
-                        { word: "Earth" },
-                        { word: "Mars" },
-                        { word: "Jupiter" },
-                        { word: "Saturn" },
-                        { word: "Uranus" },
-                        { word: "Neptune" },
-                        { word: "Pluto" },
-                        { word: "Sun" }
+                        { word: "Năm Thánh hay còn gọi" },
+                        { word: "Thời kỳ hồng ân Thiên Chúa" },
+                        { word: "Tông sắc “Spes non Confundit”" },
+                        { word: "Khẩu hiệu “Những người hành hương của hy vọng”" },
+                        { word: "Hy vọng không làm thất vọng" },
+                        { word: "Hành hương Năm Thánh" },
+                        { word: "Đến một nơi thánh" },
+                        { word: "Bước qua Cửa thánh" },
+                        { word: "Cuộc hành trình ra khỏi chính mình" },
+                        { word: "Bước theo Đức Kitô" }
                     ]
                 },
                 {
                     id: 3,
-                    title: "Set 3: Space Exploration",
-                    color: "bg-teal-50",
-                    borderColor: "border-teal-200",
+                    title: "Gói 3",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Rocket" },
-                        { word: "Astronaut" },
-                        { word: "Satellite" },
-                        { word: "Telescope" },
-                        { word: "Spacecraft" },
-                        { word: "Orbit" },
-                        { word: "Gravity" },
-                        { word: "Mission" },
-                        { word: "Spacewalk" },
-                        { word: "Launch" }
+                        { word: "Mở Năm Thánh thường lệ" },
+                        { word: "Đức Thánh Cha Phan xi cô" },
+                        { word: "Hành hương Năm Thánh có ý nghĩa" },
+                        { word: "Hoán cải, biến đổi bản thân" },
+                        { word: "Phù hợp với sự thánh thiện" },
+                        { word: "Hành hương đến nơi thánh" },
+                        { word: "Hành trình với Đức Kitô" },
+                        { word: "Đồng hình đồng dạng với Người" },
+                        { word: "Để củng cố đức tin" },
+                        { word: "Học hỏi từ Đức Kitô" }
                     ]
-                }
+                },
+                {
+                    id: 4,
+                    title: "Gói 4",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "Năm Thánh là thời gian giao hoà" },
+                        { word: "Tạo cơ hội thuận tiện để xây dựng tình liên đới" },
+                        { word: "Hy vọng không làm thất vọng" },
+                        { word: "Hành hương đến một nơi thánh" },
+                        { word: "Hoán cải bản thân để phù hợp với Thiên Chúa" },
+                        { word: "Cuộc hành trình theo Đức Kitô" },
+                        { word: "Từng bước nên đồng hình đồng dạng với Người" },
+                        { word: "Tuyên xưng đức tin một cách chân thành" },
+                        { word: "Khẩu hiệu của Năm Thánh 2025" },
+                        { word: "Hành hương với tình yêu và hy vọng" }
+                    ]
+                }                
             ]
         },
         {
             id: 10,
-            title: "Lesson 10: Art",
+            title: "Mix Random",
             color: "bg-amber-100",
             borderColor: "border-amber-300",
             textColor: "text-amber-700",
@@ -768,56 +912,182 @@ const vocabularyData = {
             sets: [
                 {
                     id: 1,
-                    title: "Set 1: Art Forms",
+                    title: "Gói 1",
                     color: "bg-amber-50",
                     borderColor: "border-amber-200",
                     words: [
-                        { word: "Painting" },
-                        { word: "Sculpture" },
-                        { word: "Photography" },
-                        { word: "Drawing" },
-                        { word: "Printmaking" },
-                        { word: "Ceramics" },
-                        { word: "Collage" },
-                        { word: "Mosaic" },
-                        { word: "Calligraphy" },
-                        { word: "Graffiti" }
+                      { word: "dìm xuống nước hay đổ nước trên đầu" },
+                      { word: "phải sạch tội trọng" },
+                      { word: "bí tích phục vụ gồm Bí tích Truyền Chức Thánh và Hôn Phối" },
+                      { word: "đức tin của chúng ta thêm mạnh mẽ" },
+                      { word: "đem lại ân sủng riêng cho mỗi sứ vụ" },
+                      { word: "tháp nhập vào Đức Kitô và Hội Thánh" },
+                      { word: "Bí tích Thống Hối" },
+                      { word: "sự sống thần linh" },
+                      { word: "tái sinh, củng cố và nuôi dưỡng các tín hữu" },
+                      { word: "làm con cái Thiên Chúa" }
                     ]
-                },
-                {
+                  },
+                  {
                     id: 2,
-                    title: "Set 2: Art Materials",
+                    title: "Gói 2",
                     color: "bg-amber-50",
                     borderColor: "border-amber-200",
                     words: [
-                        { word: "Canvas" },
-                        { word: "Brush" },
-                        { word: "Paint" },
-                        { word: "Pencil" },
-                        { word: "Clay" },
-                        { word: "Charcoal" },
-                        { word: "Pastel" },
-                        { word: "Ink" },
-                        { word: "Watercolor" },
-                        { word: "Easel" }
+                      { word: "được sinh lại trong đời sống mới" },
+                      { word: "ấn tín bí tích là dấu ấn thiêng liêng" },
+                      { word: "tiếp tục công trình cứu độ của Ngài trong Hội Thánh" },
+                      { word: "Bí tích là dấu chỉ bên ngoài" },
+                      { word: "gia tăng ân sủng Bí Tích Rửa Tội" },
+                      { word: "phục hồi và củng cố đời sống mới" },
+                      { word: "ban Mình Máu Ngài" },
+                      { word: "dấu chỉ và biểu tượng" },
+                      { word: "được ghi vào linh hồn dấu ấn thiêng liêng" },
+                      { word: "phải học giáo lý" }
                     ]
-                },
-                {
+                  },
+                  {
                     id: 3,
-                    title: "Set 3: Art Movements",
+                    title: "Gói 3",
                     color: "bg-amber-50",
                     borderColor: "border-amber-200",
                     words: [
-                        { word: "Impressionism" },
-                        { word: "Cubism" },
-                        { word: "Surrealism" },
-                        { word: "Renaissance" },
-                        { word: "Abstract" },
-                        { word: "Baroque" },
-                        { word: "Modernism" },
-                        { word: "Pop Art" },
-                        { word: "Minimalism" },
-                        { word: "Realism" }
+                      { word: "bí tích đức tin" },
+                      { word: "gia tăng ân sủng Bí Tích Rửa Tội" },
+                      { word: "các bí tích chữa lành" },
+                      { word: "ngày Đức Kitô ngự đến trong vinh quang" },
+                      { word: "phải cầu nguyện sốt sắng" },
+                      { word: "có lòng ước ao nhưng chưa có điều kiện lãnh nhận Bí Tích" },
+                      { word: "tiếp tục lễ hy sinh trên Thánh giá" },
+                      { word: "sống ơn Bí Tích Rửa Tội cách mạnh mẽ" },
+                      { word: "Hãy lãnh nhận ấn tín ơn Chúa Thánh Thần" },
+                      { word: "các bí tích khai tâm Kitô giáo gồm Bí tích Rửa Tội, Thêm Sức và Thánh Thể" }
+                    ]
+                  },
+                  {
+                    id: 4,
+                    title: "Gói 4",
+                    color: "bg-amber-50",
+                    borderColor: "border-amber-200",
+                    words: [
+                      { word: "con người gặp gỡ và đối thoại với Thiên Chúa" },
+                      { word: "ghi vào linh hồn dấu ấn thiêng liêng" },
+                      { word: "các bí tích này chỉ được lãnh một lần mà thôi" },
+                      { word: "được làm con cái Thiên Chúa" },
+                      { word: "ban tràn đầy Chúa Thánh Thần" },
+                      { word: "thi hành Lời Chúa trong đời sống thường ngày" },
+                      { word: "sứ vụ đặc biệt trong Hội Thánh" },
+                      { word: "các bí tích phục vụ gồm Bí tích Truyền Chức Thánh và Hôn Phối" },
+                      { word: "đối với những ai đã nghe rao giảng Tin Mừng" },
+                      { word: "làm cho chúng ta được sinh lại trong đời sống mới" }
+                    ]
+                  },
+                  {
+                    id: 5,
+                    title: "Gói 5",
+                    color: "bg-amber-50",
+                    borderColor: "border-amber-200",
+                    words: [
+                      { word: "có 7 bí tích" },
+                      { word: "bí tích Rửa Tội cần thiết cho ơn cứu độ" },
+                      { word: "ban Mình Máu Ngài" },
+                      { word: "giúp các tín hữu thánh hóa thời gian trong ngày" },
+                      { word: "tích cực giới thiệu Chúa cho mọi người" },
+                      { word: "các bí tích chữa lành gồm Bí tích Thống Hối và Xức Dầu Bệnh Nhân" },
+                      { word: "người lãnh Bí Tích Thêm Sức có những bổn phận" },
+                      { word: "làm của ăn nuôi sống chúng ta" },
+                      { word: "thật lòng ước ao lãnh nhận Chúa Thánh Thần" },
+                      { word: "phải cầu nguyện sốt sắng" }
+                    ]
+                  },
+                  {
+                    id: 6,
+                    title: "Gói 6",
+                    color: "bg-amber-50",
+                    borderColor: "border-amber-200",
+                    words: [
+                      { word: "tái sinh, củng cố và nuôi dưỡng các tín hữu" },
+                      { word: "giúp các tín hữu thánh hóa thời gian trong ngày" },
+                      { word: "bí tích Chúa Giê su đã lập" },
+                      { word: "hành động cứu độ của Đức Kitô" },
+                      { word: "tháp nhập vào Đức Kitô và Hội Thánh" },
+                      { word: "ban tràn đầy Chúa Thánh Thần" },
+                      { word: "Bí Tích Rửa Tội cần thiết cho ơn cứu độ" },
+                      { word: "góp phần xây dựng xã hội theo tinh thần Tin Mừng" },
+                      { word: "chết vì đức tin" },
+                      { word: "tiếp tục lễ hy sinh trên Thánh giá" }
+                    ]
+                  },
+                  {
+                    id: 7,
+                    title: "Gói 7",
+                    color: "bg-amber-50",
+                    borderColor: "border-amber-200",
+                    words: [
+                      { word: "trao ban ân sủng của Chúa Thánh Thần" },
+                      { word: "làm của ăn nuôi sống chúng ta" },
+                      { word: "tích cực giới thiệu Chúa cho mọi người" },
+                      { word: "góp phần xây dựng xã hội theo tinh thần Tin Mừng" },
+                      { word: "ban tràn đầy Chúa Thánh Thần" },
+                      { word: "các bí tích phục vụ gồm Bí tích Truyền Chức Thánh và Hôn Phối" },
+                      { word: "các bí tích này chỉ được lãnh một lần mà thôi" },
+                      { word: "gia tăng ân sủng Bí Tích Rửa Tội" },
+                      { word: "Bí tích là dấu chỉ bên ngoài" },
+                      { word: "ngày Chúa Phục Sinh" }
+                    ]
+                  },
+                  {
+                    id: 8,
+                    title: "Gói 8",
+                    color: "bg-amber-50",
+                    borderColor: "border-amber-200",
+                    words: [
+                      { word: "bí tích Thánh Thể" },
+                      { word: "ngày của Chúa" },
+                      { word: "được ghi vào linh hồn dấu ấn thiêng liêng" },
+                      { word: "làm con cái Thiên Chúa" },
+                      { word: "gia tăng ân sủng Bí Tích Rửa Tội" },
+                      { word: "phải sạch tội trọng" },
+                      { word: "phải học giáo lý" },
+                      { word: "tiếp tục công trình cứu độ của Ngài trong Hội Thánh" },
+                      { word: "sống ơn Bí Tích Rửa Tội cách mạnh mẽ" },
+                      { word: "sự chuẩn bị nội tâm của người lãnh nhận" }
+                    ]
+                  },
+                  {
+                    id: 9,
+                    title: "Gói 9",
+                    color: "bg-amber-50",
+                    borderColor: "border-amber-200",
+                    words: [
+                      { word: "bí tích đức tin" },
+                      { word: "đức tin của chúng ta thêm mạnh mẽ" },
+                      { word: "dìm xuống nước hay đổ nước trên đầu" },
+                      { word: "ngày Đức Kitô ngự đến trong vinh quang" },
+                      { word: "dấu chỉ và biểu tượng" },
+                      { word: "làm cho chúng ta được sinh lại trong đời sống mới" },
+                      { word: "Bí tích Rửa Tội cần thiết cho ơn cứu độ" },
+                      { word: "trao ban ân sủng của Chúa Thánh Thần" },
+                      { word: "phải cầu nguyện sốt sắng" },
+                      { word: "có lòng ước ao nhưng chưa có điều kiện" }
+                    ]
+                  },
+                  {
+                    id: 10,
+                    title: "Gói 10",
+                    color: "bg-amber-50",
+                    borderColor: "border-amber-200",
+                    words: [
+                        { word: "ban tràn đầy Chúa Thánh Thần, hầu giúp chúng ta sống ơn Bí Tích Rửa Tội" },
+                        { word: "sự sống thần linh" },
+                        { word: "tiếp tục lễ hy sinh trên Thánh giá" },
+                        { word: "các bí tích chữa lành gồm Bí tích Thống Hối và Xức Dầu Bệnh Nhân" },
+                        { word: "Bí tích Thêm Sức" },
+                        { word: "các bí tích khai tâm Kitô giáo gồm Bí tích Rửa Tội, Thêm Sức và Thánh Thể" },
+                        { word: "Bí tích Truyền Chức Thánh" },
+                        { word: "phải học giáo lý" },
+                        { word: "phục hồi và củng cố đời sống mới" },
+                        { word: "dấu chỉ và biểu tượng, để diễn tả và thực hiện hành động cứu độ" }
                     ]
                 }
             ]
@@ -851,13 +1121,26 @@ function init() {
 // Render lessons on the homepage
 function renderLessons() {
     lessonsContainer.innerHTML = '';
+  
     vocabularyData.lessons.forEach(lesson => {
+
+        let lessonPart = '';
+        if (lesson.id >= 1 && lesson.id <= 7) {
+            lessonPart = 'PHẦN I';
+        } else if (lesson.id === 8) {
+            lessonPart = 'PHẦN II';
+        } else if (lesson.id === 9) {
+            lessonPart = 'PHẦN III';
+        } else if (lesson.id === 10) {
+            lessonPart = 'MIX ALL';
+        }
+
         const lessonCard = document.createElement('div');
         lessonCard.className = `card ${lesson.color} ${lesson.borderColor} border-2 rounded-xl p-6 cursor-pointer shadow-sm hover:shadow-md`;
         lessonCard.innerHTML = `
             <div class="flex items-center justify-between mb-2">
                 <span class="text-4xl">${lesson.icon}</span>
-                <span class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm ${lesson.textColor} font-medium">Bài ${lesson.id}</span>
+                <span class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm ${lesson.textColor} font-medium">${lessonPart}</span>
             </div>
             <h3 class="text-xl font-semibold ${lesson.textColor}">${lesson.title}</h3>
             <p class="text-gray-600 mt-2">${lesson.sets.length} sets</p>
@@ -891,7 +1174,7 @@ function showSets(lesson) {
 function showWords(set) {
     currentSet = set;
     setTitle.textContent = set.title;
-    setDescription.textContent = `Nguồn: ${currentLesson.title}`;
+    setDescription.textContent = currentLesson.title;
     wordsContainer.innerHTML = '';
 
     set.words.forEach((wordItem, index) => {
