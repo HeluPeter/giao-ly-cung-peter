@@ -558,7 +558,7 @@ function checkCurrentAnswer() {
             question.timeTaken = Math.floor((questionEndTime - questionStartTime) / 1000);
 
             // Second attempt - lock question
-            feedbackMessage.textContent = `Sai. Đáp án đúng là: ${question.correctAnswer} - Giải thích: ${question.hint}`;
+            feedbackMessage.textContent = `Sai. Đáp án đúng là: ${question.answer} - Giải thích: ${question.hint}`;
             feedbackMessage.className = 'feedback-message feedback-incorrect';
 
             // Mark question as failed
