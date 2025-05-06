@@ -181,6 +181,61 @@ const quizQuestions = [
         timeTaken: 0
     },
     {
+        question: "Ngày Chúa Nhật rất quan trọng vì là ngày gì?",
+        syllables: "3 âm tiết",
+        answer: "Chúa Phục sinh",
+        hint: "Câu 17.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Đây là 1 yêu tố của cử hành phụng vụ?",
+        syllables: "5 âm tiết",
+        answer: "lời nói và hành động",
+        hint: "Câu 33.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Bí tích Thêm Sức được Chúa Giê-su lập để làm gì?",
+        syllables: "6 âm tiết",
+        answer: "ban tràn đầy Chúa Thánh Thần",
+        hint: "Câu 36.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Năm Phụng vụ là thời gian như thế nào?",
+        syllables: "10 âm tiết",
+        answer: "Hội Thánh cử hành các mầu nhiệm Đức Kitô",
+        hint: "Câu 11.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Qua phụng vụ Đức Ki-tô tiếp tục điều gì?",
+        syllables: "6 âm tiết",
+        answer: "công trình cứu độ của Ngài",
+        hint: "Câu 7.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
         question: "Bí tích Rửa Tội ban cho chúng ta ơn này.",
         syllables: "11 âm tiết",
         answer: "được tha tội tổ tông và các tội riêng đã phạm",

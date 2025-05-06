@@ -265,12 +265,12 @@ const quizQuestionsByTopic = {
             question: "Chọn câu sai",
             options: [
                 "A. Có bảy bí tích, Các bí tích của Hội Thánh được phân thành ba loại.",
-                "B. Tiêu đề bài 3: Các bí tích; Các bí tích của Hội Thánh được phân thành bốn loại.",
+                "B. Tiêu đề bài 3: Các bí tích; Các bí tích của Hội Thánh được phân thành 3 loại.",
                 "C. Có bảy bí tích, Tiêu đề bài 3: Các bí tích và phụng vụ",
                 "D. Tiêu đề bài 3: Các bí tích"
             ],
-            correctAnswer: "A. Có bảy bí tích, Các bí tích của Hội Thánh được phân thành ba loại.",
-            explanation: "[Câu 11, 12]",
+            correctAnswer: "C. Có bảy bí tích, Tiêu đề bài 3: Các bí tích và phụng vụ",
+            explanation: "Tiêu đề bài 3: Các bí tích - [Câu 11, 12]",
             attempts: 0,
             completed: false,
             failed: false,
@@ -593,6 +593,141 @@ const quizQuestionsByTopic = {
             options: ["Đúng", "Sai"],
             correctAnswer: "Sai",
             explanation: "đức tin của chúng ta [Câu 17]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Bí tích Rửa Tội ban cho ta ơn:",
+            options: [
+                "A. tháp nhập vào Đức Kitô và Hội Thánh",
+                "B. làm con cái Thiên Chúa",
+                "C. tha tội tổ tông và các tội riêng đã phạm",
+                "D. Tất cả đều đúng"
+            ],
+            correctAnswer: "D",
+            explanation: "Câu 25",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Nghi thức chính yếu của Bí tích Thêm Sức là gì?",
+            options: [
+                "A. xức dầu thánh",
+                "B. đặt tay",
+                "C. đổ nước trên đầu",
+                "D. A B đúng C sai"
+            ],
+            correctAnswer: "D",
+            explanation: "Câu 27",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Chọn câu đúng:",
+            options: [
+                "A. Các dấu chỉ và biểu tượng giúp con người gặp gỡ và đối thoại với Thiên Chúa",
+                "B. Đức Kitô tiếp tục công trình cứu độ của Ngài trong Hội Thánh qua các bí tích được gọi là nhiệm cục bí tích.",
+                "C. lời cầu nguyện của Hội Thánh còn được gọi là Phụng vụ Các Giờ Kinh",
+                "D. Tất cả đều đúng"
+            ],
+            correctAnswer: "B",
+            explanation: "Câu 6",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Chọn câu đúng:",
+            options: [
+                "A. Bí tích là dấu chỉ bên ngoài Chúa Giêsu đã lập và truyền lại cho Hội Thánh cử hành",
+                "B. Vì ấn tín không thể xóa được, nên các bí tích chỉ được lãnh một lần mà thôi.",
+                "C. 7 bí tích được chia ra ba loại; cử hành phụng vụ gồm dấu chỉ, hình ảnh, lời nói và hành động.",
+                "D. A và C đúng"
+            ],
+            correctAnswer: "A",
+            explanation: "Bài 3: Các bí tích",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Chọn câu đúng:",
+            options: [
+                "A. Đáp án B và C đều sai",
+                "B. Ấn tín bí tích được xem như là lời hứa Đức Ki-tô sẽ trở lại trong vinh quang",
+                "C. Điều kiện để lãnh Bí tích Thêm Sức là phải có lòng ước ao",
+                "D. Đáp án B đúng, C sai"
+            ],
+            correctAnswer: "A",
+            explanation: "Câu 29",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Người lãnh Bí tích Thêm sức được 4 ơn và 3 bổn phận.",
+            options: ["Đúng", "Sai"],
+            correctAnswer: "Sai",
+            explanation: "Trong tài liệu không có nói đến mấy ơn [Bài 5]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Người lãnh Bí tích Thêm Sức phải góp phần xây dựng xã hội theo tinh thần Tin Mừng.",
+            options: ["Đúng", "Sai"],
+            correctAnswer: "Đúng",
+            explanation: "Câu 30",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Ơn thứ ba của Bí tích Rửa Tội là được làm con cái Thiên Chúa.",
+            options: ["Đúng", "Sai"],
+            correctAnswer: "Sai",
+            explanation: "Ơn thứ 2 [Câu 25]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Bí tích Thánh Thể có thể tẩy xóa được 1 số tội lỗi.",
+            options: ["Đúng", "Sai"],
+            correctAnswer: "Đúng",
+            explanation: "Bài 6",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "1 trong những điều kiện để lãnh các Bí tích khai tâm là phải sạch tội trọng.",
+            options: ["Đúng", "Sai"],
+            correctAnswer: "Sai",
+            explanation: "Bí tích Rửa Tội thì không cần [Câu 29]",
             attempts: 0,
             completed: false,
             failed: false,
