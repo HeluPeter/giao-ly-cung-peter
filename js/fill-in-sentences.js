@@ -3,7 +3,7 @@
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVDg0JoZ3uXjtzQ2-nrJpZDcmg7h7odevp9PGo1oMWN01aO-DVqJ4B_tzeVhzQqSvy5g/exec';
 
 // Quiz questions
-const quizQuestions = [
+const newQuizQuestions = [
     {
         question: "Phụng vụ Các Giờ Kinh là gì của Đức Ki-tô cùng với Hội Thánh.",
         syllables: "3 âm tiết",
@@ -349,13 +349,25 @@ let quizTotalTime;
 let currentQuestionIndex = 0;
 let questionTimer;
 let questionStartTime;
-let timeRemaining = 35;
+let timeRemaining = 45;
 let leaderboardData = [];
 let currentPage = 1;
 const itemsPerPage = 5;
-const questionTimeLimit = 35; // seconds per question
+const questionTimeLimit = 45; // seconds per question
 
 // Initialize
+
+function shuffleArray(array) {
+    const newArray = [...array]; // Create a copy to avoid modifying the original
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+}
+
+let quizQuestions = shuffleArray(newQuizQuestions);
+
 totalPossible.textContent = quizQuestions.length * 2; // 2 points per question
 document.getElementById('max-score').textContent = quizQuestions.length * 2;
 
