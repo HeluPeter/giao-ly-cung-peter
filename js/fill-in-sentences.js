@@ -819,6 +819,7 @@ function loadLeaderboard() {
 
             // Sort by score (descending) and time (descending)
             leaderboardData.sort((a, b) => {
+                
                 if (b.score !== a.score) {
                     return b.score - a.score;
                 }
