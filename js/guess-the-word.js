@@ -4,7 +4,7 @@ const vocabularyData = {
     lessons: [
         {
             id: 1,
-            title: "Lesson 1: Animals",
+            title: "Bài 1: Phụng Vụ",
             color: "bg-blue-100",
             borderColor: "border-blue-300",
             textColor: "text-blue-700",
@@ -12,63 +12,171 @@ const vocabularyData = {
             sets: [
                 {
                     id: 1,
-                    title: "Set 1: Mammals",
+                    title: "Gói 1",
                     color: "bg-blue-50",
                     borderColor: "border-blue-200",
                     words: [
-                        { word: "guess the word guess the word" },
-                        { word: "Elephant" },
-                        { word: "Giraffe" },
-                        { word: "Dolphin" },
-                        { word: "Kangaroo" },
-                        { word: "Tiger" },
-                        { word: "Bear" },
-                        { word: "Wolf" },
-                        { word: "Monkey" },
-                        { word: "Zebra" }
+                        { word: "nhất là bí tích Thánh Thể." },
+                        { word: "Hội Thánh cử hành các bí tích" },
+                        { word: "việc Hội Thánh cử hành" },
+                        { word: "qua việc Hội Thánh cử hành các bí tích" },
+                        { word: "ơn cứu độ của Chúa qua việc Hội Thánh cử hành" },
+                        { word: "sự chuyển thông ơn cứu độ của Chúa" },
+                        { word: "là sự chuyển thông ơn cứu độ" },
+                        { word: "bí tích là sự chuyển thông ơn cứu độ" },
+                        { word: "Nhiệm cục bí tích là sự chuyển thông ơn" },
+                        { word: "sự chuyển thông" }
                     ]
                 },
                 {
                     id: 2,
-                    title: "Set 2: Birds",
+                    title: "Gói 2",
                     color: "bg-blue-50",
                     borderColor: "border-blue-200",
                     words: [
-                        { word: "Eagle" },
-                        { word: "Penguin" },
-                        { word: "Owl" },
-                        { word: "Parrot" },
-                        { word: "Flamingo" },
-                        { word: "Peacock" },
-                        { word: "Hummingbird" },
-                        { word: "Swan" },
-                        { word: "Toucan" },
-                        { word: "Ostrich" }
+                        { word: "thông ơn cứu độ" },
+                        { word: "thông ơn" },
+                        { word: "nhất là bí tích Thánh" },
+                        { word: "bí tích Thánh" },
+                        { word: "nhất là bí tích Thánh Thể" },
+                        { word: "cử hành các bí tích" },
+                        { word: "Thánh cử hành" },
+                        { word: "Hội Thánh cử hành" },
+                        { word: "việc Hội Thánh" },
+                        { word: "qua việc Hội Thánh cử hành" }
                     ]
                 },
                 {
                     id: 3,
-                    title: "Set 3: Reptiles",
+                    title: "Gói 3",
                     color: "bg-blue-50",
                     borderColor: "border-blue-200",
                     words: [
-                        { word: "Crocodile" },
-                        { word: "Snake" },
-                        { word: "Turtle" },
-                        { word: "Lizard" },
-                        { word: "Gecko" },
-                        { word: "Iguana" },
-                        { word: "Chameleon" },
-                        { word: "Alligator" },
-                        { word: "Komodo Dragon" },
-                        { word: "Tortoise" }
+                        { word: "ơn cứu độ của Chúa" },
+                        { word: "cứu độ của Chúa" },
+                        { word: "chuyển thông ơn cứu độ của Chúa" },
+                        { word: "sự chuyển thông ơn cứu độ" },
+                        { word: "là sự chuyển thông ơn" },
+                        { word: "bí tích là sự chuyển thông ơn" },
+                        { word: "Nhiệm cục bí tích là sự chuyển thông" },
+                        { word: "nhiệm cục bí tích" },
+                        { word: "là nhiệm cục bí tích" },
+                        { word: "được gọi là nhiệm cục" }
+                    ]
+                },
+                {
+                    id: 4,
+                    title: "Gói 4",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "gọi là nhiệm cục" },
+                        { word: "được gọi là nhiệm cục bí tích" },
+                        { word: "các bí tích được gọi là nhiệm cục" },
+                        { word: "qua các bí tích được gọi là nhiệm cục" },
+                        { word: "Hội Thánh qua các bí tích được gọi là nhiệm cục" },
+                        { word: "qua các bí tích" },
+                        { word: "trong Hội Thánh qua các bí tích" },
+                        { word: "của Ngài trong Hội Thánh qua các bí tích" },
+                        { word: "của Ngài trong Hội Thánh" },
+                        { word: "cứu độ của Ngài trong Hội" }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "Gói 5",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "tiếp tục công trình cứu độ của Ngài trong Hội Thánh" },
+                        { word: "cứu độ của Ngài" },
+                        { word: "công trình cứu độ của Ngài." },
+                        { word: "tiếp tục công trình cứu độ của Ngài" },
+                        { word: "tiếp tục công trình cứu độ" },
+                        { word: "Đức Kitô tiếp tục công trình" },
+                        { word: "tiếp tục công trình" },
+                        { word: "Đức Kitô tiếp tục" },
+                        { word: "qua đó Đức Kitô" },
+                        { word: "của Hội Thánh" }
+                    ]
+                },
+                {
+                    id: 6,
+                    title: "Gói 6",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "hoạt động của Hội" },
+                        { word: "nguồn mạch các hoạt động" },
+                        { word: "các hoạt động của Hội Thánh" },
+                        { word: "là nguồn mạch" },
+                        { word: "là chóp đỉnh" },
+                        { word: "là chóp đỉnh và là nguồn mạch" },
+                        { word: "Phụng vụ là chóp đỉnh và là nguồn mạch" },
+                        { word: "Phụng vụ là chóp đỉnh" },
+                        { word: "Phụng vụ có vị trí" },
+                        { word: "thánh hóa con người" }
+                    ]
+                },
+                {
+                    id: 7,
+                    title: "Gói 7",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "và thánh hóa" },
+                        { word: "Thiên Chúa và thánh hóa con người" },
+                        { word: "thờ phượng Thiên Chúa và thánh hóa con" },
+                        { word: "thờ phượng Thiên Chúa và thánh hóa con người" },
+                        { word: "để thờ phượng Thiên Chúa và thánh hóa" },
+                        { word: "để thờ phượng" },
+                        { word: "để thờ phượng Thiên Chúa" },
+                        { word: "mầu nhiệm Đức Kitô" },
+                        { word: "cử hành mầu nhiệm Đức Kitô" },
+                        { word: "chính thức cử hành mầu nhiệm" }
+                    ]
+                },
+                {
+                    id: 8,
+                    title: "Gói 8",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "Thánh chính thức cử hành" },
+                        { word: "Hội Thánh chính thức cử hành" },
+                        { word: "việc Hội Thánh chính thức cử hành mầu nhiệm" },
+                        { word: "là việc Hội Thánh chính thức cử hành" },
+                        { word: "Phụng vụ là việc Hội Thánh" },
+                        { word: "CÔNG GIÁO – năm 2023" },
+                        { word: "BẢN HỎI THƯA GIÁO LÝ" },
+                        { word: "HỎI THƯA GIÁO LÝ HỘI THÁNH" },
+                        { word: "BÀI 1: PHỤNG VỤ" },
+                        { word: "Phụng vụ" }
+                    ]
+                },
+                {
+                    id: 9,
+                    title: "Gói 9",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "GIÁO LÝ HỘI THÁNH CÔNG GIÁO – năm 2023" },
+                        { word: "HỎI THƯA GIÁO LÝ HỘI THÁNH CÔNG GIÁO" },
+                        { word: "Trích BẢN HỎI THƯA" },
+                        { word: "Trích BẢN HỎI THƯA GIÁO LÝ" },
+                        { word: "MẦU NHIỆM KI-TÔ GIÁO" },
+                        { word: "CỬ HÀNH MẦU NHIỆM" },
+                        { word: "HỘI THÁNH CÔNG GIÁO" },
+                        { word: "GIÁO LÝ HỘI THÁNH CÔNG GIÁO" },
+                        { word: "GIÁO LÝ HỘI THÁNH" },
+                        { word: "PHẦN I" }
                     ]
                 }
             ]
         },
         {
             id: 2,
-            title: "Lesson 2: Food",
+            title: "Bài 2: Cử hành phụng vụ của Hội Thánh",
             color: "bg-green-100",
             borderColor: "border-green-300",
             textColor: "text-green-700",
@@ -76,56 +184,128 @@ const vocabularyData = {
             sets: [
                 {
                     id: 1,
-                    title: "Set 1: Fruits",
-                    color: "bg-green-50",
-                    borderColor: "border-green-200",
+                    title: "Gói 1",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Apple" },
-                        { word: "Banana" },
-                        { word: "Orange" },
-                        { word: "Strawberry" },
-                        { word: "Grape" },
-                        { word: "Watermelon" },
-                        { word: "Pineapple" },
-                        { word: "Mango" },
-                        { word: "Kiwi" },
-                        { word: "Peach" }
+                        { word: "thời gian trong ngày" },
+                        { word: "thánh hóa thời gian" },
+                        { word: "các tín hữu thánh hóa" },
+                        { word: "giúp các tín hữu" },
+                        { word: "thánh hóa thời gian trong ngày." },
+                        { word: "các tín hữu thánh hóa thời gian" },
+                        { word: "để giúp các tín hữu thánh hóa" },
+                        { word: "của Đức Kitô" },
+                        { word: "cùng với Hội Thánh" },
+                        { word: "của Đức Kitô cùng với Hội Thánh" }
                     ]
                 },
                 {
                     id: 2,
-                    title: "Set 2: Vegetables",
-                    color: "bg-green-50",
-                    borderColor: "border-green-200",
+                    title: "Gói 2",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Carrot" },
-                        { word: "Broccoli" },
-                        { word: "Potato" },
-                        { word: "Tomato" },
-                        { word: "Cucumber" },
-                        { word: "Spinach" },
-                        { word: "Onion" },
-                        { word: "Lettuce" },
-                        { word: "Corn" },
-                        { word: "Peas" }
+                        { word: "lời cầu nguyện của Đức Kitô" },
+                        { word: "Các Giờ Kinh là lời cầu nguyện" },
+                        { word: "Phụng vụ Các Giờ Kinh" },
+                        { word: "đến trong vinh quang" },
+                        { word: "đón Ngài lại đến trong vinh quang." },
+                        { word: "chuẩn bị đón Ngài lại đến" },
+                        { word: "hầu chuẩn bị đón Ngài" },
+                        { word: "chúng ta sống những mầu nhiệm ấy" },
+                        { word: "sống những mầu nhiệm ấy" },
+                        { word: "để giúp chúng ta sống" }
                     ]
                 },
                 {
                     id: 3,
-                    title: "Set 3: Desserts",
-                    color: "bg-green-50",
-                    borderColor: "border-green-200",
+                    title: "Gói 3",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
                     words: [
-                        { word: "Cake" },
-                        { word: "Ice Cream" },
-                        { word: "Cookie" },
-                        { word: "Pie" },
-                        { word: "Chocolate" },
-                        { word: "Pudding" },
-                        { word: "Cupcake" },
-                        { word: "Brownie" },
-                        { word: "Donut" },
-                        { word: "Cheesecake" }
+                        { word: "các mầu nhiệm Đức Kitô" },
+                        { word: "cử hành các mầu nhiệm Đức Kitô" },
+                        { word: "Hội Thánh cử hành các mầu nhiệm" },
+                        { word: "thời gian Hội Thánh cử hành" },
+                        { word: "là thời gian Hội Thánh cử hành các mầu nhiệm" },
+                        { word: "Năm Phụng vụ là thời gian" },
+                        { word: "cả Năm Phụng vụ." },
+                        { word: "nền tảng và trung tâm của cả Năm" },
+                        { word: "trung tâm của cả Năm Phụng vụ." },
+                        { word: "nền tảng và trung tâm" }
+                    ]
+                },
+                {
+                    id: 4,
+                    title: "Gói 4",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "ngày Chúa Nhật là nền tảng" },
+                        { word: "Vì thế, ngày Chúa Nhật" },
+                        { word: "Ngày của Chúa" },
+                        { word: "rất quan trọng vì là “Ngày của Chúa”" },
+                        { word: "trong Năm phụng vụ" },
+                        { word: "Ngày Chúa Nhật rất quan trọng" },
+                        { word: "Ngày Chúa Nhật quan trọng thế" },
+                        { word: "đối thoại với Thiên Chúa" },
+                        { word: "gặp gỡ và đối thoại" },
+                        { word: "con người gặp gỡ và đối thoại" }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "Gói 5",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "nhờ đó con người gặp gỡ" },
+                        { word: "lời nói và hành động" },
+                        { word: "Hai là lời nói" },
+                        { word: "Hai là lời nói và hành động" },
+                        { word: "hành động cứu độ của Đức Kitô" },
+                        { word: "thực hiện hành động cứu độ" },
+                        { word: "diễn tả và thực hiện hành động cứu độ" },
+                        { word: "để diễn tả và thực hiện" },
+                        { word: "để diễn tả và thực hiện hành động cứu độ của Đức Kitô" },
+                        { word: "các dấu chỉ và biểu tượng" }
+                    ]
+                },
+                {
+                    id: 6,
+                    title: "Gói 6",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "Một là các dấu chỉ" },
+                        { word: "Một là các dấu chỉ và biểu tượng" },
+                        { word: "phụng vụ gồm hai yếu tố" },
+                        { word: "Cử hành phụng vụ gồm hai yếu tố này" },
+                        { word: "gồm những yếu tố" },
+                        { word: "hành động trong phụng vụ." },
+                        { word: "ở trần gian hành động" },
+                        { word: "Hội Thánh ở trần gian" },
+                        { word: "và Hội Thánh ở trần gian" },
+                        { word: "Hội Thánh trên trời" }
+                    ]
+                },
+                {
+                    id: 7,
+                    title: "Gói 7",
+                    color: "bg-blue-50",
+                    borderColor: "border-blue-200",
+                    words: [
+                        { word: "Thân Thể của Ngài là Hội Thánh trên trời" },
+                        { word: "với Thân Thể của Ngài là Hội Thánh" },
+                        { word: "Đức Kitô cùng với Thân Thể của Ngài" },
+                        { word: "nghĩa là Đức Kitô cùng với Thân Thể" },
+                        { word: "Chính “Đức Kitô toàn thể”" },
+                        { word: "Ai hành động" },
+                        { word: "CỬ HÀNH PHỤNG VỤ CỦA HỘI THÁNH" },
+                        { word: "PHỤNG VỤ CỦA HỘI THÁNH" },
+                        { word: "CỬ HÀNH PHỤNG VỤ" },
+                        { word: "BÀI 2: CỬ HÀNH PHỤNG VỤ CỦA HỘI THÁNH" }
                     ]
                 }
             ]
@@ -677,7 +857,7 @@ function renderLessons() {
         lessonCard.innerHTML = `
             <div class="flex items-center justify-between mb-2">
                 <span class="text-4xl">${lesson.icon}</span>
-                <span class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm ${lesson.textColor} font-medium">Lesson ${lesson.id}</span>
+                <span class="bg-white bg-opacity-50 rounded-full px-3 py-1 text-sm ${lesson.textColor} font-medium">Bài ${lesson.id}</span>
             </div>
             <h3 class="text-xl font-semibold ${lesson.textColor}">${lesson.title}</h3>
             <p class="text-gray-600 mt-2">${lesson.sets.length} sets</p>
@@ -711,7 +891,7 @@ function showSets(lesson) {
 function showWords(set) {
     currentSet = set;
     setTitle.textContent = set.title;
-    setDescription.textContent = `From ${currentLesson.title}`;
+    setDescription.textContent = `Nguồn: ${currentLesson.title}`;
     wordsContainer.innerHTML = '';
 
     set.words.forEach((wordItem, index) => {

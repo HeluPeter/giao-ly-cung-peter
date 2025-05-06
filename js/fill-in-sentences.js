@@ -216,7 +216,7 @@ const newQuizQuestions = [
     {
         question: "Năm Phụng vụ là thời gian như thế nào?",
         syllables: "10 âm tiết",
-        answer: "Hội Thánh cử hành các mầu nhiệm Đức Kitô",
+        answer: "Hội Thánh cử hành các mầu nhiệm Đức Ki-tô",
         hint: "Câu 11.",
         attempts: 0,
         completed: false,

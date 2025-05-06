@@ -230,14 +230,14 @@ const quizQuestionsByTopic = {
             timeTaken: 0
         },
         {
-            question: "Chọn câu đúng",
+            question: "Chọn câu sai",
             options: [
                 "A. Qua phụng vụ, Đức Kitô tiếp tục công trình cứu độ của Ngài",
                 "B. Qua phụng vụ, con người thờ phượng và thánh hóa Thiên Chúa",
                 "C. A đúng B sai",
                 "D. Tất cả đều đúng"
             ],
-            correctAnswer: "D. Tất cả đều đúng",
+            correctAnswer: "B. Qua phụng vụ, con người thờ phượng và thánh hóa Thiên Chúa",
             explanation: "[Câu 2]",
             attempts: 0,
             completed: false,
