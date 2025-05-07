@@ -433,13 +433,15 @@ function updateProgressBar() {
 }
 
 // Normalize text for comparison
-function normalizeText(text) {
-    return text
-        .toLowerCase()
-        .replace(/[.,;:'"?!/()[\]{}]/g, '')
-        .replace(/\s+/g, ' ')
-        .trim();
-}
+function normalizeText(answer) {
+    return answer
+      .replace(/“|”|"/g,'') // Loại bỏ dấu nháy
+      .replace(/-/g,'') // Loại bỏ dấu gạch nối
+      .replace(/[.,;|/?\\!@#$%^&*()_+=~`'{}\[\]:<>]/g,'') // Loại bỏ dấu chấm, phẩy và các ký tự đặc biệt
+      .replace(/\s+/g,' ') // Thay thế nhiều khoảng trắng bằng một khoảng trắng
+      .trim() // Cắt bỏ khoảng trắng thừa
+      .toLowerCase(); // Chuyển đổi thành chữ thường
+  }
 
 // Show error message
 function showErrorMessage(message) {
@@ -455,6 +457,7 @@ function hideErrorMessage() {
 // Check if the answer is correct
 function checkAnswer() {
     const userAnswer = answerInput.value;
+    console.log("🚀 ~ checkAnswer ~ userAnswer:", userAnswer)
     const currentQuestion = questions[currentQuestionIndex];
 
     if (!userAnswer.trim()) {
@@ -468,7 +471,9 @@ function checkAnswer() {
     attemptCount++;
 
     const normalizedUserAnswer = normalizeText(userAnswer);
+    console.log("🚀 ~ checkAnswer ~ normalizedUserAnswer:", normalizedUserAnswer)
     const normalizedCorrectAnswer = normalizeText(currentQuestion.correctAnswers);
+    console.log("🚀 ~ checkAnswer ~ normalizedCorrectAnswer:", normalizedCorrectAnswer)
 
     feedbackArea.classList.remove('hidden');
 
