@@ -1,6 +1,6 @@
 
 // Google Apps Script Web App URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbze-TUhudNqN0KfQhwOxJ8v28765w64BgKW-MvQsmC2pcewmiIl2jTPVikDR4EfKJwxvQ/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxxJPU4TySbC9-Tx8Kk0QqVICdlJpKXMGSAO1cSXjkmWHz_PcOiaDVWQTYdhHKNSsJgjA/exec';
 
 // Quiz questions by topic
 const quizQuestionsByTopic = {
