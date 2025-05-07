@@ -1,6 +1,6 @@
 
 // Google Apps Script Web App URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzeaHJJDd-V0LBioRRdIL6CoNV5jX5nK3OWca_QQsIvSUXlbzm6sOV4SHwlCfv4W-lCew/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVDg0JoZ3uXjtzQ2-nrJpZDcmg7h7odevp9PGo1oMWN01aO-DVqJ4B_tzeVhzQqSvy5g/exec';
 
 // Quiz questions
 const newQuizQuestions = [
@@ -787,6 +787,18 @@ function loadLeaderboard() {
                 if (leaderboardData.length === 0) {
                     leaderboardEmpty.classList.remove('hidden');
                 } else {
+                    // Sort by score (descending) and time (descending)
+                    leaderboardData.sort((a, b) => {
+                        if (b.score !== a.score) {
+                            return b.score - a.score;
+                        }
+
+                        // Convert time strings to seconds for comparison
+                        const aTime = timeToSeconds(a.time);
+                        const bTime = timeToSeconds(b.time);
+                        return aTime - bTime;
+                    });
+                    
                     leaderboardContent.classList.remove('hidden');
                     displayTopPlayers();
                     displayLeaderboard();
