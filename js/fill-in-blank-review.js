@@ -322,7 +322,7 @@ const questionSets = [
         {
             question: "1. H. Năm Thánh là gì?",
             tips: "Thưa. Năm Thánh hay còn gọi là ______, là một thời kỳ ______ mở lòng để ______ và ______.",
-            correctAnswers: "Thưa. Năm Thánh hay còn gọi là Năm Toàn Xá, là một thời kỳ hồng ân, qua đó Thiên Chúa ban ơn đặc biệt hơn khi con người mở lòng để thống hối và canh tân."
+            correctAnswers: "Thưa. Năm Thánh hay còn gọi là năm Toàn Xá, là một thời kỳ hồng ân, qua đó Thiên Chúa ban ơn đặc biệt hơn khi con người mở lòng để thống hối và canh tân. Năm Thánh là thời gian giao hoà với Thiên Chúa và anh chị em, nhằm thánh hóa cuộc sống, củng cố đức tin, tạo cơ hội thuận tiện để xây dựng tình liên đới và hiệp thông huynh đệ trong lòng Giáo Hội và thế giới, khuyến khích mọi người tuyên xưng đức tin một cách chân thành và sống động hơn nơi đức Kitô, đấng Cứu độ duy nhất của nhân loại."
         },
         {
             question: "2. H. Để mở Năm Thánh thường lệ 2025, Đức Thánh Cha Phanxicô đã ban hành tông sắc gì?",
@@ -441,7 +441,7 @@ function normalizeText(answer) {
       .replace(/\s+/g,' ') // Thay thế nhiều khoảng trắng bằng một khoảng trắng
       .trim() // Cắt bỏ khoảng trắng thừa
       .toLowerCase(); // Chuyển đổi thành chữ thường
-  }
+}
 
 // Show error message
 function showErrorMessage(message) {
@@ -457,7 +457,6 @@ function hideErrorMessage() {
 // Check if the answer is correct
 function checkAnswer() {
     const userAnswer = answerInput.value;
-    console.log("🚀 ~ checkAnswer ~ userAnswer:", userAnswer)
     const currentQuestion = questions[currentQuestionIndex];
 
     if (!userAnswer.trim()) {
@@ -471,7 +470,6 @@ function checkAnswer() {
     attemptCount++;
 
     const normalizedUserAnswer = normalizeText(userAnswer);
-    console.log("🚀 ~ checkAnswer ~ normalizedUserAnswer:", normalizedUserAnswer)
     const normalizedCorrectAnswer = normalizeText(currentQuestion.correctAnswers);
     console.log("🚀 ~ checkAnswer ~ normalizedCorrectAnswer:", normalizedCorrectAnswer)
 

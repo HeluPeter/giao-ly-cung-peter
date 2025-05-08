@@ -560,6 +560,33 @@ function handleTimeUp() {
     nextButton.classList.remove('hidden');
 }
 
+function isEquivalentAnswer(a, b) {
+    const normalize = str => str.toLowerCase().trim();
+
+    const strA = normalize(a);
+    const strB = normalize(b);
+
+    if (strA === strB) return true;
+
+    // Các cặp từ đặc biệt coi là tương đương
+    const specialCases = [
+        ["hoá", "hóa"],
+        ["xoá", "xóa"]
+    ];
+
+    for (const [x, y] of specialCases) {
+        if (
+            (strA.includes(x) && strB.includes(y)) ||
+            (strA.includes(y) && strB.includes(x))
+            ) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+  
 function checkCurrentAnswer() {
     const question = quizQuestions[currentQuestionIndex];
     const answerInput = document.getElementById('current-answer');
@@ -579,7 +606,7 @@ function checkCurrentAnswer() {
     attemptsElement.textContent = question.attempts;
 
     // Check if answer is correct
-    const isCorrect = userAnswer === question.answer.toLowerCase();
+    const isCorrect = isEquivalentAnswer(userAnswer, question.answer);
 
     if (isCorrect) {
         // Stop the timer
