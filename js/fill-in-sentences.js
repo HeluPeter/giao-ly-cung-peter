@@ -300,6 +300,61 @@ const newQuizQuestions = [
         failed: false,
         userAnswer: "",
         timeTaken: 0
+    },
+    {
+        question: "Bí tích Thánh Thể là nguồn mạch và tột đỉnh của điều gì?",
+        syllables: "7 âm tiết",
+        answer: "toàn bộ đời sống Kitô giáo",
+        hint: "Câu 17.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Đây là 1 điều kiện để được rước lễ?",
+        syllables: "9 âm tiết",
+        answer: "phải giữ chay theo quy định của Hội Thánh",
+        hint: "Câu 33.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Đây là 1 ơn ích của việc rước lễ?",
+        syllables: "10 âm tiết",
+        answer: "gia tăng ân sủng và lòng yêu mến tha nhân",
+        hint: "Câu 36.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Bí tích Thông hối có hiệu quả là ban bình an và gia tăng điều gì?",
+        syllables: "13 âm tiết",
+        answer: "sức mạnh cho cuộc chiến đấu thiêng liêng của người Kitô hữu",
+        hint: "Câu 11.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
+    },
+    {
+        question: "Đây là 1 hành động phải làm trước khi rước lễ?",
+        syllables: "4 âm tiết",
+        answer: "xưng các tội trọng",
+        hint: "Câu 7.",
+        attempts: 0,
+        completed: false,
+        failed: false,
+        userAnswer: "",
+        timeTaken: 0
     }
 ];
 

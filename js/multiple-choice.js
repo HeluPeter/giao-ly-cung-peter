@@ -733,6 +733,141 @@ const quizQuestionsByTopic = {
             failed: false,
             userAnswer: "",
             timeTaken: 0
+        },
+        {
+            question: "Chọn câu đúng:",
+            options: [
+                "A. Trong bảy bí tích, có 4 bí tích có thể tha tội.",
+                "B. Trong bảy bí tích, có 3 bí tích có thể tha tội.",
+                "C. Trong bảy bí tích, có 2 bí tích có thể tha tội.",
+                "D. Tất cả đều sai"
+            ],
+            correctAnswer: "A. Trong bảy bí tích, có 4 bí tích có thể tha tội.",
+            explanation: "[Câu ?]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Chọn câu đúng:",
+            options: [
+                "A. Lãnh nhận bí tích Thêm Sức giúp ta sạch tội trọng.",
+                "B. Chúa Giêsu đã lập Bí tích Thống Hối trong bữa tiệc ly",
+                "C. Lãnh nhận bí tích Rửa Tội giúp ta sạch tội trọng.",
+                "D. Tất cả đều đúng"
+            ],
+            correctAnswer: "C. Lãnh nhận bí tích Rửa Tội giúp ta sạch tội trọng.",
+            explanation: "[Câu ?]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Chọn câu đúng:",
+            options: [
+                "A. Ấn tín bí tích là sự chuyển thông ơn cứu độ của Chúa",
+                "B. Chúa Thánh Thần luôn hoạt động trong các bí tích",
+                "C. Bí tích Thánh Thể chứa đựng toàn bộ kho tàng thiêng liêng của Chúa Ki-tô",
+                "D. A, C sai, B đúng"
+            ],
+            correctAnswer: "B. Chúa Thánh Thần luôn hoạt động trong các bí tích",
+            explanation: "[Câu ?]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Chọn câu sai:",
+            options: [
+                "A. Bí tích Rửa Tội có thể tha tội cho người lãnh nhận",
+                "B. Ân xá có thể tha tội cho người lãnh nhận",
+                "C. Bí tích Thống Hối có thể tha tội cho người lãnh nhận",
+                "D. B sai; A, C đúng =))"
+            ],
+            correctAnswer: "B. Ân xá có thể tha tội cho người lãnh nhận",
+            explanation: "[Câu ?]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Chọn câu đúng:",
+            options: [
+                "A. Các bí tích phụng vụ gồm có Bí tích Truyền Chức Thánh và Hôn Phối",
+                "B. Các bí tích trao ban ân sủng của Chúa Giê-su",
+                "C. Bí tích Thống Hối có 3 yếu tố chính",
+                "D. A sai; B và C sai"
+            ],
+            correctAnswer: "D. A sai; B và C sai",
+            explanation: "[Câu ?]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Mọi tín hữu buộc phải xưng các tội trọng của mình ít nhất một năm một lần và trong mọi trường hợp, phải xưng các tội trọng trước khi rước lễ.",
+            options: ["Đúng", "Sai"],
+            correctAnswer: "Sai",
+            explanation: "Khi đến tuổi khôn [Câu ?]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Ân xá là việc tha thứ những hình phạt tạm đáng chịu vì những tội chúng ta đã phạm, dù những tội này đã được tha thứ.",
+            options: ["Đúng", "Sai"],
+            correctAnswer: "Đúng",
+            explanation: "[Câu ?]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Trong nhiều trường hợp, phải xưng các tội trọng trước khi rước lễ.",
+            options: ["Đúng", "Sai"],
+            correctAnswer: "Sai",
+            explanation: "Phải xưng trong mọi trường hợp [Câu ?]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Chúa Giêsu đã lập Bí tích Thống Hối khi Ngài hiện ra với các Tông đồ vào sáng ngày Phục sinh và nói rằng: “Anh em hãy nhận lấy Thánh Thần; anh em tha tội cho ai, thì tội người ấy được tha; anh em cầm giữ ai, thì tội người ấy bị cầm giữ”.",
+            options: ["Đúng", "Sai"],
+            correctAnswer: "Sai",
+            explanation: "Lúc chiều ngày Phục Sinh [Câu ?]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
+        },
+        {
+            question: "Ân xá là việc tha thứ những hình phạt tạm đáng chịu vì những tội chúng ta đã phạm, dù những tội này đã được tha thứ.",
+            options: ["Đúng", "Sai"],
+            correctAnswer: "Đúng",
+            explanation: "[Câu ?]",
+            attempts: 0,
+            completed: false,
+            failed: false,
+            userAnswer: "",
+            timeTaken: 0
         }
     ],
     science: [
