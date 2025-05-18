@@ -40,7 +40,7 @@ const vocabularyData = {
                         { word: "bí tích Thánh" },
                         { word: "nhất là bí tích Thánh Thể" },
                         { word: "cử hành các bí tích" },
-                        { word: "Thánh cử hành" },
+                        { word: "Hội Thánh cử hành các bí tích" },
                         { word: "Hội Thánh cử hành" },
                         { word: "việc Hội Thánh" },
                         { word: "qua việc Hội Thánh cử hành" }
@@ -79,7 +79,7 @@ const vocabularyData = {
                         { word: "trong Hội Thánh qua các bí tích" },
                         { word: "của Ngài trong Hội Thánh qua các bí tích" },
                         { word: "của Ngài trong Hội Thánh" },
-                        { word: "cứu độ của Ngài trong Hội" }
+                        { word: "cứu độ của Ngài trong Hội Thánh" }
                     ]
                 },
                 {
@@ -546,7 +546,7 @@ const vocabularyData = {
                         { word: "Nghi thức chính yếu của Bí Tích Thêm Sức" },
                         { word: "Thêm Sức ban tràn đầy Chúa Thánh Thần" },
                         { word: "Lãnh nhận Bí Tích Thêm Sức" },
-                        { word: "Người lãnh Bí Tích Thêm Sức phải học giáo lý" },
+                        { word: "nhất là về Bí tích Thêm Sức" },
                         { word: "Xức dầu thánh trên trán người lãnh Bí Tích" },
                         { word: "Gia tăng ân sủng Bí Tích Rửa Tội" },
                         { word: "Lãnh nhận ấn tín ơn Chúa Thánh Thần" },
@@ -630,7 +630,7 @@ const vocabularyData = {
                         { word: "hai là ý thức mình không có tội trọng" },
                         { word: "Việc rước lễ làm cho chúng ta được kết hợp mật thiết với Đức Kitô và Hội Thánh" },
                         { word: "Chúa Giê su đã lập Bí Tích Thánh Thể để tiếp tục lễ hy sinh trên Thánh giá" },
-                        { word: "Hội Thánh cử hành Bí Tích Thánh Thể trong Thánh lễ, gồm hai phần chính" },
+                        { word: "Hội Thánh cử hành Bí Tích Thánh Thể trong Thánh lễ" },
                         { word: "Bí Tích Thánh Thể là để ban Mình Máu Ngài" },
                         { word: "Chúa Giê su cầm lấy chén rượu và nói: “Tất cả các con hãy nhận lấy mà uống”" },
                         { word: "Hội Thánh dạy thế nào về việc rước lễ" }
@@ -647,10 +647,10 @@ const vocabularyData = {
                         { word: "Hội Thánh khuyên các tín hữu rước lễ mỗi khi tham dự Thánh lễ" },
                         { word: "Bí Tích Thánh Thể giúp chúng ta sống ơn Rửa Tội" },
                         { word: "bốn là có thái độ tôn kính Đức Kitô" },
-                        { word: "Việc rước lễ làm cho chúng ta được tẩy xóa các tội nhẹ" },
+                        { word: "được tẩy xóa các tội nhẹ" },
                         { word: "Bí Tích Thánh Thể là nguồn mạch và tột đỉnh của toàn bộ đời sống Kitô giáo" },
                         { word: "hai là ý thức mình không có tội trọng" },
-                        { word: "Bí Tích Thánh Thể là để ban Mình Máu Ngài, làm của ăn nuôi sống chúng ta" },
+                        { word: "để ban Mình Máu Ngài, làm của ăn nuôi sống chúng ta" },
                         { word: "Hội Thánh cử hành Bí Tích Thánh Thể trong Thánh lễ, gồm hai phần chính" }
                     ]
                 }                
@@ -732,7 +732,7 @@ const vocabularyData = {
                         { word: "ba là gia tăng sức mạnh cho cuộc chiến đấu thiêng liêng " },
                         { word: "Bí Tích Thống Hối có những yếu tố chính yếu này" },
                         { word: "Muốn lãnh Bí Tích Thống Hối chúng ta phải làm bốn việc này" },
-                        { word: "Bí Tích Thống Hối là để tha các tội riêng chúng ta đã phạm" },
+                        { word: "để tha các tội riêng chúng ta đã phạm" },
                         { word: "Muốn lãnh Bí Tích Thống Hối chúng ta phải làm bốn việc này" }
                     ]
                 },
@@ -775,7 +775,7 @@ const vocabularyData = {
                         { word: "Cử hành phụng vụ" },
                         { word: "Làm mới lại lòng yêu mến" },
                         { word: "Thứ nhất vì phụng vụ" },
-                        { word: "Mầu nhiệm thánh, là nguồn mạch" },
+                        { word: "là những mầu nhiệm thánh" },
                         { word: "Tích cực tham dự phụng vụ" },
                         { word: "Thứ ba loại bỏ lạm dụng" },
                         { word: "Cung cách cử hành phụng vụ" },
@@ -815,7 +815,7 @@ const vocabularyData = {
                         { word: "Cử hành phụng vụ là nguồn mạch" },
                         { word: "Cử hành phụng vụ thánh" },
                         { word: "Làm mới lại lòng yêu mến" },
-                        { word: "Cung cách tham dự phụng vụ" }
+                        { word: "cung cách cử hành phụng vụ" }
                     ]
                 }                
             ]
@@ -852,13 +852,13 @@ const vocabularyData = {
                     color: "bg-blue-50",
                     borderColor: "border-blue-200",
                     words: [
-                        { word: "Năm Thánh hay còn gọi" },
-                        { word: "Thời kỳ hồng ân Thiên Chúa" },
+                        { word: "thánh hóa cuộc sống" },
+                        { word: "Thời kỳ hồng ân" },
                         { word: "Tông sắc “Spes non Confundit”" },
-                        { word: "Khẩu hiệu “Những người hành hương của hy vọng”" },
+                        { word: "“Những người hành hương của hy vọng”" },
                         { word: "Hy vọng không làm thất vọng" },
                         { word: "Hành hương Năm Thánh" },
-                        { word: "Đến một nơi thánh" },
+                        { word: "củng cố đức tin" },
                         { word: "Bước qua Cửa thánh" },
                         { word: "Cuộc hành trình ra khỏi chính mình" },
                         { word: "Bước theo Đức Kitô" }
@@ -870,16 +870,16 @@ const vocabularyData = {
                     color: "bg-blue-50",
                     borderColor: "border-blue-200",
                     words: [
-                        { word: "Mở Năm Thánh thường lệ" },
+                        { word: "để xây dựng tình liên đới và hiệp thông huynh đệ" },
                         { word: "Đức Thánh Cha Phan xi cô" },
-                        { word: "Hành hương Năm Thánh có ý nghĩa" },
-                        { word: "Hoán cải, biến đổi bản thân" },
+                        { word: "Hành hương Năm Thánh có những ý nghĩa" },
+                        { word: "khuyến khích mọi người tuyên xưng" },
                         { word: "Phù hợp với sự thánh thiện" },
-                        { word: "Hành hương đến nơi thánh" },
-                        { word: "Hành trình với Đức Kitô" },
+                        { word: "Hành hương đến một nơi thánh" },
+                        { word: "hành trình ra khỏi chính mình" },
                         { word: "Đồng hình đồng dạng với Người" },
-                        { word: "Để củng cố đức tin" },
-                        { word: "Học hỏi từ Đức Kitô" }
+                        { word: "sống kinh nghiệm hoán cải" },
+                        { word: "bước theo Đức Kitô như người môn đệ" }
                     ]
                 },
                 {
@@ -892,12 +892,12 @@ const vocabularyData = {
                         { word: "Tạo cơ hội thuận tiện để xây dựng tình liên đới" },
                         { word: "Hy vọng không làm thất vọng" },
                         { word: "Hành hương đến một nơi thánh" },
-                        { word: "Hoán cải bản thân để phù hợp với Thiên Chúa" },
-                        { word: "Cuộc hành trình theo Đức Kitô" },
-                        { word: "Từng bước nên đồng hình đồng dạng với Người" },
-                        { word: "Tuyên xưng đức tin một cách chân thành" },
-                        { word: "Khẩu hiệu của Năm Thánh 2025" },
-                        { word: "Hành hương với tình yêu và hy vọng" }
+                        { word: "biến đổi chính bản thân để phù hợp" },
+                        { word: "như người môn đệ" },
+                        { word: "từng bước nên đồng hình đồng dạng với Người" },
+                        { word: "tuyên xưng đức tin một cách chân thành" },
+                        { word: "2025 có khẩu hiệu là" },
+                        { word: "bước qua Cửa thánh" }
                     ]
                 }                
             ]
