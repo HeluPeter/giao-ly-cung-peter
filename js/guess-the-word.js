@@ -1095,6 +1095,33 @@ const vocabularyData = {
     ]
 };
 
+// Lấy tất cả các từ từ vocabularyData
+const allWords = vocabularyData.lessons
+  .flatMap(lesson => lesson.sets)
+  .flatMap(set => set.words)
+  .map(wordObj => wordObj.word);
+
+// Hàm chọn ngẫu nhiên N phần tử từ mảng
+function getRandomWords(arr, count) {
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
+// Tạo 10 set từ id 11 đến 20
+const randomSets = [];
+for (let i = 0; i < 30; i++) {
+  randomSets.push({
+    id: 11 + i,
+    title: `Gói ${11 + i}`,
+    color: "bg-amber-50",
+    borderColor: "border-amber-200",
+    words: getRandomWords(allWords, 10).map(word => ({ word }))
+  });
+}
+
+// Nối randomSets vào sets của bài đầu tiên (id: 1)
+vocabularyData.lessons[9].sets.push(...randomSets);
+
 // DOM elements
 const lessonsView = document.getElementById('lessons-view');
 const setsView = document.getElementById('sets-view');
