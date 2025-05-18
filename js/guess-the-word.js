@@ -1103,13 +1103,20 @@ const allWords = vocabularyData.lessons
 
 // Hàm chọn ngẫu nhiên N phần tử từ mảng
 function getRandomWords(arr, count) {
-  const shuffled = [...arr].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
+  const result = [...arr];
+  const n = result.length;
+
+  for (let i = 0; i < count; i++) {
+    const randIndex = i + Math.floor(Math.random() * (n - i));
+    [result[i], result[randIndex]] = [result[randIndex], result[i]];
+  }
+
+  return result.slice(0, count);
 }
 
 // Tạo 10 set từ id 11 đến 20
 const randomSets = [];
-for (let i = 0; i < 30; i++) {
+for (let i = 0; i < 40; i++) {
   randomSets.push({
     id: 11 + i,
     title: `Gói ${11 + i}`,
@@ -1179,6 +1186,11 @@ function renderLessons() {
 
 // Show sets for a selected lesson
 function showSets(lesson) {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // hoặc 'auto' nếu bạn không muốn hiệu ứng mượt
+    });
+
     currentLesson = lesson;
     lessonTitle.textContent = lesson.title;
     setsContainer.innerHTML = '';
@@ -1225,6 +1237,11 @@ function showWords(set) {
 
 // Switch between views with animation
 function switchView(fromView, toView) {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // hoặc 'auto' nếu bạn không muốn hiệu ứng mượt
+    });
+
     fromView.classList.remove('visible-view');
     fromView.classList.add('hidden-view');
 
