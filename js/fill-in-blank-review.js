@@ -612,7 +612,7 @@ function toggleSidebarVisibility() {
 
 // Start countdown timer
 function startCountdown() {
-    const examDate = new Date('May 25, 2025 00:00:00').getTime();
+    const examDate = new Date('May 29, 2025 00:00:00').getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();

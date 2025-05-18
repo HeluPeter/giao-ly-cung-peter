@@ -304,7 +304,7 @@ const newQuizQuestions = [
     {
         question: "Bí tích Thánh Thể là nguồn mạch và tột đỉnh của điều gì?",
         syllables: "7 âm tiết",
-        answer: "toàn bộ đời sống Kitô giáo",
+        answer: "toàn bộ đời sống Ki-tô giáo",
         hint: "Câu 17.",
         attempts: 0,
         completed: false,
@@ -337,7 +337,7 @@ const newQuizQuestions = [
     {
         question: "Bí tích Thông hối có hiệu quả là ban bình an và gia tăng điều gì?",
         syllables: "13 âm tiết",
-        answer: "sức mạnh cho cuộc chiến đấu thiêng liêng của người Kitô hữu",
+        answer: "sức mạnh cho cuộc chiến đấu thiêng liêng của người Ki-tô hữu",
         hint: "Câu 11.",
         attempts: 0,
         completed: false,
