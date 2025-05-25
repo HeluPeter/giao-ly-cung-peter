@@ -8,6 +8,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;family=Lora:wght@500;600&amp;display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -220,70 +222,467 @@
                         <h3 class="font-lora text-xl font-semibold text-orange-800">Đoán Từ (Body)</h3>
                         <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Body</span>
                     </div>
-                    <p class="text-orange-700 text-sm">Mỗi bộ gồm 10 từ khác nhau, hãy cùng bạn bè của mình thử chơi
-                        đoán từ nhé!</p>
+                    <p class="text-orange-700 text-sm">Mỗi bộ gồm 10 từ khác nhau, hãy cùng bạn bè của mình khám phá
+                        nha!</p>
                 </div>
             </a>
 
-            <a href="#" class="card bg-white rounded-2xl overflow-hidden shadow-card relative">
+            <a href="tai-lieu/luu-tru-tai-lieu.html"
+                class="card bg-white rounded-2xl overflow-hidden shadow-card relative">
                 <div class="card-glow"></div>
-                <div class="h-40 bg-warmBeige flex items-center justify-center">
-                    <svg class="w-24 h-24 text-rose-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                <div class="h-40 bg-softGreen flex items-center justify-center">
+                    <svg class="w-20 h-20 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z">
+                            d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129">
                         </path>
                     </svg>
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="font-lora text-xl font-semibold text-orange-800">Trò Chơi Kinh Thánh</h3>
-                        <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Coming Soon</span>
+                        <h3 class="font-lora text-xl font-semibold text-orange-800">Lưu Trữ Tài Liệu</h3>
+                        <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Tài Liệu</span>
                     </div>
-                    <p class="text-orange-700 text-sm">Coming Soon</p>
+                    <p class="text-orange-700 text-sm">Nơi lưu trữ cái tài liệu/hình ảnh/thiết kế cần thiết hoặc các tài
+                        nguyên hữu ích phục vụ cho việc học giáo lý và các công việc khác.</p>
                 </div>
             </a>
 
-            <!-- Card 5: Fill in Sentences -->
-            <!-- <a href="#" class="card bg-white rounded-2xl overflow-hidden shadow-card relative">
-                <div class="card-glow"></div>
-                <div class="h-40 bg-dustyRose flex items-center justify-center">
-                    <svg class="w-24 h-24 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 18h.01"></path>
-                    </svg>
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="font-lora text-xl font-semibold text-purple-800">Nhạc Trưởng</h3>
-                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Điền Câu</span>
+            <!-- <a href="#" class="quiz-card bg-white rounded-xl overflow-hidden shadow-soft">
+                <div class="h-48 overflow-hidden relative">
+                    <div class="absolute top-3 left-3 z-10">
+                        <span
+                            class="category-badge bg-softYellow text-amber-800 text-xs px-3 py-1 rounded-full">Mathematics</span>
                     </div>
-                    <p class="text-purple-700 text-sm">Thử thách bản thân với các câu hỏi về thể loại âm nhạc, nhà soạn
-                        nhạc nổi tiếng và các bài hát biểu tượng qua các thời đại.</p>
+                    <div class="card-image w-full h-full bg-softBlue flex items-center justify-center">
+                        <svg class="w-20 h-20 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
                 </div>
-            </a> -->
+                <div class="p-5">
+                    <h3 class="font-lora text-xl font-semibold text-amber-900 mb-2">Mathematical Wonders</h3>
+                    <p class="text-amber-700 text-sm mb-4">Test your logical thinking with fascinating math puzzles and
+                        brain teasers.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>10 mins</span>
+                        </div>
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <span>Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
 
-            <!-- Card 6: True/False -->
-            <!-- <a href="#" class="card bg-white rounded-2xl overflow-hidden shadow-card relative">
-                <div class="card-glow"></div>
-                <div class="h-40 bg-softYellow flex items-center justify-center">
-                    <svg class="w-24 h-24 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 9v6m4-6v6">
-                        </path>
-                    </svg>
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="font-lora text-xl font-semibold text-green-800">Ẩm Thực &amp; Văn Hóa</h3>
-                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Đúng/Sai</span>
+            <a href="#" class="quiz-card bg-white rounded-xl overflow-hidden shadow-soft">
+                <div class="h-48 overflow-hidden relative">
+                    <div class="absolute top-3 left-3 z-10">
+                        <span
+                            class="category-badge bg-softPink text-rose-800 text-xs px-3 py-1 rounded-full">Science</span>
                     </div>
-                    <p class="text-green-700 text-sm">Khám phá những sự thật thú vị về ẩm thực toàn cầu, các món ăn
-                        truyền thống và lịch sử ẩm thực từ khắp nơi trên thế giới.</p>
+                    <div class="card-image w-full h-full bg-softPink flex items-center justify-center">
+                        <svg class="w-20 h-20 text-rose-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-lora text-xl font-semibold text-amber-900 mb-2">Science Adventure</h3>
+                    <p class="text-amber-700 text-sm mb-4">Explore the wonders of science with fascinating facts and
+                        mind-blowing discoveries.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>15 mins</span>
+                        </div>
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <span>Beginner</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="quiz-card bg-white rounded-xl overflow-hidden shadow-soft">
+                <div class="h-48 overflow-hidden relative">
+                    <div class="absolute top-3 left-3 z-10">
+                        <span
+                            class="category-badge bg-softOrange text-orange-800 text-xs px-3 py-1 rounded-full">History</span>
+                    </div>
+                    <div class="card-image w-full h-full bg-softOrange flex items-center justify-center">
+                        <svg class="w-20 h-20 text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-lora text-xl font-semibold text-amber-900 mb-2">Time Traveler</h3>
+                    <p class="text-amber-700 text-sm mb-4">Journey through different eras and test your knowledge of
+                        historical events.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>12 mins</span>
+                        </div>
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <span>Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="quiz-card bg-white rounded-xl overflow-hidden shadow-soft">
+                <div class="h-48 overflow-hidden relative">
+                    <div class="absolute top-3 left-3 z-10">
+                        <span
+                            class="category-badge bg-softBlue text-blue-800 text-xs px-3 py-1 rounded-full">Geography</span>
+                    </div>
+                    <div class="card-image w-full h-full bg-softBlue flex items-center justify-center">
+                        <svg class="w-20 h-20 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-lora text-xl font-semibold text-amber-900 mb-2">World Explorer</h3>
+                    <p class="text-amber-700 text-sm mb-4">Travel the globe and discover fascinating facts about
+                        countries and cultures.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>10 mins</span>
+                        </div>
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <span>Beginner</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="quiz-card bg-white rounded-xl overflow-hidden shadow-soft">
+                <div class="h-48 overflow-hidden relative">
+                    <div class="absolute top-3 left-3 z-10">
+                        <span
+                            class="category-badge bg-softPurple text-purple-800 text-xs px-3 py-1 rounded-full">Puzzles</span>
+                    </div>
+                    <div class="card-image w-full h-full bg-softPurple flex items-center justify-center">
+                        <svg class="w-20 h-20 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-lora text-xl font-semibold text-amber-900 mb-2">Puzzle Master</h3>
+                    <p class="text-amber-700 text-sm mb-4">Solve riddles, brain teasers, and logic puzzles that will
+                        challenge your mind.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>15 mins</span>
+                        </div>
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <span>Advanced</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="quiz-card bg-white rounded-xl overflow-hidden shadow-soft">
+                <div class="h-48 overflow-hidden relative">
+                    <div class="absolute top-3 left-3 z-10">
+                        <span
+                            class="category-badge bg-softYellow text-amber-800 text-xs px-3 py-1 rounded-full">Music</span>
+                    </div>
+                    <div class="card-image w-full h-full bg-softYellow flex items-center justify-center">
+                        <svg class="w-20 h-20 text-amber-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-lora text-xl font-semibold text-amber-900 mb-2">Musical Journey</h3>
+                    <p class="text-amber-700 text-sm mb-4">Test your knowledge of music history, genres, and famous
+                        musicians.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>10 mins</span>
+                        </div>
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <span>All Levels</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="quiz-card bg-white rounded-xl overflow-hidden shadow-soft">
+                <div class="h-48 overflow-hidden relative">
+                    <div class="absolute top-3 left-3 z-10">
+                        <span class="category-badge bg-softPink text-rose-800 text-xs px-3 py-1 rounded-full">Art</span>
+                    </div>
+                    <div class="card-image w-full h-full bg-softPink flex items-center justify-center">
+                        <svg class="w-20 h-20 text-rose-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-lora text-xl font-semibold text-amber-900 mb-2">Artistic Eye</h3>
+                    <p class="text-amber-700 text-sm mb-4">Identify famous artworks and learn about the world's greatest
+                        artists.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>8 mins</span>
+                        </div>
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <span>Beginner</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="quiz-card bg-white rounded-xl overflow-hidden shadow-soft">
+                <div class="h-48 overflow-hidden relative">
+                    <div class="absolute top-3 left-3 z-10">
+                        <span
+                            class="category-badge bg-softGreen text-green-800 text-xs px-3 py-1 rounded-full">Nature</span>
+                    </div>
+                    <div class="card-image w-full h-full bg-softGreen flex items-center justify-center">
+                        <svg class="w-20 h-20 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-lora text-xl font-semibold text-amber-900 mb-2">Wildlife Wonders</h3>
+                    <p class="text-amber-700 text-sm mb-4">Discover amazing facts about animals, plants, and natural
+                        phenomena.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>12 mins</span>
+                        </div>
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <span>All Levels</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="quiz-card bg-white rounded-xl overflow-hidden shadow-soft">
+                <div class="h-48 overflow-hidden relative">
+                    <div class="absolute top-3 left-3 z-10">
+                        <span
+                            class="category-badge bg-softOrange text-orange-800 text-xs px-3 py-1 rounded-full">Food</span>
+                    </div>
+                    <div class="card-image w-full h-full bg-softOrange flex items-center justify-center">
+                        <svg class="w-20 h-20 text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-lora text-xl font-semibold text-amber-900 mb-2">Culinary Quest</h3>
+                    <p class="text-amber-700 text-sm mb-4">Test your knowledge of global cuisines, cooking techniques,
+                        and food history.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>10 mins</span>
+                        </div>
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <span>Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="quiz-card bg-white rounded-xl overflow-hidden shadow-soft">
+                <div class="h-48 overflow-hidden relative">
+                    <div class="absolute top-3 left-3 z-10">
+                        <span
+                            class="category-badge bg-softBlue text-blue-800 text-xs px-3 py-1 rounded-full">Technology</span>
+                    </div>
+                    <div class="card-image w-full h-full bg-softBlue flex items-center justify-center">
+                        <svg class="w-20 h-20 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-lora text-xl font-semibold text-amber-900 mb-2">Tech Trivia</h3>
+                    <p class="text-amber-700 text-sm mb-4">Challenge your knowledge of gadgets, innovations, and digital
+                        breakthroughs.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>15 mins</span>
+                        </div>
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <span>Advanced</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="quiz-card bg-white rounded-xl overflow-hidden shadow-soft">
+                <div class="h-48 overflow-hidden relative">
+                    <div class="absolute top-3 left-3 z-10">
+                        <span
+                            class="category-badge bg-softPurple text-purple-800 text-xs px-3 py-1 rounded-full">Movies</span>
+                    </div>
+                    <div class="card-image w-full h-full bg-softPurple flex items-center justify-center">
+                        <svg class="w-20 h-20 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-lora text-xl font-semibold text-amber-900 mb-2">Cinema Secrets</h3>
+                    <p class="text-amber-700 text-sm mb-4">Test your knowledge of films, directors, actors, and
+                        behind-the-scenes facts.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>12 mins</span>
+                        </div>
+                        <div class="flex items-center text-amber-700 text-sm">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <span>All Levels</span>
+                        </div>
+                    </div>
                 </div>
             </a> -->
         </div>

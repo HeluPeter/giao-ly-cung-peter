@@ -723,6 +723,26 @@ video {
     background-color: rgb(232 196 196 / var(--tw-bg-opacity, 1))
 }
 
+.bg-softGreen {
+    --tw-bg-opacity: 1;
+    background-color: rgb(216 226 220 / var(--tw-bg-opacity, 1));
+}
+
+.bg-softOrange {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 229 180 / var(--tw-bg-opacity, 1));
+}
+
+.bg-softPurple {
+    --tw-bg-opacity: 1;
+    background-color: rgb(226 209 249 / var(--tw-bg-opacity, 1));
+}
+
+.bg-softYellow {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 236 199 / var(--tw-bg-opacity, 1));
+}
+
 .bg-green-100 {
     --tw-bg-opacity: 1;
     background-color: rgb(220 252 231 / var(--tw-bg-opacity, 1))
