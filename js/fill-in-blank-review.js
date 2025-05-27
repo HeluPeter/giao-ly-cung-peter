@@ -471,7 +471,6 @@ function checkAnswer() {
 
     const normalizedUserAnswer = normalizeText(userAnswer);
     const normalizedCorrectAnswer = normalizeText(currentQuestion.correctAnswers);
-    console.log("🚀 ~ checkAnswer ~ normalizedCorrectAnswer:", normalizedCorrectAnswer)
 
     feedbackArea.classList.remove('hidden');
 
