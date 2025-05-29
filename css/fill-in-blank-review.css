@@ -11,8 +11,9 @@ body {
 }
 
 .highlight {
-  color: red;
-  font-weight: bold;
+    text-decoration: underline;
+    color: red;
+    font-weight: bold;
 }
 
 .bg-softYellow {

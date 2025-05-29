@@ -434,13 +434,31 @@ function updateProgressBar() {
 
 // Normalize text for comparison
 function normalizeText(answer) {
-    return answer
+    let normalizedAnswer = answer;
+    const wordCorrections = [
+        { incorrectPattern: /hoá/gi, correctWord: 'hóa' },
+        { incorrectPattern: /xoá/gi, correctWord: 'xóa' },
+        { incorrectPattern: /tuỳ/gi, correctWord: 'tùy' },
+        { incorrectPattern: /thuý/gi, correctWord: 'thúy' },
+        { incorrectPattern: /quí/gi, correctWord: 'quý' }, // Lưu ý: 'quí' thành 'quý' là một lỗi phổ biến
+        { incorrectPattern: /thuỷ/gi, correctWord: 'thủy' },
+        { incorrectPattern: /hoà/gi, correctWord: 'hòa' },
+        { incorrectPattern: /toà/gi, correctWord: 'tòa' }
+    ];
+
+    for (const correction of wordCorrections) {
+        normalizedAnswer = normalizedAnswer.replace(correction.incorrectPattern, correction.correctWord);
+    }
+
+    normalizedAnswer = normalizedAnswer
       .replace(/“|”|"/g,'') // Loại bỏ dấu nháy
       .replace(/-/g,'') // Loại bỏ dấu gạch nối
       .replace(/[.,;|/?\\!@#$%^&*()_+=~`'{}\[\]:<>]/g,'') // Loại bỏ dấu chấm, phẩy và các ký tự đặc biệt
       .replace(/\s+/g,' ') // Thay thế nhiều khoảng trắng bằng một khoảng trắng
       .trim() // Cắt bỏ khoảng trắng thừa
       .toLowerCase(); // Chuyển đổi thành chữ thường
+
+    return normalizedAnswer;
 }
 
 // Show error message
