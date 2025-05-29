@@ -472,6 +472,7 @@ function checkAnswer() {
     const normalizedUserAnswer = normalizeText(userAnswer);
     const normalizedCorrectAnswer = normalizeText(currentQuestion.correctAnswers);
 
+    const correctWords = normalizedCorrectAnswer.split(' ');
     feedbackArea.classList.remove('hidden');
 
     // Show the "Show Answer" button after checking
@@ -489,9 +490,30 @@ function checkAnswer() {
         correctFeedback.classList.add('hidden');
         tipText.textContent = currentQuestion.tips;
 
-        if (attemptCount >= maxAttempts) {
-            tipText.innerHTML = `${currentQuestion.tips}<br><br><strong>Đáp án đúng:</strong> ${currentQuestion.correctAnswers}`;
+        displayUserResponse(userAnswer.trim(), correctWords);
+        // tipText.innerHTML = `${currentQuestion.tips}<br><br><strong>Đáp án đúng:</strong> ${currentQuestion.correctAnswers}`;
+    }
+}
+
+function displayUserResponse(userAnswer, correctWords) {
+    const userWords = normalizeText(userAnswer).split(' ');
+    let highlightedValue = userAnswer;
+
+    let hasErrors = false;
+
+    // Tìm và bôi đỏ các từ sai
+    userWords.forEach(word => {
+        if (!correctWords.includes(word)) {
+        hasErrors = true;
+        const regex = new RegExp(`(${word})`,'gi'); // Tạo biểu thức chính quy để tìm từ
+        highlightedValue = highlightedValue.replace(regex,'<span class="highlight">$1</span>'); // Bôi đỏ từ sai
         }
+    });
+
+    if (hasErrors) {
+        document.getElementById('userResponse').innerHTML = highlightedValue; // Hiển thị câu trả lời
+    } else {
+        document.getElementById('userResponse').innerHTML = ''; // Xóa nội dung nếu không có lỗi
     }
 }
 
@@ -501,6 +523,14 @@ function showAnswer() {
     feedbackArea.classList.remove('hidden');
     correctFeedback.classList.remove('hidden');
     incorrectFeedback.classList.add('hidden');
+
+    const pElementToChange = correctFeedback.querySelector('.text-green-800.font-medium');
+    if (pElementToChange) {
+        pElementToChange.textContent = "Đây là đáp án đúng!";
+    } else {
+        console.error("Không tìm thấy phần tử p cần thay đổi.");
+    }
+    
     correctAnswerText.textContent = currentQuestion.correctAnswers;
 }
 
@@ -611,7 +641,7 @@ function toggleSidebarVisibility() {
 
 // Start countdown timer
 function startCountdown() {
-    const examDate = new Date('May 29, 2025 00:00:00').getTime();
+    const examDate = new Date('May 30, 2025 00:00:00').getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();

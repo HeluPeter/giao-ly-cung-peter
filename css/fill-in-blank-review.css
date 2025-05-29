@@ -9,6 +9,12 @@ body {
 .quiz-card {
     transition: all 0.3s ease;
 }
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
 .bg-softYellow {
     --tw-bg-opacity: 1;
     background-color: rgb(255 236 199 / var(--tw-bg-opacity, 1));
