@@ -615,29 +615,41 @@ function handleTimeUp() {
     nextButton.classList.remove('hidden');
 }
 
-function isEquivalentAnswer(a, b) {
-    const normalize = str => str.toLowerCase().trim();
-
-    const strA = normalize(a);
-    const strB = normalize(b);
-
-    if (strA === strB) return true;
-
-    // Các cặp từ đặc biệt coi là tương đương
-    const specialCases = [
-        ["hoá", "hóa"],
-        ["xoá", "xóa"]
+// Normalize text for comparison
+function normalizeText(answer) {
+    let normalizedAnswer = answer;
+    const wordCorrections = [
+        { incorrectPattern: /hoá/gi, correctWord: 'hóa' },
+        { incorrectPattern: /xoá/gi, correctWord: 'xóa' },
+        { incorrectPattern: /tuỳ/gi, correctWord: 'tùy' },
+        { incorrectPattern: /thuý/gi, correctWord: 'thúy' },
+        { incorrectPattern: /quí/gi, correctWord: 'quý' }, // Lưu ý: 'quí' thành 'quý' là một lỗi phổ biến
+        { incorrectPattern: /thuỷ/gi, correctWord: 'thủy' },
+        { incorrectPattern: /hoà/gi, correctWord: 'hòa' },
+        { incorrectPattern: /toà/gi, correctWord: 'tòa' }
     ];
 
-    for (const [x, y] of specialCases) {
-        if (
-            (strA.includes(x) && strB.includes(y)) ||
-            (strA.includes(y) && strB.includes(x))
-            ) {
-            return true;
-        }
+    for (const correction of wordCorrections) {
+        normalizedAnswer = normalizedAnswer.replace(correction.incorrectPattern, correction.correctWord);
     }
 
+    normalizedAnswer = normalizedAnswer
+      .replace(/“|”|"/g,'') // Loại bỏ dấu nháy
+      .replace(/-/g,'') // Loại bỏ dấu gạch nối
+      .replace(/[.,;|/?\\!@#$%^&*()_+=~`'{}\[\]:<>]/g,'') // Loại bỏ dấu chấm, phẩy và các ký tự đặc biệt
+      .replace(/\s+/g,' ') // Thay thế nhiều khoảng trắng bằng một khoảng trắng
+      .trim() // Cắt bỏ khoảng trắng thừa
+      .toLowerCase(); // Chuyển đổi thành chữ thường
+
+    return normalizedAnswer;
+}
+
+function isEquivalentAnswer(a, b) {
+    const strA = normalizeText(a);
+    const strB = normalizeText(b);
+
+    if (strA === strB) return true;
+    
     return false;
 }
 
