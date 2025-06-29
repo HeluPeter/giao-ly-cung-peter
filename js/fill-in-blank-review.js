@@ -313,8 +313,43 @@ const questionSets = [
         },
         {
             question: "3. H. Tại sao cần phải canh tân đời sống đức tin trong cử hành phụng vụ?",
-            tips: "Thưa. Phải canh tân ______ lý do này:- Thứ nhất vì phụng vụ là ______, là ______ trước tiên ______ với Thiên Chúa và với nhau.\n- Thứ hai vì Hội Thánh ______ ______ cách trọn vẹn, ______.\n- Thứ ba vì cần loại bỏ đi ______, ______, và ______.",
+            tips: "Thưa. Phải canh tân ______ lý do này:- Thứ nhất vì phụng vụ là ______, là ______ trước tiên ______ với Thiên Chúa và với nhau.- Thứ hai vì Hội Thánh ______ ______ cách trọn vẹn, ______.- Thứ ba vì cần loại bỏ đi ______, ______, và ______.",
             correctAnswers: "Thưa. Phải canh tân đời sống đức tin trong cử hành phụng vụ vì những lý do này:- Thứ nhất vì phụng vụ là những mầu nhiệm thánh, là nguồn mạch trước tiên và thiết yếu để các tín hữu được thánh hóa, được hiệp thông mật thiết với Thiên Chúa và với nhau.- Thứ hai vì Hội Thánh tha thiết mong ước toàn thể các tín hữu được hướng dẫn tham dự cử hành phụng vụ cách trọn vẹn, ý thức và tích cực.- Thứ ba vì cần loại bỏ đi những cử hành cẩu thả, những lạm dụng vì thiếu hiểu biết, và thái độ tham dự khô khan nguội lạnh của nhiều tín hữu."
+        },
+        {
+            question: "4. H. Những ai được mời gọi phải canh tân đời sống đức tin trong cử hành phụng vụ?",
+            tips: "Thưa. ______ các tín hữu, những người đã chịu ______, đã trở nên ______, hàng tư tế _____, được mời gọi phải ______, để tham dự và cử hành phụng vụ cách ______, ______, và ______.",
+            correctAnswers: "Thưa. Toàn thể các tín hữu, những người đã chịu phép rửa tội, đã trở nên dòng dõi ưu tuyển, hàng tư tế vương giả, dân tộc thánh thiện, và đoàn dân được tuyển chọn (x. 1 Pr 2,9), được mời gọi phải không ngừng canh tân chính mình, để tham dự và cử hành phụng vụ cách trọn vẹn, ý thức, và hiệu quả."
+        },
+        {
+            question: "5. H. Các thừa tác viên chức thánh cần làm gì để canh tân đời sống đức tin trong cử hành phụng vụ?",
+            tips: "Thưa. Các thừa tác viên _____:- Một là ______ tinh thần và năng lực của phụng vụ, và trở nên ______ trong lãnh vực này.- Hai là luôn cử hành cách ______ và _____, đặc biệt là ______.- Ba là chú trọng và ______ thực hiện việc ______ về phụng vụ cho các tín hữu.",
+            correctAnswers: "Thưa. Các thừa tác viên chức thánh, nhất là các mục tử chăn dắt các linh hồn, cần phải làm những điều này:- Một là thấm nhuần sâu đậm tinh thần và năng lực của phụng vụ, và trở nên thầy dạy trong lãnh vực này.- Hai là luôn cử hành cách sốt sắng và trung thành các mầu nhiệm của Đức Kitô, đặc biệt là hy tế Thánh Thể theo đúng tinh thần và luật phụng vụ của Hội Thánh.- Ba là chú trọng và kiên tâm thực hiện việc giảng dạy về phụng vụ cho các tín hữu, giúp họ tham dự phụng vụ tích cực cả bề trong lẫn bề ngoài."
+        },
+        {
+            question: "6. H. Các tín hữu giáo dân cần phải làm gì để canh tân đời sống đức tin trong cử hành phụng vụ?",
+            tips: "Thưa. Các tín hữu giáo dân cần thực hiện:- Một là siêng năng ______, nhất là tham dự Thánh Lễ cách ______, ______ và ______.- Hai là ______ học hỏi về phụng vụ và trong phụng vụ.- Ba là ______ đời sống đức tin theo phụng vụ, sống ______ và ______.",
+            correctAnswers: "Thưa. Các tín hữu giáo dân cần phải thực hiện những điều này:- Một là siêng năng tham dự phụng vụ, nhất là tham dự Thánh Lễ cách trọn vẹn, ý thức và hiệu quả.- Hai là chăm chỉ học hỏi về phụng vụ và trong phụng vụ.- Ba là dập khuôn đời sống đức tin theo phụng vụ, sống tình bác ái và dấn thân loan báo Tin Mừng."
+        },
+        {
+            question: "7. H. Làm thế nào để tham dự phụng vụ cách đích thực và trọn vẹn?",
+            tips: "Thưa. Tham dự phụng vụ _____ là:- Một là đến với thái độ ______, ______, và ______.- Hai là _____ qua các ______, ______, ______, ______, và sự ______ cần thiết.- Ba là chăm chú lắng nghe ______, dâng hiến chính mình hợp với ______, rước lễ và sống ______ với Thiên Chúa và với nhau.- Bốn là tham dự vào ______ và ______ sau cử hành.",
+            correctAnswers: "Thưa. Tham dự phụng vụ cách đích thực và trọn vẹn là thực hiện những điều này:- Một là đến tham dự phụng vụ với thái độ sẵn sàng, chủ động, và hoà hợp cộng tác với ân sủng của mầu nhiệm thánh.- Hai là tham dự toàn vẹn cả tâm hồn và thể xác qua các cử chỉ, tư thế, hành động, lời đối đáp tung hô ca hát, và với sự thinh lặng cần thiết.- Ba là chăm chú lắng nghe Lời Chúa, tập dâng hiến chính mình hợp với hy lễ Chúa Kitô, rước lễ và sống hiệp thông trọn vẹn với Thiên Chúa và với nhau.- Bốn là tham dự vào sứ vụ bác ái và truyền giáo sau cử hành phụng vụ."
+        },
+        {
+            question: "8. H. Các thừa tác viên như giúp lễ, đọc sách, dẫn lễ, và các ca viên cần phải làm gì để tham dự phụng vụ được trọn vẹn?",
+            tips: "Thưa. Các thừa tác viên cần:- Một là thi hành ______ và chỉ thi hành ______ theo đúng ______ và ______.- Hai là thi hành với lòng ______ và ______.- Ba là thấm nhuần tinh thần phụng vụ, chăm chỉ ______ và ______ để chu toàn phần việc của mình.",
+            correctAnswers: "Thưa. Các thừa tác viên như giúp lễ, đọc sách, dẫn lễ, ca viên là đang thực hiện một thừa tác vụ đích thực trong phụng vụ. Để được trọn vẹn, họ cần thực hiện những điều này:- Một là thi hành trọn vẹn và chỉ thi hành những gì thuộc lãnh vực mình tuỳ theo bản chất sự việc và những quy tắc phụng vụ.- Hai là thi hành phận vụ với lòng đạo đức chân thành và nghiêm túc.- Ba là phải thấm nhuần tinh thần phụng vụ, chăm chỉ học hỏi và rèn luyện để chu toàn các phần việc của mình theo đúng nghi thức và quy định."
+        },
+        {
+            question: "9. H. Để tăng thêm sự hiểu biết và yêu mến phụng vụ, người tín hữu cần làm những gì?",
+            tips: "Thưa. Người tín hữu cần:- Một là tham dự phụng vụ với thái độ ______ trước các mầu nhiệm được cử hành.- Hai là đào sâu khám phá ______ của phụng vụ, nhất là ______.- Ba là chú tâm đến ______, đến vẻ đẹp của ______, và đến ______ trong mỗi cử hành.",
+            correctAnswers: "Thưa. Người tín hữu cần làm những điều này:- Một là tham dự phụng vụ với thái độ ngỡ ngàng thán phục trước các mầu nhiệm được cử hành.- Hai là đào sâu khám phá vẻ đẹp của phụng vụ, nhất là ý nghĩa của ngôn ngữ biểu tượng trong phụng vụ.- Ba là chú tâm đến nghệ thuật cử hành, đến vẻ đẹp của chân lý, đến tính năng động và cách thức Chúa Thánh Thần tác động trong mỗi cử hành phụng vụ."
+        },
+        {
+            question: "10. H. Để nuôi dưỡng ý thức về sự thánh thiêng và cảm nhận nét đẹp của phụng vụ, cần phải loại bỏ những cung cách cử hành và thói quen tham dự phụng vụ nào?",
+            tips: "Thưa. Cần loại bỏ những điều này:- Một là cử hành cách ______, thiếu ______, thái độ ______, hoặc không tuân theo ______.- Hai là tham dự như những ______ và ______, dửng dưng bên ngoài, sử dụng ______, hoặc ______.- Ba là thái độ đi lễ chỉ vì ______, ______, hoặc để ______.",
+            correctAnswers: "Thưa. Để nuôi dưỡng ý thức về sự thánh thiêng và cảm nhận nét đẹp của phụng vụ, cần loại bỏ những thiếu sót này:- Một là cử hành phụng vụ cách cẩu thả, thiếu sự chuẩn bị, có thái độ kiêu ngạo lấy mình làm trung tâm, hoặc không tuân theo những nguyên tắc của phụng vụ.- Hai là tham dự phụng vụ như những khách bàng quan và câm lặng, dửng dưng bên ngoài, sử dụng điện thoại, hoặc nói chuyện riêng trong giờ phụng vụ.- Ba là thái độ đi lễ chỉ vì sợ tội, sợ dư luận, hoặc chỉ để cầu lợi cầu may mà thôi."
         }
     ],
     // Section 3:  PHẦN III
@@ -336,8 +371,38 @@ const questionSets = [
         },
         {
             question: "4. H. Hành hương Năm Thánh mang những ý nghĩa gì?",
-            tips: "Thưa. Hành hương Năm Thánh có những ý nghĩa này:\n- Một là ______ ______h.\n- Hai là ______, biến đổi chí______.\n- Ba là ______, bước theo Đức Kitô như ______ đồng dạng với Người.",
-            correctAnswers: "Thưa. Hành hương Năm Thánh có những ý nghĩa này:\n- Một là lên đường hành hương đến một nơi thánh và bước qua Cửa Thánh.\n- Hai là sống kinh nghiệm hoán cải, biến đổi chính bản thân để phù hợp với sự thánh thiện của Thiên Chúa.\n- Ba là cuộc hành trình ra khỏi chính mình, bước theo Đức Kitô như người môn đệ, để từng bước nên đồng hình đồng dạng với Người."
+            tips: "Thưa. Hành hương Năm Thánh có những ý nghĩa này:- Một là ______ ______h.- Hai là ______, biến đổi chí______.- Ba là ______, bước theo Đức Kitô như ______ đồng dạng với Người.",
+            correctAnswers: "Thưa. Hành hương Năm Thánh có những ý nghĩa này:- Một là lên đường hành hương đến một nơi thánh và bước qua Cửa Thánh.- Hai là sống kinh nghiệm hoán cải, biến đổi chính bản thân để phù hợp với sự thánh thiện của Thiên Chúa.- Ba là cuộc hành trình ra khỏi chính mình, bước theo Đức Kitô như người môn đệ, để từng bước nên đồng hình đồng dạng với Người."
+        },
+        {
+            question: "5. H. Hy vọng Kitô giáo có những đặc tính nào?",
+            tips: "Thưa. Hy vọng Kitô giáo có những đặc tính này:- Một là hy vọng phát sinh từ ______ của Chúa Giê su trên ______.- Hai là hy vọng không ______ cũng không ______.- Ba là hy vọng như cái ______ chắc chắn và bền vững của tâm hồn, thả sâu vào nơi Chúa Giê su đã vào như ______ mở đường cho chúng ta.- Bốn là hy vọng đặt trên nền tảng ______ và được nuôi dưỡng bằng ______.- Năm là hy vọng hướng về cùng đích là ______ trong ______ với Thiên Chúa.",
+            correctAnswers: "Thưa. Hy vọng Kitô giáo có những đặc tính này:- Một là hy vọng phát sinh từ trái tim bị đâm thâu của Chúa Giê su trên thập giá.- Hai là hy vọng không lừa dối cũng không làm thất vọng.- Ba là hy vọng như cái neo chắc chắn và bền vững của tâm hồn, thả sâu vào nơi Chúa Giê su đã vào như người tiền phong mở đường cho chúng ta (x. Dt 6,19-20; GLHTCG 1820).- Bốn là hy vọng đặt trên nền tảng đức tin và được nuôi dưỡng bằng đức ái, bằng tình yêu Thiên Chúa.- Năm là hy vọng hướng về cùng đích là hạnh phúc vĩnh cửu trong hiệp thông trọn vẹn với Thiên Chúa."
+        },
+        {
+            question: "6. H. Bởi đâu mà hy vọng Kitô giáo không lừa dối cũng không làm thất vọng?",
+            tips: "Thưa. Vì nó dựa trên ______ mà Thiên Chúa đã ______ vào lòng chúng ta, nhờ ______ mà Người ban cho chúng ta, giúp chúng ta xác tín rằng không có gì và không ai có thể ______.",
+            correctAnswers: "Thưa. Hy vọng Kitô giáo không lừa dối cũng không làm thất vọng vì nó dựa trên tình yêu vô điều kiện mà Thiên Chúa đã đổ vào lòng chúng ta, nhờ Thánh Thần mà Người ban cho chúng ta (x. Rm 5,5), giúp chúng ta xác tín rằng không có gì và không ai có thể tách chúng ta ra khỏi tình yêu của Thiên Chúa (x. Rm 8,35-39)."
+        },
+        {
+            question: "7. H. Người tín hữu cần làm gì để trở nên người hành hương của hy vọng?",
+            tips: "Thưa. Người tín hữu cần:- Một là kín múc niềm hy vọng nơi ______ của Thiên Chúa qua cuộc gặp gỡ ______ với Đức Kitô, như đi hành hương, sống kiên nhẫn, ẩn náu nơi Thiên Chúa qua ______ và ______, nhất là qua ______ và ______.- Hai là khám phá lại niềm hy vọng qua ______ của thời đại, nhất là lưu tâm tới ______.- Ba là sống ______ và trở nên ______ cho con người hôm nay.",
+            correctAnswers: "Thưa. Để trở nên người hành hương của hy vọng, người tín hữu làm những điều này:- Một là kín múc niềm hy vọng nơi ân sủng của Thiên Chúa qua cuộc gặp gỡ sống động thân tình với Đức Ki tô, như đi hành hương, sống kiên nhẫn, ẩn náu nơi Thiên Chúa qua cầu nguyện và cử hành phụng vụ, nhất là qua bí tích Hòa Giải và lãnh nhận Ân Xá.- Hai là khám phá lại niềm hy vọng qua những dấu chỉ của thời đại, nhất là lưu tâm tới những điều thiện hảo trên thế giới.- Ba là sống chứng nhân và trở nên dấu chỉ của hy vọng cho con người trong thế giới hôm nay."
+        },
+        {
+            question: "8. H. Đức Thánh Cha Phan xi cô gợi mở những gì cần thực hiện để là dấu chỉ hy vọng cho thế giới hôm nay?",
+            tips: "Thưa. Đức Thánh Cha gợi mở:- Một là dấn thân xây dựng ______.- Hai là có lòng ______ với cuộc sống và sẵn sàng ______.- Ba là biểu lộ sự ______ với các tù nhân, kêu gọi ______, ______, bãi bỏ ______ và giúp tù nhân ______.- Bốn là xoa dịu ______ bằng cách thăm nom với ______.- Năm là truyền cảm hứng cho ______, gần gũi và đồng hành với họ.- Sáu là đón nhận ______, bảo vệ ______ của người yếu thế.- Bảy là trân trọng và ______ người cao tuổi.- Tám là mang lại niềm hy vọng cho người nghèo, lập ______, giúp các nước nghèo phát triển, ______ và tôn trọng ______.",
+            correctAnswers: "Thưa. Để là dấu chỉ hy vọng cho thế giới hôm nay, Đức Thánh Cha Phan xi cô đã gợi mở những điều này:- Một là dấn thân xây dựng hòa bình trên thế giới.- Hai là có lòng nhiệt thành với cuộc sống và sẵn sàng chia sẻ cuộc sống qua việc sinh thêm nhiều con cái và tìm lại niềm vui sống vì được tạo dựng theo hình ảnh Thiên Chúa.- Ba là biểu lộ sự gần gũi với các tù nhân, kêu gọi ân xá và giảm án, bãi bỏ án tử hình và giúp tù nhân tái hòa nhập cộng đồng.- Bốn là xoa dịu những đau khổ cho bệnh nhân bằng cách thăm nom trong tình yêu thương và sự gần gũi.- Năm là truyền cảm hứng cho giới trẻ, gần gũi và đồng hành với họ.- Sáu là mở rộng vòng tay đón nhận người di cư và tị nạn, sẵn sàng bảo vệ quyền lợi của những người yếu thế nhất.- Bảy là trân trọng và nâng đỡ người cao tuổi.- Tám là mang lại niềm hy vọng cho người nghèo, lập quỹ toàn cầu để triệt để xóa bỏ nạn đói, giúp cho nước nghèo phát triển, xóa nợ và tôn trọng môi sinh."
+        },
+        {
+            question: "9. H. Trở nên dấu chỉ hy vọng là trách nhiệm và bổn phận của ai?",
+            tips: "Thưa. Tất cả những người đã được ______, mỗi người với ______ và ______ của mình, đều có trách nhiệm trở nên những dấu chỉ ______ minh chứng cho sự hiện diện của Thiên Chúa.",
+            correctAnswers: "Thưa. Tất cả những người đã được Rửa tội, mỗi người với đặc sủng và nhiệm vụ của mình, đều có trách nhiệm trở nên những dấu chỉ hy vọng minh chứng cho sự hiện diện của Thiên Chúa giữa lòng thế giới."
+        },
+        {
+            question: "10. H. Người tín hữu chứng minh về đức tin và đức mến trong lòng mình bằng cách nào?",
+            tips: "Thưa. Người tín hữu sống tràn đầy ______, để có thể trao đi một ______, một ______, một ______, một ______, một ______, vì biết rằng trong ______, điều này có thể trở thành ______ nơi người đón nhận.",
+            correctAnswers: "Thưa. Người tín hữu chứng minh về đức tin và đức mến trong lòng mình bằng cách sống tràn đầy niềm hy vọng, để có thể trao đi dù chỉ là một nụ cười, một cử chỉ thân tình, một cái nhìn huynh đệ, một sự lắng nghe chân thành, một sự phục vụ vô vị lợi, vì biết rằng, trong Thần Khí của Chúa Giê su, điều này có thể trở thành hạt giống trổ sinh hy vọng nơi những ai đón nhận."
         }
     ]
 ];
@@ -659,7 +724,7 @@ function toggleSidebarVisibility() {
 
 // Start countdown timer
 function startCountdown() {
-    const examDate = new Date('May 30, 2025 00:00:00').getTime();
+    const examDate = new Date('July 12, 2025 00:00:00').getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
