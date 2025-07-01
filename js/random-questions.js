@@ -288,5 +288,22 @@ function restart() {
 randomBtn.addEventListener('click', showRandomQuestion);
 restartBtn.addEventListener('click', restart);
 
+document.addEventListener("DOMContentLoaded", function () {
+    const answerText = document.getElementById("answer-text");
+    const toggleBtn = document.getElementById("toggle-answer-btn");
+
+    toggleBtn.addEventListener("click", function () {
+        const isHidden = answerText.classList.contains("hidden");
+
+        if (isHidden) {
+            answerText.classList.remove("hidden");
+            toggleBtn.textContent = "Ẩn đáp án";
+        } else {
+            answerText.classList.add("hidden");
+            toggleBtn.textContent = "Xem đáp án";
+        }
+    });
+});
+
 // Initialize on load
 init();

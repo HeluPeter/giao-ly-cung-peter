@@ -98,12 +98,22 @@
         </h1>
 
         <div id="question-card"
-            class="bg-white rounded-xl p-8 md:p-10 mb-8 min-h-[220px] shadow-soft fade-transition fade-in flex flex-col justify-center"
-            bis_skin_checked="1">
-            <p id="question-text" class="text-xl md:text-2xl font-lora text-warm-brown mb-8 text-center">Click 'Random
-                Question' to begin your journey.</p>
-            <p id="answer-text" class="text-lg md:text-xl font-nunito text-light-brown italic text-center"></p>
+            class="bg-white rounded-xl p-8 md:p-10 mb-8 min-h-[220px] shadow-soft fade-transition fade-in flex flex-col justify-center">
+
+            <p id="question-text" class="text-xl md:text-2xl font-lora text-warm-brown mb-8 text-center">
+                Click 'Random Question' to begin your journey.
+            </p>
+
+            <p id="answer-text" class="text-lg md:text-xl font-nunito text-light-brown italic text-center hidden">
+                Đây là đáp án ví dụ.
+            </p>
+
+            <button id="toggle-answer-btn"
+                class="mt-4 mx-auto px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">
+                Xem đáp án
+            </button>
         </div>
+
 
         <div class="flex flex-col sm:flex-row gap-6 justify-center" bis_skin_checked="1">
             <button id="random-btn"
