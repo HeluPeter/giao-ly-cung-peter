@@ -72,6 +72,19 @@
             <h1 class="text-3xl font-bold text-center">BỘ ĐỀ ÔN TẬP GIÁO LÝ 2025</h1>
         </header>
 
+        <div class="hidden" bis_skin_checked="1">
+            <!-- Timer button sound -->
+            <audio id="nextSound">
+                <!-- Add your timer sound file here -->
+                <source src="choncauhoi.m4a" type="audio/mpeg">
+            </audio>
+
+            <!-- Correct sound -->
+            <audio id="correctSound">
+                <!-- Add your correct sound file here -->
+                <source src="dung.m4a" type="audio/mpeg">
+            </audio>
+        </div>
         <!-- Main Content -->
         <div class="flex flex-col md:flex-row gap-6">
             <!-- Quiz Area (60%) -->
@@ -129,7 +142,7 @@
                 <div id="quiz-screen" class="hidden">
                     <div class="flex justify-between items-center mb-6">
                         <h2 class="text-2xl font-bold text-[#7b2d30]"><span id="current-part-title"></span></h2>
-                        <audio id="start-sound" src="10s.mp3" preload="auto"></audio>
+                        <audio id="start-sound" src="10s.m4a" preload="auto"></audio>
 
                         <div id="timer-container" class="flex items-center justify-center">
                             <!-- Đây sẽ là nút hình tròn thay vì chỉ là div -->

@@ -59,15 +59,15 @@ let quizData = {
                 "explanation": "B cũng sai =)))"
             },
             {
-                "question": "Chọn câu đúng:",
+                "question": "Chọn câu sai:",
                 "options": {
-                    "A": "Bí tích Thống Hối là bí tích Chúa Giêsu đã lập, để tha tội riêng chúng ta đã phạm từ khi lãnh Bí tích Rửa tội về sau.",
+                    "A": "Bí tích Thống Hối là bí tích Chúa Giêsu đã lập, để tha các tội riêng chúng ta đã phạm từ khi lãnh Bí tích Rửa tội về sau.",
                     "B": "Bí tích Xức Dầu bệnh nhân là bí tích Chúa Giêsu đã lập, để ban ơn nâng đỡ bệnh nhân và người già yếu, về phần hồn cũng như phần xác.",
                     "C": "Bí tích Truyền Chức Thánh là bí tích Chúa Giêsu đã lập, để ủy thác tác vụ của Ngài cho các Tông đồ.",
-                    "D": "Bí tích Thánh Thể là bí tích Chúa Giêsu đã lập, để tiếp tục lễ hy sinh trên Thánh giá và để ban Mình Thánh Ngài, làm của ăn nuôi sống chúng ta."
+                    "D": "Bí tích Thánh Thể là bí tích Chúa Giêsu đã lập, để tiếp tục lễ hy sinh trên Thánh giá và để ban Mình Máu Ngài, làm của ăn nuôi sống chúng ta."
                 },
                 "correctAnswer": "B",
-                "explanation": "còn phải giải thích nữa :)))"
+                "explanation": "tác vụ => sứ vụ"
             },
             {
                 "question": "Chọn câu sai",
@@ -118,7 +118,7 @@ let quizData = {
                 "options": {
                     "A": "Nhờ ân sủng của Chúa Thánh Thần, chúng ta được chữa lành và biến đổi",
                     "B": "Các bí tích khai tâm Ki-tô giáo, giúp củng cố và phục hồi các tín hữu trong đời sống mới",
-                    "C": "ngày Chúa Nhật là nền tảng và trung tâm của các bí tích",
+                    "C": "Ngày Chúa Nhật là nền tảng và trung tâm của các bí tích",
                     "D": "Tất cả đều sai"
                 },
                 "correctAnswer": "A",
@@ -312,17 +312,6 @@ let quizData = {
                 "explanation": "[Câu 29, 12]"
             },
             {
-                "question": "PHẦN I – GIÁO LÝ HỘI THÁNH CÔNG GIÁO CỬ HÀNH MẦU NHIỆM KI-TÔ GIÁO (Trích BẢN HỎI THƯA GIÁO LÝ HỘI THÁNH CÔNG GIÁO – năm 2023). Bài 2 có tiêu đề là gì?",
-                "options": {
-                    "A": "CỬ HÀNH PHỤNG VỤ CỦA HỘI THÁNH",
-                    "B": "HỘI THÁNH CỬ HÀNH PHỤNG VỤ",
-                    "C": "HỘI THÁNH VÀ PHỤNG VỤ",
-                    "D": "PHỤNG VỤ VÀ HỘI THÁNH"
-                },
-                "correctAnswer": "A",
-                "explanation": ""
-            },
-            {
                 "question": "Phụng vụ các giờ kinh là ___.",
                 "options": {
                     "A": "thời gian Hội Thánh cử hành các mầu nhiệm Đức Kitô",
@@ -431,6 +420,354 @@ let quizData = {
                 },
                 "correctAnswer": "A",
                 "explanation": "[Câu 21]"
+            },
+            {
+                question: "Bí tích Thêm Sức",
+                options: {
+                A: "Tha các tội trọng",
+                B: "Có nghi thức chính yếu là dìm xuống nước",
+                C: "Giúp chúng ta tham dự trước vào đời sống vĩnh cửu",
+                D: "Tất cả đều đúng"
+                },
+                correctAnswer: "C",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu sai",
+                options: {
+                A: "Muốn lãnh Bí tích Thống Hối phải làm 4 việc",
+                B: "Bí tích Thống Hối có 3 hiệu quả",
+                C: "Bí tích Rửa Tội ban cho chúng ta 3 ơn",
+                D: "Có 4 điều kiện để được rước lễ"
+                },
+                correctAnswer: "C",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu đúng",
+                options: {
+                A: "Theo tài liệu câu 11, Bí tích 4-5-6 lần lượt là Thống Hối - Truyền Chức Thánh - Xức Dầu Bệnh Nhân",
+                B: "Hiệu quả thứ 4 của Bí tích Xức Dầu là chữa lành thân xác nếu phù hợp với ý Chúa",
+                C: "Bí tích Thánh Thể là nguồn mạch và trung tâm của toàn bộ năm phụng vụ",
+                D: "Để rước lễ thì phải có thái độ tôn kính"
+                },
+                correctAnswer: "B",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu sai",
+                options: {
+                A: "Hội Thánh trên trời và Hội Thánh ở trần gian hành động trong phụng vụ",
+                B: "Qua việc Hội Thánh cử hành Bí tích Hôn Phối, Thiên Chúa chuyển thông ơn cứu độ",
+                C: "Không phải lúc nào ân sủng của Chúa Kitô trong các Bí tích cũng mang lại lợi ích",
+                D: "Tất cả đều sai"
+                },
+                correctAnswer: "D",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Người muốn lãnh Bí tích Thêm Sức cần phải làm gì?",
+                options: {
+                A: "Góp phần xây dựng xã hội theo tinh thần Tin Mừng",
+                B: "Nỗ lực thi hành Lời Chúa trong đời sống thường ngày",
+                C: "Tích cực giới thiệu Chúa cho mọi người",
+                D: "Tất cả đều sai"
+                },
+                correctAnswer: "D",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu sai",
+                options: {
+                A: "Phụng vụ Lời Chúa khởi đi từ lời nguyện hiệp lễ cho đến hết lời nguyện chung",
+                B: "Bí tích Thống Hối là để tha các tội riêng",
+                C: "Bí tích Truyền Chức Thánh gồm 3 cấp bậc",
+                D: "Bí tích Hôn Phối ban ân sủng cần thiết"
+                },
+                correctAnswer: "A",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu đúng",
+                options: {
+                A: "Khi tự nguyện nộp mình chịu khổ hình, Chúa Giêsu cầm lấy bánh, bẻ ra và trao cho các môn đệ",
+                B: "Có 3 Bí tích trao ban ấn tín thiêng liêng không tẩy xóa được",
+                C: "Bí tích Truyền Chức Thánh có thể được lãnh 3 lần: 1 lần chức Phó tế, 1 lần Linh mục và 1 lần Giám mục",
+                D: "Bí tích Xức Dầu chuẩn bị cho cuộc vượt qua của Đức Kitô"
+                },
+                correctAnswer: "B",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Ấn tín Bí tích",
+                options: {
+                A: "Giúp đức tin của chúng ta thêm mạnh mẽ vững vàng",
+                B: "Để lãnh nhận thì phải sạch tội trọng",
+                C: "Giao hòa chúng ta với Thiên Chúa và Hội Thánh",
+                D: "Nằm trong nhóm các Bí tích khai tâm Kitô giáo"
+                },
+                correctAnswer: "A",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Bí tích Thêm Sức",
+                options: [
+                    "A. Tha các tội trọng",
+                    "B. Có nghi thức chính yếu là dìm xuống nước",
+                    "C. Giúp chúng ta tham dự trước vào đời sống vĩnh cửu",
+                    "D. Tất cả đều đúng"
+                ],
+                correctAnswer: "C. Giúp chúng ta tham dự trước vào đời sống vĩnh cửu",
+                explanation: "[đang cập nhật]",
+                attempts: 0,
+                completed: false,
+                failed: false,
+                userAnswer: "",
+                timeTaken: 0
+            },
+            {
+                question: "Chọn câu sai",
+                options: [
+                    "A. Muốn lãnh Bí tích Thống Hối phải làm 4 việc",
+                    "B. Bí tích Thống Hối có 3 hiệu quả",
+                    "C. Bí tích Rửa Tội ban cho chúng ta 3 ơn",
+                    "D. Có 4 điều kiện để được rước lễ"
+                ],
+                correctAnswer: "C. Bí tích Rửa Tội ban cho chúng ta 3 ơn",
+                explanation: "[đang cập nhật]",
+                attempts: 0,
+                completed: false,
+                failed: false,
+                userAnswer: "",
+                timeTaken: 0
+            },
+            {
+                question: "Chọn câu đúng",
+                options: [
+                    "A. Theo tài liệu câu 11, Bí tích 4-5-6 lần lượt là Thống Hối - Truyền Chức Thánh - Xức Dầu Bệnh Nhân",
+                    "B. Hiệu quả thứ 4 của Bí tích Xức Dầu là chữa lành thân xác nếu phù hợp với ý Chúa",
+                    "C. Bí tích Thánh Thể là nguồn mạch và trung tâm của toàn bộ năm phụng vụ",
+                    "D. Để rước lễ thì phải có thái độ tôn kính"
+                ],
+                correctAnswer: "B. Hiệu quả thứ 4 của Bí tích Xức Dầu là chữa lành thân xác nếu phù hợp với ý Chúa",
+                explanation: "[đang cập nhật]",
+                attempts: 0,
+                completed: false,
+                failed: false,
+                userAnswer: "",
+                timeTaken: 0
+            },
+            {
+                question: "Chọn câu sai",
+                options: [
+                    "A. Hội Thánh trên trời và Hội Thánh ở trần gian hành động trong phụng vụ",
+                    "B. Qua việc Hội Thánh cử hành Bí tích Hôn Phối, Thiên Chúa chuyển thông ơn cứu độ",
+                    "C. Không phải lúc nào ân sủng của Chúa Kitô trong các Bí tích cũng mang lại lợi ích",
+                    "D. Tất cả đều sai"
+                ],
+                correctAnswer: "D. Tất cả đều sai",
+                explanation: "[đang cập nhật]",
+                attempts: 0,
+                completed: false,
+                failed: false,
+                userAnswer: "",
+                timeTaken: 0
+            },
+            {
+                question: "Người muốn lãnh Bí tích Thêm Sức cần phải làm gì?",
+                options: [
+                    "A. Góp phần xây dựng xã hội theo tinh thần Tin Mừng",
+                    "B. Nỗ lực thi hành Lời Chúa trong đời sống thường ngày",
+                    "C. Tích cực giới thiệu Chúa cho mọi người",
+                    "D. Tất cả đều sai"
+                ],
+                correctAnswer: "D. Tất cả đều sai",
+                explanation: "[đang cập nhật]",
+                attempts: 0,
+                completed: false,
+                failed: false,
+                userAnswer: "",
+                timeTaken: 0
+            },
+            {
+                question: "Chọn câu sai",
+                options: [
+                    "A. Phụng vụ Lời Chúa khởi đi từ lời nguyện hiệp lễ cho đến hết lời nguyện chung",
+                    "B. Bí tích Thống Hối là để tha các tội riêng",
+                    "C. Bí tích Truyền Chức Thánh gồm 3 cấp bậc",
+                    "D. Bí tích Hôn Phối ban ân sủng cần thiết"
+                ],
+                correctAnswer: "A. Phụng vụ Lời Chúa khởi đi từ lời nguyện hiệp lễ cho đến hết lời nguyện chung",
+                explanation: "[đang cập nhật]",
+                attempts: 0,
+                completed: false,
+                failed: false,
+                userAnswer: "",
+                timeTaken: 0
+            },
+            {
+                question: "Chọn câu đúng",
+                options: [
+                    "A. Khi tự nguyện nộp mình chịu khổ hình, Chúa Giêsu cầm lấy bánh, bẻ ra và trao cho các môn đệ",
+                    "B. Có 3 Bí tích trao ban ấn tín thiêng liêng không tẩy xóa được",
+                    "C. Bí tích Truyền Chức Thánh có thể được lãnh 3 lần: 1 lần chức Phó tế, 1 lần Linh mục và 1 lần Giám mục",
+                    "D. Bí tích Xức Dầu chuẩn bị cho cuộc vượt qua của Đức Kitô"
+                ],
+                correctAnswer: "B. Có 3 Bí tích trao ban ấn tín thiêng liêng không tẩy xóa được",
+                explanation: "[đang cập nhật]",
+                attempts: 0,
+                completed: false,
+                failed: false,
+                userAnswer: "",
+                timeTaken: 0
+            },
+            {
+                question: "Ấn tín Bí tích",
+                options: [
+                    "A. Giúp đức tin của chúng ta thêm mạnh mẽ vững vàng",
+                    "B. Để lãnh nhận thì phải sạch tội trọng",
+                    "C. Giao hòa chúng ta với Thiên Chúa và Hội Thánh",
+                    "D. Nằm trong nhóm các Bí tích khai tâm Kitô giáo"
+                ],
+                correctAnswer: "A. Giúp đức tin của chúng ta thêm mạnh mẽ vững vàng",
+                explanation: "[đang cập nhật]",
+                attempts: 0,
+                completed: false,
+                failed: false,
+                userAnswer: "",
+                timeTaken: 0
+            },
+            {
+                question: "Có mấy mục đích của hôn nhân công giáo, mấy hiệu quả của Bí tích Truyền Chức Thánh, muốn lãnh Bí tích Thống Hối phải làm mấy việc?",
+                options: {
+                A: "2, 3, 3",
+                B: "2, 3, 2",
+                C: "2, 3, 4",
+                D: "3, 3, 4"
+                },
+                correctAnswer: "C",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu sai",
+                options: {
+                A: "Chúng ta sống các mầu nhiệm Đức Kitô để chuẩn bị đón Ngài lại đến trong vinh quang",
+                B: "Chúa Giêsu đã lập Bí tích Thống Hối khi Ngài hiện ra với các Tông đồ vào chiều ngày Phục sinh",
+                C: "Phải xưng các tội trọng trước khi rước lễ",
+                D: "Máu Thánh Chúa Kitô là Giao Ước"
+                },
+                correctAnswer: "D",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu đúng",
+                options: {
+                A: "Bí tích Hôn Phối được cử hành cách công khai",
+                B: "Có 3 Bí tích được Chúa Giêsu lập trong bữa tiệc ly",
+                C: "Bí tích Thánh Thể ghi vào linh hồn dấu ấn thiêng liêng không thể tẩy xóa",
+                D: "Thiên Chúa in dấu ấn vào lòng những người lãnh các Bí tích khai tâm"
+                },
+                correctAnswer: "A",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu đúng",
+                options: {
+                A: "Bí tích là dấu chỉ Chúa Giêsu đã lập và truyền lại cho Hội Thánh cử hành",
+                B: "Lời nói và hành động trong cử hành phụng vụ giúp con người gặp gỡ và đối thoại với Thiên Chúa",
+                C: "Có một Bí tích không phải do Chúa Giêsu lập",
+                D: "Hội Thánh buộc các tín hữu rước lễ mỗi khi tham dự Thánh lễ"
+                },
+                correctAnswer: "B",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu sai",
+                options: {
+                A: "Khi lãnh nhận các bí tích, phải có đức tin",
+                B: "Mọi tín hữu đều có thể lãnh Bí tích Xức Dầu",
+                C: "Chức tư tế thừa tác khác biệt với chức tư tế cộng đồng",
+                D: "Các Bí tích phụng vụ giúp xây dựng dân Thiên Chúa"
+                },
+                correctAnswer: "D",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu đúng",
+                options: {
+                A: "Bí tích Thêm Sức phục hồi đời sống mới của các tín hữu",
+                B: "Nghi thức chính yếu của Bí tích Rửa Tội là dìm xuống nước hay đổ nước trên đầu người lãnh bí tích và nói: “Nhân danh Cha và Con và Thánh Thần”",
+                C: "Đức Kitô chính là Chiên Vượt Qua của chúng ta",
+                D: "Chỉ Bí tích Thêm Sức mới ban tràn đầy Chúa Thánh Thần"
+                },
+                correctAnswer: "C",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Bí tích Hôn Phối",
+                options: {
+                A: "Có mục đích thứ nhất là sinh sản và dưỡng dục con cái",
+                B: "Có liên quan đến Bí tích khác",
+                C: "Ban ân sủng cần thiết nhưng không phải ân sủng Chúa Thánh Thần",
+                D: "Muốn lãnh nhận thì phải đáp ứng 3 điều kiện"
+                },
+                correctAnswer: "B",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu sai",
+                options: {
+                A: "Các tín hữu nên rước lễ ít nhất một năm một lần trong mùa Phục Sinh",
+                B: "Người lãnh Bí tích Truyền Chức Thánh sẽ nên đồng hình đồng dạng với Đức Kitô",
+                C: "Người lãnh Bí tích Thêm Sức có bổn phận thứ 2 là góp phần xây dựng xã hội theo tinh thần Tin Mừng",
+                D: "“Đức Kitô toàn thể” hành động trong phụng vụ"
+                },
+                correctAnswer: "A",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu đúng",
+                options: {
+                A: "Bí tích Thêm Sức gia tăng ân sủng các Bí tích khác",
+                B: "Ngày Chúa phục sinh là nguồn mạch của cả năm phụng vụ",
+                C: "Qua Bí tích Rửa Tội, Thiên Chúa in một lời hứa với người lãnh nhận",
+                D: "Phụng vụ có 1 mục đích"
+                },
+                correctAnswer: "C",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu sai",
+                options: {
+                A: "Mình máu Chúa Giêsu là của ăn nuôi sống chúng ta",
+                B: "Bí tích Xức Dầu đem lại ơn nâng đỡ về phần hồn cũng như phần xác",
+                C: "Người tín hữu có thể xây dựng Hội Thánh",
+                D: "Tất cả đều sai"
+                },
+                correctAnswer: "D",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu đúng",
+                options: {
+                A: "Nếu phạm tội mà chưa xưng được thì không còn cách nào khác để được tha tội",
+                B: "Bí tích Truyền Chức Thánh cần thiết cho ơn cứu độ",
+                C: "Phụng vụ các giờ kinh giúp các tín hữu thánh hóa bản thân",
+                D: "Tất cả đều sai"
+                },
+                correctAnswer: "B",
+                explanation: "[đang cập nhật]"
+            },
+            {
+                question: "Chọn câu đúng",
+                options: {
+                A: "Thánh lễ thánh hóa con người",
+                B: "Nghi thức là một trong những yếu tố của cử hành phụng vụ",
+                C: "Trong bữa ăn tối, Người cầm lấy chén rượu, cũng tạ ơn, trao cho các môn đệ",
+                D: "Tất cả đều đúng"
+                },
+                correctAnswer: "A",
+                explanation: "[đang cập nhật]"
             }
         ]
     },
@@ -702,6 +1039,8 @@ const scoreboardBody = document.getElementById('scoreboard-body');
 const toggleAdminBtn = document.getElementById('toggle-admin-btn');
 const adminControls = document.getElementById('admin-controls');
 const teamSelect = document.getElementById('team-select');
+const nextSound = document.getElementById('nextSound');
+const correctSound = document.getElementById('correctSound');
 
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
@@ -1032,6 +1371,23 @@ function selectTrueFalseOption(isTrue) {
     });
 }
 
+function playCorrectSound() {
+    try {
+        correctSound.currentTime = 0;
+        correctSound.play();
+    } catch (e) {
+        console.log("Correct sound not available yet");
+    }
+}
+function playNextSound() {
+    try {
+        nextSound.currentTime = 0;
+        nextSound.play();
+    } catch (e) {
+        console.log("Next sound not available yet");
+    }
+}
+
 // Show the answer
 function showAnswer() {
     const question = quizData[currentPart].questions[currentQuestionIndex];
@@ -1056,6 +1412,8 @@ function showAnswer() {
         `;
     }
 
+    playCorrectSound();
+
     // Update and show modal
     answerContent.innerHTML = content;
     answerModal.classList.remove('hidden');
@@ -1069,6 +1427,7 @@ function closeModal() {
 // Move to the next question
 function nextQuestion() {
     currentQuestionIndex++;
+    playNextSound();
 
     // Check if we've reached the end of questions
     if (currentQuestionIndex >= quizData[currentPart].questions.length) {

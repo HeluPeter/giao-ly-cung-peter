@@ -5362,7 +5362,7 @@
                 options.innerHTML = '';
                 for (const [key, value] of Object.entries(question.options)) {
                     const option = document.createElement('button');
-                    option.className = 'option-btn text-left p-3 bg-pastel hover:bg-sandy text-brown rounded-lg transition-all';
+                    option.className = 'option-btn text-left p-3 bg-pastel hover:bg-sandy text-2xl text-brown rounded-lg transition-all';
                     option.innerHTML = `<span class="font-bold">${key}:</span> ${value}`;
                     option.addEventListener('click', () => selectOption(key));
                     options.appendChild(option);
