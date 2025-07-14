@@ -538,6 +538,68 @@ function hideErrorMessage() {
 }
 
 // Check if the answer is correct
+// function checkAnswer() {
+//     const userAnswer = answerInput.value;
+//     const currentQuestion = questions[currentQuestionIndex];
+
+//     if (!userAnswer.trim()) {
+//         showErrorMessage('Vui lòng nhập câu trả lời trước khi kiểm tra.');
+//         return;
+//     }
+
+//     // Hide error message if it was shown
+//     hideErrorMessage();
+
+//     attemptCount++;
+
+//     const normalizedUserAnswer = normalizeText(userAnswer);
+//     const normalizedCorrectAnswer = normalizeText(currentQuestion.correctAnswers);
+
+//     const correctWords = normalizedCorrectAnswer.split(' ');
+//     feedbackArea.classList.remove('hidden');
+
+//     // Show the "Show Answer" button after checking
+//     showAnswerButton.classList.remove('hidden');
+//     showAnswerButton.classList.add('button-appear');
+
+//     if (normalizedUserAnswer === normalizedCorrectAnswer) {
+//         // Correct answer
+//         correctFeedback.classList.remove('hidden');
+//         incorrectFeedback.classList.add('hidden');
+//         correctAnswerText.textContent = currentQuestion.correctAnswers;
+//     } else {
+//         // Incorrect answer
+//         incorrectFeedback.classList.remove('hidden');
+//         correctFeedback.classList.add('hidden');
+//         tipText.textContent = currentQuestion.tips;
+
+//         displayUserResponse(userAnswer.trim(), correctWords);
+//         // tipText.innerHTML = `${currentQuestion.tips}<br><br><strong>Đáp án đúng:</strong> ${currentQuestion.correctAnswers}`;
+//     }
+// }
+
+// function displayUserResponse(userAnswer, correctWords) {
+//     const userWords = normalizeText(userAnswer).split(' ');
+//     let highlightedValue = userAnswer;
+
+//     let hasErrors = false;
+
+//     // Tìm và bôi đỏ các từ sai
+//     userWords.forEach(word => {
+//         if (!correctWords.includes(word)) {
+//         hasErrors = true;
+//         const regex = new RegExp(`(${word})`,'gi'); // Tạo biểu thức chính quy để tìm từ
+//         highlightedValue = highlightedValue.replace(regex,'<span class="highlight">$1</span>'); // Bôi đỏ từ sai
+//         }
+//     });
+
+//     if (hasErrors) {
+//         document.getElementById('userResponse').innerHTML = highlightedValue; // Hiển thị câu trả lời
+//     } else {
+//         document.getElementById('userResponse').innerHTML = ''; // Xóa nội dung nếu không có lỗi
+//     }
+// }
+
 function checkAnswer() {
     const userAnswer = answerInput.value;
     const currentQuestion = questions[currentQuestionIndex];
@@ -555,10 +617,11 @@ function checkAnswer() {
     const normalizedUserAnswer = normalizeText(userAnswer);
     const normalizedCorrectAnswer = normalizeText(currentQuestion.correctAnswers);
 
-    const correctWords = normalizedCorrectAnswer.split(' ');
+    // Tách từ giữ nguyên bản gốc
+    const correctTokens = tokenizeWithOriginal(currentQuestion.correctAnswers);
+    const userTokens = tokenizeWithOriginal(userAnswer);
+    
     feedbackArea.classList.remove('hidden');
-
-    // Show the "Show Answer" button after checking
     showAnswerButton.classList.remove('hidden');
     showAnswerButton.classList.add('button-appear');
 
@@ -567,37 +630,147 @@ function checkAnswer() {
         correctFeedback.classList.remove('hidden');
         incorrectFeedback.classList.add('hidden');
         correctAnswerText.textContent = currentQuestion.correctAnswers;
+        document.getElementById('userResponse').classList.add('hidden');
     } else {
         // Incorrect answer
         incorrectFeedback.classList.remove('hidden');
         correctFeedback.classList.add('hidden');
-        tipText.textContent = currentQuestion.tips;
+        // tipText.textContent = currentQuestion.tips;
+        document.getElementById('userResponse').classList.remove('hidden');
 
-        displayUserResponse(userAnswer.trim(), correctWords);
-        // tipText.innerHTML = `${currentQuestion.tips}<br><br><strong>Đáp án đúng:</strong> ${currentQuestion.correctAnswers}`;
+        displayUserResponse(userAnswer, correctTokens);
     }
 }
 
-function displayUserResponse(userAnswer, correctWords) {
-    const userWords = normalizeText(userAnswer).split(' ');
-    let highlightedValue = userAnswer;
 
-    let hasErrors = false;
-
-    // Tìm và bôi đỏ các từ sai
-    userWords.forEach(word => {
-        if (!correctWords.includes(word)) {
-        hasErrors = true;
-        const regex = new RegExp(`(${word})`,'gi'); // Tạo biểu thức chính quy để tìm từ
-        highlightedValue = highlightedValue.replace(regex,'<span class="highlight">$1</span>'); // Bôi đỏ từ sai
+// Hàm tách từ giữ nguyên bản gốc nhưng dựa trên chuẩn hóa
+function tokenizeWithOriginal(originalText) {
+    const normalized = normalizeText(originalText);
+    const words = normalized.split(' ');
+    
+    let currentPos = 0;
+    const tokens = [];
+    
+    for (const word of words) {
+        if (word === '') continue;
+        
+        const start = originalText.toLowerCase().indexOf(word.toLowerCase(), currentPos);
+        if (start === -1) {
+            tokens.push({
+                original: word,
+                normalized: word
+            });
+            continue;
         }
-    });
-
-    if (hasErrors) {
-        document.getElementById('userResponse').innerHTML = highlightedValue; // Hiển thị câu trả lời
-    } else {
-        document.getElementById('userResponse').innerHTML = ''; // Xóa nội dung nếu không có lỗi
+        
+        const end = start + word.length;
+        const originalWord = originalText.slice(start, end);
+        
+        tokens.push({
+            original: originalWord,
+            normalized: word
+        });
+        
+        currentPos = end;
     }
+    
+    return tokens;
+}
+
+function displayUserResponse(userAnswer, correctTokens) {
+    const userTokens = tokenizeWithOriginal(userAnswer);
+    let resultHTML = '';
+    let missingWords = [];
+    let correctIndex = 0;
+    let userIndex = 0;
+    
+    const correctMatched = new Array(correctTokens.length).fill(false);
+    const missingPositions = [];
+    
+    while (userIndex < userTokens.length && correctIndex < correctTokens.length) {
+        const currentUser = userTokens[userIndex];
+        const currentCorrect = correctTokens[correctIndex];
+        
+        if (currentUser.normalized === currentCorrect.normalized) {
+            resultHTML += currentUser.original + ' ';
+            correctMatched[correctIndex] = true;
+            correctIndex++;
+            userIndex++;
+        } else {
+            let lookAhead = 1;
+            let foundMatch = false;
+            
+            // Tìm từ khớp phía sau
+            while (correctIndex + lookAhead < correctTokens.length && lookAhead < 5) {
+                if (currentUser.normalized === correctTokens[correctIndex + lookAhead].normalized) {
+                    foundMatch = true;
+                    break;
+                }
+                lookAhead++;
+            }
+            
+            if (foundMatch) {
+                // Ghi nhận vị trí từ bị thiếu
+                missingPositions.push({
+                    position: resultHTML.length,
+                    words: correctTokens.slice(correctIndex, correctIndex + lookAhead)
+                });
+                
+                // Thêm từ bị thiếu vào danh sách
+                for (let i = correctIndex; i < correctIndex + lookAhead; i++) {
+                    missingWords.push(correctTokens[i].original);
+                }
+                
+                correctIndex += lookAhead;
+            } else {
+                // Đánh dấu từ sai
+                resultHTML += `<span class="highlight" title="Sai: ${currentUser.original} → Đúng: ${currentCorrect.original}">${currentUser.original}</span> `;
+                userIndex++;
+                correctIndex++;
+            }
+        }
+    }
+    
+    // Xử lý các từ thừa ở cuối
+    while (userIndex < userTokens.length) {
+        resultHTML += `<span class="highlight" title="Từ thừa">${userTokens[userIndex].original}</span> `;
+        userIndex++;
+    }
+    
+    // Thêm các từ còn thiếu chưa được đánh dấu
+    for (let i = correctIndex; i < correctTokens.length; i++) {
+        if (!correctMatched[i]) {
+            missingWords.push(correctTokens[i].original);
+        }
+    }
+    
+    // Chèn dấu (...) đỏ vào các vị trí từ bị thiếu
+    let adjustedHTML = resultHTML;
+    let adjustment = 0;
+    
+    for (const pos of missingPositions.sort((a, b) => b.position - a.position)) {
+        const gapContent = pos.words.map(w => w.original).join(' ');
+        const gapMark = `<span class="highlight" title="Thiếu: ${gapContent}">(...)</span> `;
+        adjustedHTML = adjustedHTML.slice(0, pos.position + adjustment) + gapMark + adjustedHTML.slice(pos.position + adjustment);
+        adjustment += gapMark.length;
+    }
+    
+    // Hiển thị kết quả
+    document.getElementById('userResponse').innerHTML = adjustedHTML;
+    
+    // // Hiển thị các từ thiếu (nếu có)
+    // const missingWordsContainer = document.getElementById('missingWordsContainer');
+    // if (missingWords.length > 0) {
+    //     missingWordsContainer.innerHTML = `
+    //         <div class="missing-words-title">Các từ bị thiếu:</div>
+    //         <div class="missing-words-list">
+    //             ${missingWords.map(word => `<span class="missing-word">${word}</span>`).join(' ')}
+    //         </div>
+    //     `;
+    //     missingWordsContainer.classList.remove('hidden');
+    // } else {
+    //     missingWordsContainer.classList.add('hidden');
+    // }
 }
 
 // Show the correct answer
@@ -724,7 +897,7 @@ function toggleSidebarVisibility() {
 
 // Start countdown timer
 function startCountdown() {
-    const examDate = new Date('July 12, 2025 00:00:00').getTime();
+    const examDate = new Date('August 9, 2025 00:00:00').getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
