@@ -617,7 +617,7 @@
                 },
                 {
                     id: 2,
-                    name: "Kho Báu Siu To Khổng Lồ",
+                    name: "Kho Báu Lớn",
                     pointsPerQuestion: 200,
                     bonusPoints: 1000,
                     code: [1, 8, 9, 4, 3], // Fixed code for chest 2
@@ -667,7 +667,7 @@
                 },
                 {
                     id: 3,
-                    name: "Kho Báu Khó",
+                    name: "Kho Báu Siu To Khổng Lồ",
                     pointsPerQuestion: 300,
                     bonusPoints: 1500,
                     code: [5, 0, 4, 6, 9], // Fixed code for chest 3
@@ -958,7 +958,7 @@
 
                 if (question.type === 'multiple') {
                     optionBtn.innerHTML = `
-                        <span class="inline-block w-8 h-8 rounded-full bg-ebd8ba text-center mr-2">${String.fromCharCode(65 + index)}</span>
+                        <span class="inline-block w-8 h-8 rounded-full bg-ebd8ba text-center mr-2">${String.fromCharCode(65 + index)}.</span>
                         ${option}
                     `;
                 } else {
