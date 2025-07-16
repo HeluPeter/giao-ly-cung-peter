@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò Chơi Săn Kho Báu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8ebd4;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ebd8ba' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3,
+        .heading-font {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+
+        .treasure-chest {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .treasure-chest:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .btn {
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .question-card {
+            transition: all 0.3s ease;
+        }
+
+        .question-card:hover:not(.disabled) {
+            transform: translateY(-5px);
+        }
+
+        .digit-found {
+            animation: bounce 0.5s;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fac5b2;
+            animation: confetti-fall 3s linear forwards;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(500px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .option-btn {
+            transition: all 0.2s ease;
+        }
+
+        .option-btn:hover:not(.selected):not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .option-btn.selected {
+            background-color: #c5755d;
+            color: white;
+        }
+
+        .text-e17373 {
+            color: #e17373;
+        }
+
+        .timer-circle {
+            stroke-dasharray: 440;
+            stroke-dashoffset: 0;
+            transform-origin: center;
+            transform: rotate(-90deg);
+            transition: stroke-dashoffset 1s linear;
+        }
+
+        .code-input {
+            width: 50px;
+            height: 60px;
+            font-size: 24px;
+            text-align: center;
+            border: 2px solid #fac5b2;
+            border-radius: 8px;
+            margin: 0 4px;
+            transition: all 0.2s;
+        }
+
+        .code-input:focus {
+            border-color: #c5755d;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(197, 117, 93, 0.3);
+        }
+
+        .shake {
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translateX(-5px);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: translateX(5px);
+            }
+        }
+
+        .main-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <div class="main-container">
+        <!-- Home Screen -->
+        <div id="home-screen" class="container mx-auto px-4 py-8">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-6xl text-c5755d mb-4 font-black">🏴‍☠️ Trò Chơi Săn Kho Báu 🏴‍☠️</h1>
+                <p class="text-xl md:text-2xl text-8a5c39 font-medium">Tìm mã bí mật và mở khóa rương kho báu!</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
+                <div class="text-center">
+                    <button id="start-game-btn"
+                        class="btn bg-8a5c39 hover:bg-c5755d text-e17373 text-2xl py-4 px-8 rounded-xl shadow-lg font-bold">
+                        Bắt Đầu Cuộc Phiêu Lưu! 🚀
+                    </button>
+                </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl p-6">
+                <h2 class="text-2xl md:text-3xl text-c5755d mb-4 font-bold">Cách Chơi</h2>
+                <ul class="list-disc pl-6 space-y-2 text-lg">
+                    <li>Mỗi rương kho báu có 5 câu hỏi trắc nghiệm</li>
+                    <li>Trả lời đúng câu hỏi để kiếm điểm và mở khóa các chữ số mã</li>
+                    <li>Bạn sẽ biết các chữ số nhưng không biết vị trí của chúng</li>
+                    <li>Sử dụng bộ đếm thời gian 15 giây để giúp với các câu hỏi khó</li>
+                    <li>Cố gắng mở khóa rương với mã đúng</li>
+                    <li>Sau khi tất cả các rương được mở, đội có nhiều điểm nhất sẽ thắng</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Chest Selection Screen -->
+        <div id="chest-selection" class="container mx-auto px-4 py-8 hidden">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-6xl text-c5755d mb-4 font-black">Chọn Một Rương Kho Báu</h1>
+                <p class="text-xl md:text-2xl text-8a5c39 font-medium">Mỗi rương chứa các câu hỏi và kho báu khác nhau!
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
+                <div id="chest-1"
+                    class="treasure-chest cursor-pointer bg-white rounded-xl shadow-xl p-6 text-center w-full md:w-1/3 max-w-xs">
+                    <div class="relative">
+                        <svg class="w-full h-auto" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="30" width="80" height="50" rx="5" fill="#8a5c39" />
+                            <rect x="10" y="30" width="80" height="10" rx="2" fill="#c5755d" />
+                            <rect x="15" y="35" width="70" height="40" rx="2" fill="#ebd8ba" />
+                            <circle cx="50" cy="30" r="5" fill="#fac5b2" />
+                            <rect x="45" y="20" width="10" height="10" fill="#8a5c39" />
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="heading-font text-4xl text-8a5c39 font-black">1</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl text-c5755d mt-4 font-bold">Kho Báu Dễ</h3>
+                    <p class="text-8a5c39">100 điểm mỗi câu hỏi</p>
+                </div>
+
+                <div id="chest-2"
+                    class="treasure-chest cursor-pointer bg-white rounded-xl shadow-xl p-6 text-center w-full md:w-1/3 max-w-xs">
+                    <div class="relative">
+                        <svg class="w-full h-auto" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="30" width="80" height="50" rx="5" fill="#8a5c39" />
+                            <rect x="10" y="30" width="80" height="10" rx="2" fill="#c5755d" />
+                            <rect x="15" y="35" width="70" height="40" rx="2" fill="#ebd8ba" />
+                            <circle cx="50" cy="30" r="5" fill="#fac5b2" />
+                            <rect x="45" y="20" width="10" height="10" fill="#8a5c39" />
+                            <circle cx="25" cy="50" r="5" fill="#fac5b2" />
+                            <circle cx="75" cy="50" r="5" fill="#fac5b2" />
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="heading-font text-4xl text-8a5c39 font-black">2</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl text-c5755d mt-4 font-bold">Kho Báu Trung Bình</h3>
+                    <p class="text-8a5c39">200 điểm mỗi câu hỏi</p>
+                </div>
+
+                <div id="chest-3"
+                    class="treasure-chest cursor-pointer bg-white rounded-xl shadow-xl p-6 text-center w-full md:w-1/3 max-w-xs">
+                    <div class="relative">
+                        <svg class="w-full h-auto" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="30" width="80" height="50" rx="5" fill="#8a5c39" />
+                            <rect x="10" y="30" width="80" height="10" rx="2" fill="#c5755d" />
+                            <rect x="15" y="35" width="70" height="40" rx="2" fill="#ebd8ba" />
+                            <circle cx="50" cy="30" r="5" fill="#fac5b2" />
+                            <rect x="45" y="20" width="10" height="10" fill="#8a5c39" />
+                            <circle cx="25" cy="45" r="5" fill="#c5755d" />
+                            <circle cx="75" cy="45" r="5" fill="#c5755d" />
+                            <circle cx="25" cy="65" r="5" fill="#c5755d" />
+                            <circle cx="75" cy="65" r="5" fill="#c5755d" />
+                            <circle cx="50" cy="55" r="8" fill="#fac5b2" />
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="heading-font text-4xl text-8a5c39 font-black">3</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl text-c5755d mt-4 font-bold">Kho Báu Khó</h3>
+                    <p class="text-8a5c39">300 điểm mỗi câu hỏi</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button id="back-to-home"
+                    class="btn bg-c5755d hover:bg-8a5c39 text-e17373 text-xl py-3 px-6 rounded-lg shadow-md font-medium">
+                    Quay Lại Trang Chủ 🏠
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="container mx-auto px-4 py-8 hidden">
+            <div class="text-center mb-8">
+                <h1 id="chest-title" class="text-4xl md:text-6xl text-c5755d mb-4 font-black">Rương Kho Báu #1</h1>
+                <p id="chest-subtitle" class="text-xl md:text-2xl text-8a5c39 font-medium">Trả lời câu hỏi để tìm mã bí
+                    mật!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Left Column - Questions -->
+                <div class="md:col-span-2">
+                    <div class="bg-white rounded-xl shadow-xl p-6 mb-6">
+                        <h2 class="text-2xl text-c5755d mb-4 font-bold">Câu Hỏi</h2>
+                        <div id="questions-container" class="grid grid-cols-1 gap-4">
+                            <!-- Questions will be added here -->
+                        </div>
+                    </div>
+
+                    <div id="question-detail" class="bg-white rounded-xl shadow-xl p-6 mb-6 hidden">
+                        <div class="flex justify-between items-center mb-4">
+                            <button id="back-to-questions"
+                                class="btn bg-8a5c39 hover:bg-c5755d text-e17373 text-lg py-2 px-4 rounded-lg shadow-md font-medium">
+                                ← Quay Lại Câu Hỏi
+                            </button>
+
+                            <div class="flex items-center">
+                                <div class="relative w-12 h-12 mr-2">
+                                    <svg class="w-12 h-12" viewBox="0 0 160 160">
+                                        <circle cx="80" cy="80" r="70" fill="none" stroke="#ebd8ba" stroke-width="12" />
+                                        <circle id="timer-circle" class="timer-circle" cx="80" cy="80" r="70"
+                                            fill="none" stroke="#c5755d" stroke-width="12" />
+                                    </svg>
+                                    <span id="timer-text"
+                                        class="absolute inset-0 flex items-center justify-center text-xl font-bold">15</span>
+                                </div>
+                                <button id="start-timer"
+                                    class="btn bg-fac5b2 hover:bg-c5755d text-e17373 text-lg py-2 px-4 rounded-lg shadow-md font-medium">
+                                    Bắt Đầu Đếm Giờ
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 id="current-question-title" class="text-2xl text-c5755d font-bold">Câu Hỏi</h3>
+                                <span id="question-points"
+                                    class="bg-8a5c39 text-e17373 px-3 py-1 rounded-lg text-lg font-medium">100
+                                    điểm</span>
+                            </div>
+                            <p id="current-question-text" class="text-xl mb-6">Nội dung câu hỏi ở đây?</p>
+                        </div>
+
+                        <div id="answer-options" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <!-- Answer options will be added here -->
+                        </div>
+
+                        <div class="text-center">
+                            <button id="check-answer"
+                                class="btn bg-c5755d hover:bg-8a5c39 text-e17373 text-xl py-3 px-6 rounded-lg shadow-md font-bold">
+                                Kiểm Tra Đáp Án ✓
+                            </button>
+                        </div>
+
+                        <div id="answer-result" class="mt-6 hidden">
+                            <div id="correct-answer"
+                                class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded mb-4 hidden">
+                                <p class="text-xl">✅ Chính xác! Bạn đã tìm thấy một chữ số: <span id="found-digit"
+                                        class="text-3xl font-bold digit-found">5</span></p>
+                                <p>Bạn đã kiếm được <span id="points-earned" class="font-bold">100</span> điểm!</p>
+                            </div>
+
+                            <div id="wrong-answer"
+                                class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded mb-4 hidden">
+                                <p class="text-xl">❌ Rất tiếc, đáp án không đúng.</p>
+                                <p>Hãy thử câu hỏi khác!</p>
+                            </div>
+
+                            <button id="continue-after-answer"
+                                class="btn bg-8a5c39 hover:bg-c5755d text-e17373 text-xl py-3 px-6 rounded-lg shadow-md font-medium">
+                                Tiếp Tục
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Code -->
+                <div>
+                    <div class="bg-white rounded-xl shadow-xl p-6 mb-6">
+                        <h2 class="text-2xl text-c5755d mb-4 font-bold">Mã Bí Mật</h2>
+                        <div class="flex justify-center mb-6">
+                            <div id="code-display" class="grid grid-cols-5 gap-2 w-full">
+                                <div
+                                    class="bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold">
+                                    ?</div>
+                                <div
+                                    class="bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold">
+                                    ?</div>
+                                <div
+                                    class="bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold">
+                                    ?</div>
+                                <div
+                                    class="bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold">
+                                    ?</div>
+                                <div
+                                    class="bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold">
+                                    ?</div>
+                            </div>
+                        </div>
+
+                        <!-- Digits Found section -->
+                        <div class="mb-6">
+                            <h3 class="text-xl text-c5755d mb-4 font-medium">Chữ Số Đã Tìm Thấy:</h3>
+                            <div id="digits-found" class="flex flex-wrap justify-center gap-2">
+                                <p class="text-center text-gray-500">Chưa tìm thấy chữ số nào</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl text-c5755d mb-4 font-medium">Nhập Mã Để Mở Khóa:</h3>
+                            <div class="flex justify-center mb-4" id="code-input-container">
+                                <input type="number" min="0" max="9" class="code-input" maxlength="1">
+                                <input type="number" min="0" max="9" class="code-input" maxlength="1">
+                                <input type="number" min="0" max="9" class="code-input" maxlength="1">
+                                <input type="number" min="0" max="9" class="code-input" maxlength="1">
+                                <input type="number" min="0" max="9" class="code-input" maxlength="1">
+                            </div>
+
+                            <div class="text-center">
+                                <button id="unlock-chest-btn"
+                                    class="btn bg-c5755d hover:bg-8a5c39 text-e17373 text-xl py-3 px-6 rounded-lg shadow-md font-bold">
+                                    🔓 Mở Khóa Rương
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button id="back-to-chests"
+                            class="btn bg-c5755d hover:bg-8a5c39 text-e17373 text-xl py-3 px-6 rounded-lg shadow-md font-medium">
+                            Quay Lại Rương 🏠
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chest Unlocked Modal -->
+        <div id="chest-unlocked-modal"
+            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+            <div class="bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full mx-4">
+                <div class="text-center">
+                    <h2 class="text-3xl text-c5755d mb-4 font-black">🎉 Đã Mở Khóa Rương Kho Báu! 🎉</h2>
+                    <div class="mb-6">
+                        <svg class="w-48 h-auto mx-auto" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="30" width="80" height="50" rx="5" fill="#8a5c39" />
+                            <rect x="10" y="15" width="80" height="15" rx="2" fill="#c5755d" />
+                            <rect x="15" y="35" width="70" height="40" rx="2" fill="#fac5b2" />
+                            <circle cx="25" cy="45" r="5" fill="#ebd8ba" />
+                            <circle cx="75" cy="45" r="5" fill="#ebd8ba" />
+                            <circle cx="25" cy="65" r="5" fill="#ebd8ba" />
+                            <circle cx="75" cy="65" r="5" fill="#ebd8ba" />
+                            <circle cx="50" cy="55" r="10" fill="#ebd8ba" />
+                        </svg>
+                    </div>
+                    <p class="text-xl mb-4 font-medium">Bạn đã mở khóa rương!</p>
+                    <p class="text-lg mb-6">Bạn đã kiếm được <span id="chest-points" class="font-bold">500</span> điểm
+                        thưởng!</p>
+                    <button id="continue-after-unlock"
+                        class="btn bg-c5755d hover:bg-8a5c39 text-e17373 text-xl py-3 px-6 rounded-lg shadow-md font-bold">
+                        Tiếp Tục Cuộc Phiêu Lưu
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wrong Code Modal -->
+        <div id="wrong-code-modal"
+            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+            <div class="bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full mx-4">
+                <div class="text-center">
+                    <h2 class="text-3xl text-red-600 mb-4 font-black">❌ Mã Không Đúng!</h2>
+                    <p class="text-xl mb-6 font-medium">Hãy thử lại với một tổ hợp khác.</p>
+                    <button id="try-again-btn"
+                        class="btn bg-c5755d hover:bg-8a5c39 text-e17373 text-xl py-3 px-6 rounded-lg shadow-md font-bold">
+                        Thử Lại
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Results Modal -->
+        <div id="final-results-modal"
+            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+            <div class="bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full mx-4">
+                <div class="text-center">
+                    <h2 class="text-3xl text-c5755d mb-4 font-black">🏆 Hoàn Thành Cuộc Phiêu Lưu! 🏆</h2>
+                    <p class="text-xl mb-6 font-medium">Tất cả các rương kho báu đã được mở khóa!</p>
+
+                    <div class="mb-6">
+                        <h3 class="text-2xl text-8a5c39 mb-4 font-bold">Điểm Số Cuối Cùng</h3>
+                        <p class="text-4xl font-black" id="final-score">1500 điểm</p>
+                    </div>
+
+                    <button id="play-again-btn"
+                        class="btn bg-c5755d hover:bg-8a5c39 text-e17373 text-xl py-3 px-6 rounded-lg shadow-md font-bold">
+                        Chơi Lại! 🔄
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Audio elements (placeholders) -->
+        <!-- You will need to add the actual audio files later -->
+        <div class="hidden" bis_skin_checked="1">
+            <!-- Timer button sound -->
+            <audio id="timerSound">
+                <!-- Add your timer sound file here -->
+                <source src="15s.m4a" type="audio/mpeg">
+            </audio>
+
+            <!-- Correct sound -->
+            <audio id="correctSound">
+                <!-- Add your correct sound file here -->
+                <source src="dung.m4a" type="audio/mpeg">
+            </audio>
+
+            <!-- Incorrect sound -->
+            <audio id="incorrectSound">
+                <!-- Add your incorrect sound file here -->
+                <source src="sai.m4a" type="audio/mpeg">
+            </audio>
+
+            <!-- Star sound -->
+            <audio id="starSound">
+                <!-- Add your star sound file here -->
+                <source src="modau.m4a" type="audio/mpeg">
+            </audio>
+
+            <!-- Hope Star selection sound -->
+            <audio id="hopeStarSound">
+                <!-- Add your hope star selection sound file here -->
+                <source src="ngoisaohyvong.m4a" type="audio/mpeg">
+            </audio>
+            <audio id="selectQues">
+                <!-- Add your hope star selection sound file here -->
+                <source src="choncauhoi.m4a" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        // Game data
+        const gameData = {
+            score: 0,
+            currentChest: null,
+            digitsFound: [],
+            chests: [
+                {
+                    id: 1,
+                    name: "Kho Báu Dễ",
+                    pointsPerQuestion: 100,
+                    bonusPoints: 500,
+                    code: [2, 5, 7, 3, 0], // Fixed code for chest 1
+                    questions: [
+                        {
+                            id: 1,
+                            text: "Tại sao Chúa Giêsu lại lên núi một mình sau khi giải tán dân chúng?",
+                            type: "multiple",
+                            options: ["Vì muốn tránh đám đông", "Vì Ngài buồn bã", "Vì muốn cầu nguyện với Chúa Cha", "Vì các môn đệ không đi cùng"],
+                            answer: 2,
+                            answered: false
+                        },
+                        {
+                            id: 2,
+                            text: "Trong khi các môn đệ lên thuyền, Chúa Giêsu đã làm gì?",
+                            type: "multiple",
+                            options: ["Xuống thuyền cùng các ông", "Trở về làng", "Lên núi cầu nguyện một mình", "Nói chuyện với dân chúng"],
+                            answer: 2,
+                            answered: false
+                        },
+                        {
+                            id: 3,
+                            text: "Khi các môn đệ gặp sóng gió, thuyền đã ra xa bờ bao nhiêu?",
+                            type: "multiple",
+                            options: ["Mấy cây số", "Một cây số", "Vài mét", "Gần tới bờ bên kia"],
+                            answer: 0,
+                            answered: false
+                        },
+                        {
+                            id: 4,
+                            text: "Thời điểm Chúa Giêsu đi trên mặt biển là khi nào?",
+                            type: "multiple",
+                            options: ["Lúc sáng sớm", "Canh hai", "Canh ba", "Canh tư"],
+                            answer: 3,
+                            answered: false
+                        },
+                        {
+                            id: 5,
+                            text: "Khi thấy Đức Giêsu đi trên mặt biển, các môn đệ phản ứng thế nào?",
+                            type: "multiple",
+                            options: ["Mừng rỡ", "Ngạc nhiên", "Cầu nguyện", "Hoảng hốt và tưởng là ma"],
+                            answer: 3,
+                            answered: false
+                        }
+                    ],
+                    completed: false
+                },
+                {
+                    id: 2,
+                    name: "Kho Báu Trung Bình",
+                    pointsPerQuestion: 200,
+                    bonusPoints: 1000,
+                    code: [1, 8, 9, 4, 3], // Fixed code for chest 2
+                    questions: [
+                        {
+                            id: 1,
+                            text: "Chúa Giêsu đã nói gì để trấn an các môn đệ?",
+                            type: "multiple",
+                            options: ["Thầy đến cứu các con", "Cứ yên tâm, chính Thầy đây, đừng sợ!", "Đừng sợ, hãy cầu nguyện", "Đây là thử thách của các con"],
+                            answer: 1,
+                            answered: false
+                        },
+                        {
+                            id: 2,
+                            text: "Ai là người xin đi trên mặt nước đến với Chúa Giêsu?",
+                            type: "multiple",
+                            options: ["Đức Giáo Hoàng Leo", "Cha Tiềm", "Phêrô", "Gioan"],
+                            answer: 2,
+                            answered: false
+                        },
+                        {
+                            id: 3,
+                            text: "Khi Phêrô bắt đầu chìm xuống, ông đã nói gì?",
+                            type: "multiple",
+                            options: ["Thầy ơi, cứu con với!", "Thầy Lộc Fuho ơi, cứu con với", "Lạy Thầy, con sợ quá!", "Con không thể tiếp tục nữa!"],
+                            answer: 0,
+                            answered: false
+                        },
+                        {
+                            id: 4,
+                            text: "Điều gì khiến Phêrô bắt đầu chìm?",
+                            type: "multiple",
+                            options: ["Vì anh Lộc đẹp trai", "Vì ông nghi ngờ và sợ hãi", "Vì sóng lớn", "Vì Chúa rút tay lại"],
+                            answer: 1,
+                            answered: false
+                        },
+                        {
+                            id: 5,
+                            text: "Đức Giêsu đã làm gì khi Phêrô chìm xuống nước?",
+                            type: "multiple",
+                            options: ["Nhìn ông và mỉm cười", "Kêu gọi các môn đệ giúp", "Trở lại thuyền một mình", "Đưa tay nắm lấy ông"],
+                            answer: 3,
+                            answered: false
+                        }
+                    ],
+                    completed: false
+                },
+                {
+                    id: 3,
+                    name: "Kho Báu Khó",
+                    pointsPerQuestion: 300,
+                    bonusPoints: 1500,
+                    code: [5, 0, 4, 6, 9], // Fixed code for chest 3
+                    questions: [
+                        {
+                            id: 1,
+                            text: "Chúa Giêsu nói gì với Phêrô khi cứu ông?",
+                            type: "multiple",
+                            options: ["Con cần tập luyện thêm", "Sao lại hoài nghi?", "Hãy học nơi Thầy", "Đức tin con mạnh mẽ lắm!"],
+                            answer: 1,
+                            answered: false
+                        },
+                        {
+                            id: 2,
+                            text: "Khi Chúa Giêsu và Phêrô lên thuyền, điều gì xảy ra?",
+                            type: "multiple",
+                            options: ["Anh Lộc đẹp trai hơn", "Gió lặng ngay", "Mọi người la hét", "A và B đúng"],
+                            answer: 1,
+                            answered: false
+                        },
+                        {
+                            id: 3,
+                            text: "Các môn đệ đã thốt lên điều gì sau khi chứng kiến sự việc?",
+                            type: "multiple",
+                            options: ["Chúng ta đã thoát chết rồi!", "Thầy là người quyền năng!", "Thật là kỳ diệu!", "Quả thật, Ngài là Con Thiên Chúa!"],
+                            answer: 3,
+                            answered: false
+                        },
+                        {
+                            id: 4,
+                            text: "Phêrô đã đi được trên mặt nước một đoạn trước khi bị chìm.",
+                            type: "true-false",
+                            options: ["Đúng", "Sai"],
+                            answer: 0,
+                            answered: false
+                        },
+                        {
+                            id: 5,
+                            text: "Các môn đệ ngay lập tức nhận ra Chúa Giêsu khi Người đi trên mặt biển.",
+                            type: "true-false",
+                            options: ["Đúng", "Sai"],
+                            answer: 1,
+                            answered: false
+                        }
+                    ],
+                    completed: false
+                }
+            ]
+        };
+
+        // DOM Elements
+        const homeScreen = document.getElementById('home-screen');
+        const chestSelection = document.getElementById('chest-selection');
+        const gameScreen = document.getElementById('game-screen');
+        const chestUnlockedModal = document.getElementById('chest-unlocked-modal');
+        const wrongCodeModal = document.getElementById('wrong-code-modal');
+        const finalResultsModal = document.getElementById('final-results-modal');
+
+        // Home Screen Elements
+        const startGameBtn = document.getElementById('start-game-btn');
+
+        // Chest Selection Elements
+        const chest1 = document.getElementById('chest-1');
+        const chest2 = document.getElementById('chest-2');
+        const chest3 = document.getElementById('chest-3');
+        const backToHome = document.getElementById('back-to-home');
+
+        // Game Screen Elements
+        const chestTitle = document.getElementById('chest-title');
+        const chestSubtitle = document.getElementById('chest-subtitle');
+        const questionsContainer = document.getElementById('questions-container');
+        const questionDetail = document.getElementById('question-detail');
+        const backToQuestions = document.getElementById('back-to-questions');
+        const currentQuestionTitle = document.getElementById('current-question-title');
+        const currentQuestionText = document.getElementById('current-question-text');
+        const questionPoints = document.getElementById('question-points');
+        const answerOptions = document.getElementById('answer-options');
+        const checkAnswer = document.getElementById('check-answer');
+        const answerResult = document.getElementById('answer-result');
+        const correctAnswer = document.getElementById('correct-answer');
+        const wrongAnswer = document.getElementById('wrong-answer');
+        const foundDigit = document.getElementById('found-digit');
+        const pointsEarned = document.getElementById('points-earned');
+        const continueAfterAnswer = document.getElementById('continue-after-answer');
+        const codeDisplay = document.getElementById('code-display');
+        const codeInputs = document.querySelectorAll('.code-input');
+        const digitsFound = document.getElementById('digits-found');
+        const unlockChestBtn = document.getElementById('unlock-chest-btn');
+        const backToChests = document.getElementById('back-to-chests');
+        const timerCircle = document.getElementById('timer-circle');
+        const timerText = document.getElementById('timer-text');
+        const startTimer = document.getElementById('start-timer');
+        const tryAgainBtn = document.getElementById('try-again-btn');
+
+        // Chest Unlocked Modal Elements
+        const chestPoints = document.getElementById('chest-points');
+        const continueAfterUnlock = document.getElementById('continue-after-unlock');
+
+        // Final Results Modal Elements
+        const finalScore = document.getElementById('final-score');
+        const playAgainBtn = document.getElementById('play-again-btn');
+
+        // Timer variables
+        let timerInterval;
+        let timeLeft = 15;
+        let timerRunning = false;
+
+        // Audio elements
+        const timerSound = document.getElementById('timerSound');
+        const correctSound = document.getElementById('correctSound');
+        const incorrectSound = document.getElementById('incorrectSound');
+        const starSound = document.getElementById('starSound');
+        const hopeStarSound = document.getElementById('hopeStarSound');
+        const selectQues = document.getElementById('selectQues');
+
+        // Sound functions
+        function playTimerSound() {
+            try {
+                timerSound.currentTime = 0;
+                timerSound.play();
+            } catch (e) {
+                console.log("Timer sound not available yet");
+            }
+
+            console.log("Playing timer sound");
+        }
+
+        function playQuestionSelectSound() {
+            try {
+                selectQues.currentTime = 0;
+                selectQues.play();
+            } catch (e) {
+                console.log("Timer sound not available yet");
+            }
+
+            console.log("Playing question select sound");
+        }
+
+        function playCheckAnswerSound() {
+            try {
+                correctSound.currentTime = 0;
+                correctSound.play();
+            } catch (e) {
+                console.log("Timer sound not available yet");
+            }
+
+            console.log("Playing check answer sound");
+        }
+
+        function playCorrectCodeSound() {
+            try {
+                correctSound.currentTime = 0;
+                correctSound.play();
+            } catch (e) {
+                console.log("Timer sound not available yet");
+            }
+
+            console.log("Playing correct code sound");
+        }
+
+        function playWrongCodeSound() {
+            try {
+                incorrectSound.currentTime = 0;
+                incorrectSound.play();
+            } catch (e) {
+                console.log("Timer sound not available yet");
+            }
+
+            console.log("Playing wrong code sound");
+        }
+
+        function playSelectChestSound() {
+            try {
+                hopeStarSound.currentTime = 0;
+                hopeStarSound.play();
+            } catch (e) {
+                console.log("Timer sound not available yet");
+            }
+
+            console.log("Playing wrong code sound");
+        }
+
+        function loadChest(chestId) {
+            playSelectChestSound();
+            gameData.currentChest = gameData.chests.find(chest => chest.id === chestId);
+
+            // Update UI
+            chestTitle.textContent = `Rương Kho Báu #${chestId}`;
+            chestSubtitle.textContent = `${gameData.currentChest.name} - ${gameData.currentChest.pointsPerQuestion} điểm mỗi câu hỏi`;
+
+            // Reset digits found for this chest
+            gameData.digitsFound = [];
+
+            // Load questions
+            loadQuestions();
+
+            // Reset code display
+            resetCodeDisplay();
+
+            // Reset code inputs
+            resetCodeInputs();
+
+            // Update digits found display
+            updateDigitsFound();
+
+            // Show game screen
+            chestSelection.classList.add('hidden');
+            gameScreen.classList.remove('hidden');
+        }
+
+        function loadQuestions() {
+            questionsContainer.innerHTML = '';
+
+            gameData.currentChest.questions.forEach(question => {
+                const questionCard = document.createElement('div');
+                questionCard.className = `question-card p-4 rounded-lg shadow-md ${question.answered ? 'bg-gray-200 disabled' : 'bg-white hover:bg-fac5b2 hover:bg-opacity-20 cursor-pointer'}`;
+                questionCard.dataset.questionId = question.id;
+
+                questionCard.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-ebd8ba flex items-center justify-center text-lg font-bold mr-3">
+                                ${question.id}
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold">Câu Hỏi ${question.id}</h3>
+                                <p class="${question.answered ? 'text-gray-500' : 'text-8a5c39'}">
+                                    ${question.answered ? 'Đã trả lời' : 'Nhấn để trả lời'}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-8a5c39 text-e17373 px-3 py-1 rounded-lg">
+                            ${gameData.currentChest.pointsPerQuestion} điểm
+                        </div>
+                    </div>
+                `;
+
+                if (!question.answered) {
+                    questionCard.addEventListener('click', () => {
+                        playQuestionSelectSound(); // Play sound when selecting a question
+                        showQuestion(question);
+                    });
+                }
+
+                questionsContainer.appendChild(questionCard);
+            });
+        }
+
+        function showQuestion(question) {
+            // Update question detail
+            currentQuestionTitle.textContent = `Câu Hỏi ${question.id}`;
+            currentQuestionText.textContent = question.text;
+            questionPoints.textContent = `${gameData.currentChest.pointsPerQuestion} điểm`;
+
+            // Reset timer
+            resetTimer();
+
+            // Load answer options
+            loadAnswerOptions(question);
+
+            // Hide answer result
+            answerResult.classList.add('hidden');
+            correctAnswer.classList.add('hidden');
+            wrongAnswer.classList.add('hidden');
+
+            // Show check answer button
+            checkAnswer.classList.remove('hidden');
+
+            // Set current question
+            checkAnswer.dataset.questionId = question.id;
+
+            // Show question detail
+            questionsContainer.parentElement.classList.add('hidden');
+            questionDetail.classList.remove('hidden');
+        }
+
+        function loadAnswerOptions(question) {
+            answerOptions.innerHTML = '';
+
+            question.options.forEach((option, index) => {
+                const optionBtn = document.createElement('button');
+                optionBtn.className = 'option-btn w-full p-4 text-left text-lg border-2 border-fac5b2 rounded-lg hover:bg-fac5b2 hover:bg-opacity-20';
+                optionBtn.dataset.index = index;
+
+                if (question.type === 'multiple') {
+                    optionBtn.innerHTML = `
+                        <span class="inline-block w-8 h-8 rounded-full bg-ebd8ba text-center mr-2">${String.fromCharCode(65 + index)}</span>
+                        ${option}
+                    `;
+                } else {
+                    optionBtn.innerHTML = `
+                        <span class="inline-block w-8 h-8 rounded-full bg-ebd8ba text-center mr-2">${index === 0 ? 'Đ' : 'S'}</span>
+                        ${option}
+                    `;
+                }
+
+                optionBtn.addEventListener('click', () => {
+                    // Remove selected class from all options
+                    document.querySelectorAll('.option-btn').forEach(btn => {
+                        btn.classList.remove('selected');
+                    });
+
+                    // Add selected class to clicked option
+                    optionBtn.classList.add('selected');
+                });
+
+                answerOptions.appendChild(optionBtn);
+            });
+        }
+
+        function resetCodeDisplay() {
+            const codeSlots = codeDisplay.querySelectorAll('div');
+            codeSlots.forEach(slot => {
+                slot.textContent = '?';
+                slot.className = 'bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold';
+            });
+        }
+
+        function resetCodeInputs() {
+            codeInputs.forEach(input => {
+                input.value = '';
+            });
+        }
+
+        function updateDigitsFound() {
+            digitsFound.innerHTML = '';
+
+            if (gameData.digitsFound.length === 0) {
+                const noDigits = document.createElement('p');
+                noDigits.className = 'text-center text-gray-500';
+                noDigits.textContent = 'Chưa tìm thấy chữ số nào';
+                digitsFound.appendChild(noDigits);
+                return;
+            }
+
+            gameData.digitsFound.forEach(digit => {
+                const digitEl = document.createElement('div');
+                digitEl.className = 'bg-fac5b2 w-12 h-12 rounded-lg flex items-center justify-center text-2xl font-bold';
+                digitEl.textContent = digit;
+                digitsFound.appendChild(digitEl);
+            });
+        }
+
+        function unlockChest() {
+            // Play correct code sound
+            playCorrectCodeSound();
+
+            // Update UI
+            chestPoints.textContent = gameData.currentChest.bonusPoints;
+
+            // Add bonus points to score
+            gameData.score += gameData.currentChest.bonusPoints;
+
+            // Mark chest as completed
+            gameData.currentChest.completed = true;
+
+            // Show unlock modal
+            chestUnlockedModal.classList.remove('hidden');
+
+            // Create confetti effect
+            createConfetti();
+        }
+
+        function createConfetti() {
+            const confettiContainer = document.body;
+            const colors = ['#c5755d', '#ebd8ba', '#fac5b2', '#8a5c39'];
+
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.width = `${Math.random() * 10 + 5}px`;
+                confetti.style.height = `${Math.random() * 10 + 5}px`;
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDuration = `${Math.random() * 2 + 2}s`;
+                confetti.style.animationDelay = `${Math.random() * 0.5}s`;
+
+                confettiContainer.appendChild(confetti);
+
+                // Remove confetti after animation
+                setTimeout(() => {
+                    confetti.remove();
+                }, 3000);
+            }
+        }
+
+        function checkAllChestsCompleted() {
+            const allCompleted = gameData.chests.every(chest => chest.completed);
+
+            if (allCompleted) {
+                showFinalResults();
+            }
+        }
+
+        function showFinalResults() {
+            // Update final score
+            finalScore.textContent = `${gameData.score} điểm`;
+
+            // Show final results modal
+            finalResultsModal.classList.remove('hidden');
+        }
+
+        function startCountdown() {
+            // If timer is already running, stop it
+            if (timerRunning) {
+                clearInterval(timerInterval);
+                timerRunning = false;
+                startTimer.textContent = "Bắt Đầu Đếm Giờ";
+                resetTimer();
+                return;
+            }
+
+            // Reset timer
+            resetTimer();
+
+            // Play timer sound
+            playTimerSound();
+
+            // Update button text
+            startTimer.textContent = "Dừng Đếm Giờ";
+
+            // Set timer running flag
+            timerRunning = true;
+
+            // Start countdown
+            timerInterval = setInterval(() => {
+                timeLeft--;
+
+                // Update timer text
+                timerText.textContent = timeLeft;
+
+                // Update timer circle
+                const dashoffset = 440 * (1 - timeLeft / 15);
+                timerCircle.style.strokeDashoffset = dashoffset;
+
+                // Change color as time runs out
+                if (timeLeft <= 5) {
+                    timerCircle.style.stroke = '#c5755d';
+                }
+
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    timerRunning = false;
+                    startTimer.textContent = "Bắt Đầu Đếm Giờ";
+                }
+            }, 1000);
+        }
+
+        function resetTimer() {
+            // Clear interval
+            clearInterval(timerInterval);
+
+            // Reset time left
+            timeLeft = 15;
+
+            // Reset timer text
+            timerText.textContent = timeLeft;
+
+            // Reset timer circle
+            timerCircle.style.strokeDashoffset = 0;
+            timerCircle.style.stroke = '#c5755d';
+
+            // Reset timer running flag
+            timerRunning = false;
+
+            // Reset button text
+            startTimer.textContent = "Bắt Đầu Đếm Giờ";
+        }
+
+        function shakeElement(element) {
+            element.classList.add('shake');
+            setTimeout(() => {
+                element.classList.remove('shake');
+            }, 500);
+        }
+
+        // Event Listeners
+        // Home Screen
+        startGameBtn.addEventListener('click', () => {
+            homeScreen.classList.add('hidden');
+            chestSelection.classList.remove('hidden');
+        });
+
+        // Chest Selection
+        chest1.addEventListener('click', () => {
+            loadChest(1);
+        });
+
+        chest2.addEventListener('click', () => {
+            loadChest(2);
+        });
+
+        chest3.addEventListener('click', () => {
+            loadChest(3);
+        });
+
+        backToHome.addEventListener('click', () => {
+            chestSelection.classList.add('hidden');
+            homeScreen.classList.remove('hidden');
+        });
+
+        // Game Screen
+        backToQuestions.addEventListener('click', () => {
+            // Clear timer
+            if (timerRunning) {
+                clearInterval(timerInterval);
+                timerRunning = false;
+            }
+            resetTimer();
+
+            // Go back to questions
+            questionDetail.classList.add('hidden');
+            questionsContainer.parentElement.classList.remove('hidden');
+        });
+
+        checkAnswer.addEventListener('click', () => {
+            // Play check answer sound
+            playCheckAnswerSound();
+
+            const questionId = parseInt(checkAnswer.dataset.questionId);
+            const question = gameData.currentChest.questions.find(q => q.id === questionId);
+            const selectedOption = document.querySelector('.option-btn.selected');
+
+            // Check if an option is selected
+            if (!selectedOption) {
+                alert('Vui lòng chọn một đáp án!');
+                return;
+            }
+
+            const selectedIndex = parseInt(selectedOption.dataset.index);
+
+            // Hide check answer button
+            checkAnswer.classList.add('hidden');
+
+            // Disable options
+            document.querySelectorAll('.option-btn').forEach(btn => {
+                btn.disabled = true;
+            });
+
+            // Clear timer if running
+            if (timerRunning) {
+                clearInterval(timerInterval);
+                timerRunning = false;
+            }
+            resetTimer();
+
+            if (selectedIndex === question.answer) {
+                // Mark question as answered
+                question.answered = true;
+
+                // Add points to score
+                gameData.score += gameData.currentChest.pointsPerQuestion;
+
+                // Get a random digit from the code that hasn't been found yet
+                const availableDigits = gameData.currentChest.code.filter(digit =>
+                    !gameData.digitsFound.includes(digit)
+                );
+
+                let foundDigitValue;
+                if (availableDigits.length > 0) {
+                    foundDigitValue = availableDigits[Math.floor(Math.random() * availableDigits.length)];
+                    gameData.digitsFound.push(foundDigitValue);
+                } else {
+                    // If all digits are found, just show a random one again
+                    foundDigitValue = gameData.currentChest.code[Math.floor(Math.random() * gameData.currentChest.code.length)];
+                }
+
+                // Update UI
+                foundDigit.textContent = foundDigitValue;
+                pointsEarned.textContent = gameData.currentChest.pointsPerQuestion;
+                correctAnswer.classList.remove('hidden');
+                wrongAnswer.classList.add('hidden');
+
+                // Update digits found
+                updateDigitsFound();
+            } else {
+                // Show wrong answer
+                correctAnswer.classList.add('hidden');
+                wrongAnswer.classList.remove('hidden');
+            }
+
+            // Show result
+            answerResult.classList.remove('hidden');
+        });
+
+        continueAfterAnswer.addEventListener('click', () => {
+            // Go back to questions
+            questionDetail.classList.add('hidden');
+            questionsContainer.parentElement.classList.remove('hidden');
+
+            // Reload questions to update UI
+            loadQuestions();
+        });
+
+        unlockChestBtn.addEventListener('click', () => {
+            // Get entered code
+            let enteredCode = [];
+            codeInputs.forEach(input => {
+                if (input.value !== '') {
+                    enteredCode.push(parseInt(input.value));
+                }
+            });
+
+            // Check if code is complete
+            if (enteredCode.length !== 5) {
+                alert('Vui lòng nhập đủ 5 chữ số của mã.');
+                return;
+            }
+
+            // Check if code is correct
+            const correctCode = gameData.currentChest.code;
+            const isCorrect = enteredCode.every((digit, index) => digit === correctCode[index]);
+
+            if (isCorrect) {
+                // Unlock chest
+                unlockChest();
+            } else {
+                // Play wrong code sound
+                playWrongCodeSound();
+
+                // Show wrong code modal
+                wrongCodeModal.classList.remove('hidden');
+
+                // Shake the code input container
+                shakeElement(document.getElementById('code-input-container'));
+            }
+        });
+
+        backToChests.addEventListener('click', () => {
+            // Clear timer if running
+            if (timerRunning) {
+                clearInterval(timerInterval);
+                timerRunning = false;
+            }
+
+            // Go back to chest selection
+            gameScreen.classList.add('hidden');
+            chestSelection.classList.remove('hidden');
+        });
+
+        // Timer
+        startTimer.addEventListener('click', () => {
+            startCountdown();
+        });
+
+        // Code inputs
+        codeInputs.forEach((input, index) => {
+            // Limit to one digit
+            input.addEventListener('input', function () {
+                if (this.value.length > 1) {
+                    this.value = this.value.slice(0, 1);
+                }
+
+                // Move to next input if value is entered
+                if (this.value !== '' && index < codeInputs.length - 1) {
+                    codeInputs[index + 1].focus();
+                }
+            });
+
+            // Handle backspace
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Backspace' && this.value === '' && index > 0) {
+                    codeInputs[index - 1].focus();
+                }
+            });
+        });
+
+        // Wrong Code Modal
+        tryAgainBtn.addEventListener('click', () => {
+            // Hide modal
+            wrongCodeModal.classList.add('hidden');
+
+            // Clear code inputs
+            resetCodeInputs();
+
+            // Focus on first input
+            codeInputs[0].focus();
+        });
+
+        // Chest Unlocked Modal
+        continueAfterUnlock.addEventListener('click', () => {
+            // Hide modal
+            chestUnlockedModal.classList.add('hidden');
+
+            // Go back to chest selection
+            gameScreen.classList.add('hidden');
+            chestSelection.classList.remove('hidden');
+
+            // Check if all chests are completed
+            checkAllChestsCompleted();
+        });
+
+        // Final Results Modal
+        playAgainBtn.addEventListener('click', () => {
+            // Reset game data
+            gameData.score = 0;
+            gameData.digitsFound = [];
+
+            gameData.chests.forEach(chest => {
+                chest.completed = false;
+                chest.questions.forEach(question => {
+                    question.answered = false;
+                });
+            });
+
+            // Hide modal
+            finalResultsModal.classList.add('hidden');
+
+            // Go back to home
+            chestSelection.classList.add('hidden');
+            homeScreen.classList.remove('hidden');
+        });
+    </script>
+
+</html>
