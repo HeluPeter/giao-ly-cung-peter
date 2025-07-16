@@ -192,11 +192,11 @@
                 <h2 class="text-2xl md:text-3xl text-c5755d mb-4 font-bold">Cách Chơi</h2>
                 <ul class="list-disc pl-6 space-y-2 text-lg">
                     <li>Mỗi rương kho báu có 5 câu hỏi trắc nghiệm</li>
-                    <li>Trả lời đúng câu hỏi để kiếm điểm và mở khóa các chữ số mã</li>
+                    <li>Trả lời đúng câu hỏi để kiếm vàng và mở khóa các chữ số mã</li>
                     <li>Bạn sẽ biết các chữ số nhưng không biết vị trí của chúng</li>
                     <li>Sử dụng bộ đếm thời gian 15 giây để giúp với các câu hỏi khó</li>
                     <li>Cố gắng mở khóa rương với mã đúng</li>
-                    <li>Sau khi tất cả các rương được mở, đội có nhiều điểm nhất sẽ thắng</li>
+                    <li>Sau khi tất cả các rương được mở, đội có nhiều vàng nhất sẽ thắng</li>
                 </ul>
             </div>
         </div>
@@ -225,7 +225,7 @@
                         </div>
                     </div>
                     <h3 class="text-2xl text-c5755d mt-4 font-bold">Kho Báu Dễ</h3>
-                    <p class="text-8a5c39">100 điểm mỗi câu hỏi</p>
+                    <p class="text-8a5c39">100 vàng mỗi câu hỏi</p>
                 </div>
 
                 <div id="chest-2"
@@ -245,7 +245,7 @@
                         </div>
                     </div>
                     <h3 class="text-2xl text-c5755d mt-4 font-bold">Kho Báu Trung Bình</h3>
-                    <p class="text-8a5c39">200 điểm mỗi câu hỏi</p>
+                    <p class="text-8a5c39">200 vàng mỗi câu hỏi</p>
                 </div>
 
                 <div id="chest-3"
@@ -268,7 +268,7 @@
                         </div>
                     </div>
                     <h3 class="text-2xl text-c5755d mt-4 font-bold">Kho Báu Khó</h3>
-                    <p class="text-8a5c39">300 điểm mỗi câu hỏi</p>
+                    <p class="text-8a5c39">300 vàng mỗi câu hỏi</p>
                 </div>
             </div>
 
@@ -327,7 +327,7 @@
                                 <h3 id="current-question-title" class="text-2xl text-c5755d font-bold">Câu Hỏi</h3>
                                 <span id="question-points"
                                     class="bg-8a5c39 text-e17373 px-3 py-1 rounded-lg text-lg font-medium">100
-                                    điểm</span>
+                                    vàng</span>
                             </div>
                             <p id="current-question-text" class="text-xl mb-6">Nội dung câu hỏi ở đây?</p>
                         </div>
@@ -348,7 +348,7 @@
                                 class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded mb-4 hidden">
                                 <p class="text-xl">✅ Chính xác! Bạn đã tìm thấy một chữ số: <span id="found-digit"
                                         class="text-3xl font-bold digit-found">5</span></p>
-                                <p>Bạn đã kiếm được <span id="points-earned" class="font-bold">100</span> điểm!</p>
+                                <p>Bạn đã kiếm được <span id="points-earned" class="font-bold">100</span> vàng!</p>
                             </div>
 
                             <div id="wrong-answer"
@@ -445,7 +445,7 @@
                         </svg>
                     </div>
                     <p class="text-xl mb-4 font-medium">Bạn đã mở khóa rương!</p>
-                    <p class="text-lg mb-6">Bạn đã kiếm được <span id="chest-points" class="font-bold">500</span> điểm
+                    <p class="text-lg mb-6">Bạn đã kiếm được <span id="chest-points" class="font-bold">500</span> vàng
                         thưởng!</p>
                     <button id="continue-after-unlock"
                         class="btn bg-c5755d hover:bg-8a5c39 text-e17373 text-xl py-3 px-6 rounded-lg shadow-md font-bold">
@@ -479,8 +479,8 @@
                     <p class="text-xl mb-6 font-medium">Tất cả các rương kho báu đã được mở khóa!</p>
 
                     <div class="mb-6">
-                        <h3 class="text-2xl text-8a5c39 mb-4 font-bold">Điểm Số Cuối Cùng</h3>
-                        <p class="text-4xl font-black" id="final-score">1500 điểm</p>
+                        <h3 class="text-2xl text-8a5c39 mb-4 font-bold">vàng Số Cuối Cùng</h3>
+                        <p class="text-4xl font-black" id="final-score">1500 vàng</p>
                     </div>
 
                     <button id="play-again-btn"
@@ -827,7 +827,7 @@
 
             // Update UI
             chestTitle.textContent = `Rương Kho Báu #${chestId}`;
-            chestSubtitle.textContent = `${gameData.currentChest.name} - ${gameData.currentChest.pointsPerQuestion} điểm mỗi câu hỏi`;
+            chestSubtitle.textContent = `${gameData.currentChest.name} - ${gameData.currentChest.pointsPerQuestion} vàng mỗi câu hỏi`;
 
             // Reset digits found for this chest
             gameData.digitsFound = [];
@@ -871,7 +871,7 @@
                             </div>
                         </div>
                         <div class="bg-8a5c39 text-e17373 px-3 py-1 rounded-lg">
-                            ${gameData.currentChest.pointsPerQuestion} điểm
+                            ${gameData.currentChest.pointsPerQuestion} vàng
                         </div>
                     </div>
                 `;
@@ -891,7 +891,7 @@
             // Update question detail
             currentQuestionTitle.textContent = `Câu Hỏi ${question.id}`;
             currentQuestionText.textContent = question.text;
-            questionPoints.textContent = `${gameData.currentChest.pointsPerQuestion} điểm`;
+            questionPoints.textContent = `${gameData.currentChest.pointsPerQuestion} vàng`;
 
             // Reset timer
             resetTimer();
@@ -1035,7 +1035,7 @@
 
         function showFinalResults() {
             // Update final score
-            finalScore.textContent = `${gameData.score} điểm`;
+            finalScore.textContent = `${gameData.score} vàng`;
 
             // Show final results modal
             finalResultsModal.classList.remove('hidden');
