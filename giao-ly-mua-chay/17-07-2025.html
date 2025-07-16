@@ -167,6 +167,40 @@
             width: 100%;
             margin: 0 auto;
         }
+
+        .code-slot {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .code-slot:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-slot.revealed {
+            background-color: #fac5b2;
+            color: #8a5c39;
+            font-weight: bold;
+        }
+
+        .pulse {
+            animation: pulse 1s;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
@@ -175,7 +209,7 @@
         <!-- Home Screen -->
         <div id="home-screen" class="container mx-auto px-4 py-8">
             <div class="text-center mb-8">
-                <h1 class="text-4xl md:text-6xl text-c5755d mb-4 font-black">🏴‍☠️ Trò Chơi Săn Kho Báu 🏴‍☠️</h1>
+                <h1 class="text-4xl md:text-6xl text-c5755d mb-4 font-black">💵 Trò Chơi Săn Kho Báu 💵</h1>
                 <p class="text-xl md:text-2xl text-8a5c39 font-medium">Tìm mã bí mật và mở khóa rương kho báu!</p>
             </div>
 
@@ -220,11 +254,11 @@
                             <circle cx="50" cy="30" r="5" fill="#fac5b2" />
                             <rect x="45" y="20" width="10" height="10" fill="#8a5c39" />
                         </svg>
-                        <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="absolute inset-0 flex items-center justify-center" style="margin-top: 90px;">
                             <span class="heading-font text-4xl text-8a5c39 font-black">1</span>
                         </div>
                     </div>
-                    <h3 class="text-2xl text-c5755d mt-4 font-bold">Kho Báu Dễ</h3>
+                    <h3 class="text-2xl text-c5755d mt-4 font-bold">Kho Báu Nhỏ</h3>
                     <p class="text-8a5c39">100 vàng mỗi câu hỏi</p>
                 </div>
 
@@ -240,11 +274,11 @@
                             <circle cx="25" cy="50" r="5" fill="#fac5b2" />
                             <circle cx="75" cy="50" r="5" fill="#fac5b2" />
                         </svg>
-                        <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="absolute inset-0 flex items-center justify-center" style="margin-top: 90px;">
                             <span class="heading-font text-4xl text-8a5c39 font-black">2</span>
                         </div>
                     </div>
-                    <h3 class="text-2xl text-c5755d mt-4 font-bold">Kho Báu Trung Bình</h3>
+                    <h3 class="text-2xl text-c5755d mt-4 font-bold">Kho Báu Lớn</h3>
                     <p class="text-8a5c39">200 vàng mỗi câu hỏi</p>
                 </div>
 
@@ -263,11 +297,11 @@
                             <circle cx="75" cy="65" r="5" fill="#c5755d" />
                             <circle cx="50" cy="55" r="8" fill="#fac5b2" />
                         </svg>
-                        <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="absolute inset-0 flex items-center justify-center" style="margin-top: 90px;">
                             <span class="heading-font text-4xl text-8a5c39 font-black">3</span>
                         </div>
                     </div>
-                    <h3 class="text-2xl text-c5755d mt-4 font-bold">Kho Báu Khó</h3>
+                    <h3 class="text-2xl text-c5755d mt-4 font-bold">Kho Báu Siu To Khổng Lồ</h3>
                     <p class="text-8a5c39">300 vàng mỗi câu hỏi</p>
                 </div>
             </div>
@@ -346,9 +380,8 @@
                         <div id="answer-result" class="mt-6 hidden">
                             <div id="correct-answer"
                                 class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded mb-4 hidden">
-                                <p class="text-xl">✅ Chính xác! Bạn đã tìm thấy một chữ số: <span id="found-digit"
-                                        class="text-3xl font-bold digit-found">5</span></p>
-                                <p>Bạn đã kiếm được <span id="points-earned" class="font-bold">100</span> vàng!</p>
+                                <p class="text-xl">✅ Chính xác! Bạn đã kiếm được <span id="points-earned"
+                                        class="font-bold">100</span> vàng!</p>
                             </div>
 
                             <div id="wrong-answer"
@@ -371,34 +404,29 @@
                         <h2 class="text-2xl text-c5755d mb-4 font-bold">Mã Bí Mật</h2>
                         <div class="flex justify-center mb-6">
                             <div id="code-display" class="grid grid-cols-5 gap-2 w-full">
-                                <div
-                                    class="bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold">
-                                    ?</div>
-                                <div
-                                    class="bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold">
-                                    ?</div>
-                                <div
-                                    class="bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold">
-                                    ?</div>
-                                <div
-                                    class="bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold">
-                                    ?</div>
-                                <div
-                                    class="bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold">
-                                    ?</div>
+                                <div class="code-slot bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold"
+                                    data-index="0">?</div>
+                                <div class="code-slot bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold"
+                                    data-index="1">?</div>
+                                <div class="code-slot bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold"
+                                    data-index="2">?</div>
+                                <div class="code-slot bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold"
+                                    data-index="3">?</div>
+                                <div class="code-slot bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold"
+                                    data-index="4">?</div>
                             </div>
                         </div>
 
                         <!-- Digits Found section -->
                         <div class="mb-6">
-                            <h3 class="text-xl text-c5755d mb-4 font-medium">Chữ Số Đã Tìm Thấy:</h3>
+                            <h3 class="text-xl text-c5755d mb-4 font-medium">Mã Số Nhận Được:</h3>
                             <div id="digits-found" class="flex flex-wrap justify-center gap-2">
                                 <p class="text-center text-gray-500">Chưa tìm thấy chữ số nào</p>
                             </div>
                         </div>
 
                         <div class="mb-6">
-                            <h3 class="text-xl text-c5755d mb-4 font-medium">Nhập Mã Để Mở Khóa:</h3>
+                            <h3 class="text-xl text-c5755d mb-4 font-medium">Nhập Mã Để Mở Rương:</h3>
                             <div class="flex justify-center mb-4" id="code-input-container">
                                 <input type="number" min="0" max="9" class="code-input" maxlength="1">
                                 <input type="number" min="0" max="9" class="code-input" maxlength="1">
@@ -431,7 +459,7 @@
             class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
             <div class="bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full mx-4">
                 <div class="text-center">
-                    <h2 class="text-3xl text-c5755d mb-4 font-black">🎉 Đã Mở Khóa Rương Kho Báu! 🎉</h2>
+                    <h2 class="text-3xl text-c5755d mb-4 font-black">🎉 Đã Mở Rương Kho Báu! 🎉</h2>
                     <div class="mb-6">
                         <svg class="w-48 h-auto mx-auto" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
                             <rect x="10" y="30" width="80" height="50" rx="5" fill="#8a5c39" />
@@ -445,8 +473,8 @@
                         </svg>
                     </div>
                     <p class="text-xl mb-4 font-medium">Bạn đã mở khóa rương!</p>
-                    <p class="text-lg mb-6">Bạn đã kiếm được <span id="chest-points" class="font-bold">500</span> vàng
-                        thưởng!</p>
+                    <p class="text-lg mb-6">Bạn đã kiếm thêm được <span id="chest-points" class="font-bold">500</span>
+                        vàng!</p>
                     <button id="continue-after-unlock"
                         class="btn bg-c5755d hover:bg-8a5c39 text-e17373 text-xl py-3 px-6 rounded-lg shadow-md font-bold">
                         Tiếp Tục Cuộc Phiêu Lưu
@@ -535,10 +563,11 @@
             score: 0,
             currentChest: null,
             digitsFound: [],
+            revealedCodePositions: [],
             chests: [
                 {
                     id: 1,
-                    name: "Kho Báu Dễ",
+                    name: "Kho Báu Nhỏ",
                     pointsPerQuestion: 100,
                     bonusPoints: 500,
                     code: [2, 5, 7, 3, 0], // Fixed code for chest 1
@@ -588,7 +617,7 @@
                 },
                 {
                     id: 2,
-                    name: "Kho Báu Trung Bình",
+                    name: "Kho Báu Siu To Khổng Lồ",
                     pointsPerQuestion: 200,
                     bonusPoints: 1000,
                     code: [1, 8, 9, 4, 3], // Fixed code for chest 2
@@ -720,10 +749,11 @@
         const answerResult = document.getElementById('answer-result');
         const correctAnswer = document.getElementById('correct-answer');
         const wrongAnswer = document.getElementById('wrong-answer');
-        const foundDigit = document.getElementById('found-digit');
+        // const foundDigit = document.getElementById('found-digit');
         const pointsEarned = document.getElementById('points-earned');
         const continueAfterAnswer = document.getElementById('continue-after-answer');
         const codeDisplay = document.getElementById('code-display');
+        const codeSlots = document.querySelectorAll('.code-slot');
         const codeInputs = document.querySelectorAll('.code-input');
         const digitsFound = document.getElementById('digits-found');
         const unlockChestBtn = document.getElementById('unlock-chest-btn');
@@ -831,6 +861,9 @@
 
             // Reset digits found for this chest
             gameData.digitsFound = [];
+
+            // Reset revealed code positions
+            gameData.revealedCodePositions = [];
 
             // Load questions
             loadQuestions();
@@ -950,10 +983,48 @@
         }
 
         function resetCodeDisplay() {
-            const codeSlots = codeDisplay.querySelectorAll('div');
             codeSlots.forEach(slot => {
                 slot.textContent = '?';
-                slot.className = 'bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold';
+                slot.className = 'code-slot bg-ebd8ba rounded-lg h-16 flex items-center justify-center text-3xl font-bold';
+
+                // Add click event to reveal code
+                slot.addEventListener('click', revealCodeDigit);
+            });
+        }
+
+        function revealCodeDigit(event) {
+            if (!gameData.currentChest) return;
+
+            const slot = event.currentTarget;
+            const index = parseInt(slot.dataset.index);
+
+            // Check if this position is already revealed
+            if (gameData.revealedCodePositions.includes(index)) return;
+
+            // Reveal the digit
+            const codeDigit = gameData.currentChest.code[index];
+            slot.textContent = codeDigit;
+            slot.classList.add('revealed', 'pulse');
+
+            // Add to revealed positions
+            gameData.revealedCodePositions.push(index);
+
+            // Remove pulse animation after it completes
+            setTimeout(() => {
+                slot.classList.remove('pulse');
+            }, 1000);
+        }
+
+        function revealAllCodeDigits() {
+            codeSlots.forEach((slot, index) => {
+                const codeDigit = gameData.currentChest.code[index];
+                slot.textContent = codeDigit;
+                slot.classList.add('revealed');
+
+                // Add to revealed positions if not already there
+                if (!gameData.revealedCodePositions.includes(index)) {
+                    gameData.revealedCodePositions.push(index);
+                }
             });
         }
 
@@ -974,7 +1045,14 @@
                 return;
             }
 
-            gameData.digitsFound.forEach(digit => {
+            const shuffledDigits = [...gameData.digitsFound]; // tạo bản sao để không thay đổi mảng gốc
+
+            for (let i = shuffledDigits.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledDigits[i], shuffledDigits[j]] = [shuffledDigits[j], shuffledDigits[i]];
+            }
+
+            shuffledDigits.forEach(digit => {
                 const digitEl = document.createElement('div');
                 digitEl.className = 'bg-fac5b2 w-12 h-12 rounded-lg flex items-center justify-center text-2xl font-bold';
                 digitEl.textContent = digit;
@@ -994,6 +1072,9 @@
 
             // Mark chest as completed
             gameData.currentChest.completed = true;
+
+            // Reveal all code digits
+            revealAllCodeDigits();
 
             // Show unlock modal
             chestUnlockedModal.classList.remove('hidden');
@@ -1207,7 +1288,7 @@
                 }
 
                 // Update UI
-                foundDigit.textContent = foundDigitValue;
+                // foundDigit.textContent = foundDigitValue;
                 pointsEarned.textContent = gameData.currentChest.pointsPerQuestion;
                 correctAnswer.classList.remove('hidden');
                 wrongAnswer.classList.add('hidden');
@@ -1336,6 +1417,7 @@
             // Reset game data
             gameData.score = 0;
             gameData.digitsFound = [];
+            gameData.revealedCodePositions = [];
 
             gameData.chests.forEach(chest => {
                 chest.completed = false;
